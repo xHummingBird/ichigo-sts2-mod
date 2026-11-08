@@ -23,4 +23,8 @@ public class StrikeIchigo() : IchigoCard(
         await CommonActions.CardAttack(this, cardPlay, (int)DynamicVars.Damage.BaseValue, "vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Damage.UpgradeValueBy(3m);
+    }
 }
