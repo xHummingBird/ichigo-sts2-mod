@@ -37,7 +37,7 @@ public class Ichigo : PlaceholderCharacterModel
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<HollowMask>()
     ];
     
     public override CardPoolModel CardPool => ModelDb.CardPool<IchigoCardPool>();
