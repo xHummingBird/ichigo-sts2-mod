@@ -23,11 +23,11 @@ public class Ichigo : PlaceholderCharacterModel
     public override int StartingHp => 70;
     
     public override IEnumerable<CardModel> StartingDeck => [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
+        ModelDb.Card<StrikeIchigo>(),
+        ModelDb.Card<StrikeIchigo>(),
+        ModelDb.Card<StrikeIchigo>(),
+        ModelDb.Card<StrikeIchigo>(),
+        ModelDb.Card<StrikeIchigo>(),
         ModelDb.Card<DefendIchigo>(),
         ModelDb.Card<DefendIchigo>(),
         ModelDb.Card<DefendIchigo>(),
