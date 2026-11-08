@@ -46,3 +46,6 @@ riderModule.iml
 Thumbs.db
 *.swp
 *~
+
+# Machine-specific build paths (set per developer)
+/Directory.Build.props
