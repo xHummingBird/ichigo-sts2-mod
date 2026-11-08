@@ -5,3 +5,44 @@ riderModule.iml
 /_ReSharper.Caches/
 # JetBrains Rider (machine-local IDE files)
 .idea/
+
+# Godot generated cache (keep *.import and *.uid files committed)
+/.godot/mono/
+/.godot/editor/
+/.godot/exported/
+/.godot/imported/
+/.godot/global_script_class_cache.cfg
+/.godot/uid_cache.bin
+
+# Rider / ReSharper user-specific files
+/.idea/.idea.Ichigo/.idea/shelf/
+/.idea/.idea.Ichigo/.idea/workspace.xml
+/.idea/.idea.Ichigo/.idea/markdown.xml
+/.idea/.idea.Ichigo/.idea/httpRequests/
+/.idea/.idea.Ichigo/.idea/queries/
+/.idea/.idea.Ichigo/.idea/dataSources/
+/.idea/.idea.Ichigo/.idea/dataSources.local.xml
+/.idea/.idea.Ichigo/.idea/modules.xml
+/.idea/.idea.Ichigo/.idea/contentModel.xml
+/.idea/.idea.Ichigo/.idea/projectSettingsUpdater.xml
+/.idea/.idea.Ichigo/.idea/.idea.Ichigo.iml
+/.idea/.idea.Ichigo/.idea/doctool/
+/.idea/.idea.Ichigo/.idea/indexLayout.xml
+/.idea/.idea.Ichigo/.idea/.name
+/.idea/.idea.Ichigo/.idea/encodings.xml
+/.idea/.idea.Ichigo/.idea/vcs.xml
+/.ReSharper/
+*.DotSettings.user
+
+# Visual Studio user files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
