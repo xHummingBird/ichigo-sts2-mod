@@ -1,3 +1,17 @@
 {
-  
+  "ICHIGO-BANKAI_POWER.title": "Bankai",
+  "ICHIGO-BANKAI_POWER.description": "[gold]Getsuga Tenshou[/gold] deals double damage and applies [gold]Bleed[/gold]. Attacks deal 3 additional damage to enemies with [gold]Spiritual Fracture[/gold]. You cannot gain Reiryoku. Lasts [blue]{Amount}[/blue] turn(s).",
+  "ICHIGO-BANKAI_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] deals double damage and applies [gold]Bleed[/gold]. Attacks deal 3 additional damage to enemies with [gold]Spiritual Fracture[/gold]. You cannot gain Reiryoku. Lasts [blue]{Amount}[/blue] turn(s).",
+
+  "ICHIGO-BLEED_POWER.title": "Bleed",
+  "ICHIGO-BLEED_POWER.description": "At the start of its turn, loses HP equal to the amount of [gold]Bleed[/gold], then reduces [gold]Bleed[/gold] by 1.",
+  "ICHIGO-BLEED_POWER.smartDescription": "At the start of its turn, loses [blue]{Amount}[/blue] HP, then reduces [gold]Bleed[/gold] by 1.",
+
+  "ICHIGO-SPIRITUAL_FRACTURE_POWER.title": "Spiritual Fracture",
+  "ICHIGO-SPIRITUAL_FRACTURE_POWER.description": "Takes 25% more damage from attacks.",
+  "ICHIGO-SPIRITUAL_FRACTURE_POWER.smartDescription": "Takes 25% more damage from attacks.",
+
+  "ICHIGO-SPIRITUAL_PRESSURE_POWER.title": "Spiritual Pressure",
+  "ICHIGO-SPIRITUAL_PRESSURE_POWER.description": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-SPIRITUAL_PRESSURE_POWER.smartDescription": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold]. Currently [blue]{Amount}[/blue]."
 }
