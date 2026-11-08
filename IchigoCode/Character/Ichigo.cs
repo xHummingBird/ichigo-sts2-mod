@@ -6,6 +6,9 @@ using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using Ichigo.IchigoCode.Cards;
+using Ichigo.IchigoCode.Cards.Basic;
+using Ichigo.IchigoCode.Relics;
 
 namespace Ichigo.IchigoCode.Character;
 
@@ -25,11 +28,11 @@ public class Ichigo : PlaceholderCharacterModel
         ModelDb.Card<StrikeIronclad>(),
         ModelDb.Card<StrikeIronclad>(),
         ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<DefendIchigo>(),
+        ModelDb.Card<DefendIchigo>(),
+        ModelDb.Card<DefendIchigo>(),
+        ModelDb.Card<DefendIchigo>(),
+        ModelDb.Card<DefendIchigo>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

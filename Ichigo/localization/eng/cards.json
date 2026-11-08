@@ -1,3 +1,7 @@
 {
+  "ICHIGO-DEFEND_ICHIGO.title": "Defend",
+  "ICHIGO-DEFEND_ICHIGO.description": "Gain {Block} Block.",
+  "ICHIGO-GETSUGA_TENSHOU.title": "Getsuga Tenshou",
+  "ICHIGO-GETSUGA_TENSHOU.description": "Deal {Damage} damage. Exhaust."
   
 }
