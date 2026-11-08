@@ -4,6 +4,8 @@
   "ICHIGO-GETSUGA_TENSHOU.title": "Getsuga Tenshou",
   "ICHIGO-GETSUGA_TENSHOU.description": "Deal {Damage} damage. Exhaust.",
   "ICHIGO-STRIKE_ICHIGO.title": "Strike",
-  "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage} damage."
+  "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage} damage.",
+  "ICHIGO-DUAL_ZENGETSU.title": "Dual Zengetsu",
+  "ICHIGO-DUAL_ZENGETSU.description": "Add {Cards} Getsuga Tenshou to your hand."
   
 }
