@@ -6,7 +6,9 @@ riderModule.iml
 # JetBrains Rider (machine-local IDE files)
 .idea/
 
-# Godot generated cache (keep *.import and *.uid files committed)
+# Godot generated files (regenerated when the project is opened)
+*.import
+*.uid
 /.godot/mono/
 /.godot/editor/
 /.godot/exported/
