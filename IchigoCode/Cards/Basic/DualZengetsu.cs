@@ -11,7 +11,7 @@ using Ichigo.IchigoCode.Character;
 namespace Ichigo.IchigoCode.Cards.Basic;
 
 public class DualZengetsu() : IchigoCard(
-    1,
+    2,
     CardType.Skill,
     CardRarity.Basic,
     TargetType.Self
