@@ -32,7 +32,8 @@ public class Ichigo : PlaceholderCharacterModel
         ModelDb.Card<DefendIchigo>(),
         ModelDb.Card<DefendIchigo>(),
         ModelDb.Card<DefendIchigo>(),
-        ModelDb.Card<DefendIchigo>()
+        ModelDb.Card<DefendIchigo>(),
+        ModelDb.Card<DualZengetsu>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

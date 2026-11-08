@@ -20,7 +20,7 @@ public class StrikeIchigo() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CommonActions.CardAttack(this, cardPlay, (int)DynamicVars.Damage.BaseValue, "vfx/vfx_attack_slash")
+        await CommonActions.CardAttack(this, cardPlay, vfx: "vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
     protected override void OnUpgrade()

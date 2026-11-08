@@ -26,8 +26,7 @@ public sealed class GetsugaTenshou() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(cardPlay.Target!)
-            .Execute(choiceContext);
+        await CommonActions.CardAttack(this, cardPlay, vfx: "vfx/vfx_attack_slash").Execute(choiceContext);
     }
 
     protected override void OnUpgrade()
