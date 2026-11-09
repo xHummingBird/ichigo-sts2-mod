@@ -6,6 +6,8 @@
   "ICHIGO-STRIKE_ICHIGO.title": "Strike",
   "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage} damage.",
   "ICHIGO-DUAL_ZENGETSU.title": "Dual Zengetsu",
-  "ICHIGO-DUAL_ZENGETSU.description": "Creates {Cards} upgraded Getsuga Tenshou to your hand."
+  "ICHIGO-DUAL_ZENGETSU.description": "Creates {Cards} upgraded Getsuga Tenshou to your hand.",
+  "ICHIGO-FLASH_STEP.title": "Flash Step",
+  "ICHIGO-FLASH_STEP.description": "Add {Cards} Getsuga Tenshou to your hand. Gain 6 Block."
   
 }
