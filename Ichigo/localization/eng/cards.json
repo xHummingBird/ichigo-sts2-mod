@@ -12,5 +12,7 @@
   "ICHIGO-SPIRITUAL_AWARENESS.title": "Spiritual Awareness",
   "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Energy} Energy. Gain {Cards} Reiryoku.",
   "ICHIGO-BRINGER_LIGHT.title": "Bringer Light",
-  "ICHIGO-BRINGER_LIGHT.description": "Gain {Block} Block. Draw {Cards} cards."
+  "ICHIGO-BRINGER_LIGHT.description": "Gain {Block} Block. Draw {Cards} cards.",
+  "ICHIGO-SONIDO.title": "Sonido",
+  "ICHIGO-SONIDO.description": "Lose {HpLoss} HP. Gain {Energy} Energy. Gain {Block} Block."
 }
