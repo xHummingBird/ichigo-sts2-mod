@@ -8,8 +8,9 @@
   "ICHIGO-DUAL_ZENGETSU.title": "Dual Zengetsu",
   "ICHIGO-DUAL_ZENGETSU.description": "Creates {Cards} upgraded Getsuga Tenshou to your hand.",
   "ICHIGO-FLASH_STEP.title": "Flash Step",
-  "ICHIGO-FLASH_STEP.description": "Add {Cards} Getsuga Tenshou to your hand. Gain 6 Block.",
+  "ICHIGO-FLASH_STEP.description": "Add {Cards} Getsuga Tenshou to your hand. Gain {Block} Block.",
   "ICHIGO-SPIRITUAL_AWARENESS.title": "Spiritual Awareness",
-  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Energy} Energy. Gain {Cards} Reiryoku."
-  
+  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Energy} Energy. Gain {Cards} Reiryoku.",
+  "ICHIGO-BRINGER_LIGHT.title": "Bringer Light",
+  "ICHIGO-BRINGER_LIGHT.description": "Gain {Block} Block. Draw {Cards} cards."
 }
