@@ -1,3 +1,17 @@
 {
+  "ICHIGO-ICHIGO.title": "Ichigo",
+  "ICHIGO-ICHIGO.titleObject": "Ichigo",
+  "ICHIGO-ICHIGO.description": "A substitute Soul Reaper with a giant zanpakuto.",
+  "ICHIGO-ICHIGO.pronounObject": "him",
+  "ICHIGO-ICHIGO.possessiveAdjective": "his",
+  "ICHIGO-ICHIGO.pronounPossessive": "his",
+  "ICHIGO-ICHIGO.pronounSubject": "he",
+  "ICHIGO-ICHIGO.goldMonologue": "Time to fight.",
+  "ICHIGO-ICHIGO.eventDeathPrevention": "Not yet...",
+  "ICHIGO-ICHIGO.aromaPrinciple": "Spirit pressure",
+  "ICHIGO-ICHIGO.cardsModifierTitle": "Reiatsu",
+  "ICHIGO-ICHIGO.cardsModifierDescription": "Cards cost less this turn.",
+  "ICHIGO-ICHIGO.banter.alive.endTurnPing": "Let's go!",
+  "ICHIGO-ICHIGO.banter.dead.endTurnPing": "Still not done..."
   
 }
