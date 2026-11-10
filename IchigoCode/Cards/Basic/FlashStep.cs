@@ -18,7 +18,7 @@ public class FlashStep() : IchigoCard(
     TargetType.Self
 )
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2), new BlockVar(6, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -28,7 +28,7 @@ public class FlashStep() : IchigoCard(
 			await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
 			await Cmd.Wait(0.25f);
 		}
-        await CreatureCmd.GainBlock(Owner.Creature, 6m, ValueProp.Move, cardPlay);
+        await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
     }
 
     protected override void OnUpgrade()
