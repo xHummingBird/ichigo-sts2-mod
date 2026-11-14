@@ -1,3 +1,4 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
@@ -6,6 +7,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
 using Ichigo.IchigoCode.Mechanics;
+using MegaCrit.Sts2.Core.Commands;
 
 namespace Ichigo.IchigoCode.Powers;
 
@@ -16,7 +18,7 @@ public sealed class SpiritualFracturePower : IchigoPower
 
     public override PowerType Type => PowerType.Debuff;
 
-    public override PowerStackType StackType => PowerStackType.Single;
+    public override PowerStackType StackType => PowerStackType.Counter;
 
     public override decimal ModifyDamageMultiplicative(
         Creature? target,
@@ -37,5 +39,13 @@ public sealed class SpiritualFracturePower : IchigoPower
             return BankaiDamageIncrease;
 
         return BaseDamageIncrease;
+    }
+
+    public override async Task AfterApplied(
+        Creature? applier,
+        CardModel? cardSource)
+    {
+        if (Owner.HasPower<SoulDisruptionPower>())
+            await PowerCmd.Remove(Owner.GetPower<SoulDisruptionPower>());
     }
 }

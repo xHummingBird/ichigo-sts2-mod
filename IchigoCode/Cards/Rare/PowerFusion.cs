@@ -28,4 +28,9 @@ public class PowerFusion() : IchigoCard(
 		await Cmd.CustomScaledWait(0f, 0.25f);
 		await GetsugaTenshouTokens.AddToHand(CombatState!, Owner, handSize);
     }
+    
+    protected override void OnUpgrade()
+    {
+        AddKeyword(CardKeyword.Retain);
+    }
 }

@@ -27,7 +27,7 @@ public partial class ReiryokuDisplay : Control
      * relative to Ichigo's energy counter.
      */
     private static readonly Vector2 DisplayPosition =
-        new(-75f, -75f);
+        new(-55f, -65f);
 
     /*
      * Additional position offset for only the number.
@@ -53,7 +53,7 @@ public partial class ReiryokuDisplay : Control
      * Hover-tip position relative to the display.
      */
     private static readonly Vector2 HoverTipOffset =
-        new(-60f, -450f);
+        new(0f, -450f);
 
     private Control? _display;
     private TextureRect? _overlay;

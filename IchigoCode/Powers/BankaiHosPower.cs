@@ -1,3 +1,4 @@
+using Ichigo.IchigoCode.Cards.Token;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -35,7 +36,7 @@ public sealed class BankaiHosPower : IchigoPower
             return 1m;
 
         double lostPercent = (1.0 - Owner.GetHpPercentRemaining()) * 100.0;
-        return cardSource is IGetsugaTenshouCard ? GetsugaDamageMultiplier : 1m + (decimal)lostPercent / 100m;
+        return cardSource is GetsugaTenshou ? GetsugaDamageMultiplier : 1m + (decimal)lostPercent / 100m;
     }
 
     public override async Task AfterSideTurnEnd(

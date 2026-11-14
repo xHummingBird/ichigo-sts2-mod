@@ -26,10 +26,10 @@ public sealed class SoulDisruptionPower : IchigoPower
             return;
 
         await PowerCmd.Remove(this);
-
+        var powerAmount = 2;
         if (!Owner.HasPower<SpiritualFracturePower>())
         {
-            await PowerCmd.Apply<SpiritualFracturePower>(choiceContext, Owner, 1, applier, cardSource);
+            await PowerCmd.Apply<SpiritualFracturePower>(choiceContext, Owner, powerAmount , applier, cardSource);
         }
     }
 }

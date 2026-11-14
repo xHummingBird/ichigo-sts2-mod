@@ -92,7 +92,8 @@ public class GetsugaTenshou() : IchigoCard(
             }
             else await attackCommand.Execute(
                 choiceContext);
-            await PowerCmd.Apply<SpiritualFracturePower>(choiceContext, cardPlay.Target, 1, Owner.Creature, this);
+            if (!cardPlay.Target.HasPower<SpiritualFracturePower>())
+                await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, cardPlay.Target, 1, Owner.Creature, this);
         }
     }
 
