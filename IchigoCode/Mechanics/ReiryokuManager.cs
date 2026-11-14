@@ -13,14 +13,14 @@ public static class ReiryokuManager
             .FirstOrDefault();
     }
 
-    public static bool IsInBankai(Player player)
+    public static bool IsInTrueBankai(Player player)
     {
         return player.Creature.HasPower<TrueBankaiPower>();
     }
 
     public static bool CanGainReiryoku(Player player)
     {
-        return !IsInBankai(player);
+        return !IsInTrueBankai(player);
     }
 
     public static int GetReiryoku(Player player)

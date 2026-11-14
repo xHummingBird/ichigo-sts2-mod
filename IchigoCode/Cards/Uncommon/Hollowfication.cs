@@ -9,6 +9,8 @@ using MegaCrit.Sts2.Core.ValueProps;
 using Ichigo.IchigoCode.Cards.Common;
 using Ichigo.IchigoCode.Character;
 using Ichigo.IchigoCode.Powers;
+using Ichigo.IchigoCode.Mechanics;
+
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
 
@@ -24,7 +26,11 @@ public class Hollowfication() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await TrueBankaiPower.CheckTrueBankai.LoseHp(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue, this, cardPlay);
+        if (!(ReiryokuManager.IsInTrueBankai(Owner)))
+        {
+            await CreatureCmd.Damage(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue,
+                ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
+        }
         await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
 
