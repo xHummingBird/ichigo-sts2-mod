@@ -20,7 +20,7 @@ public class Ichigo : PlaceholderCharacterModel
 
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Neutral;
-    public override int StartingHp => 70;
+    public override int StartingHp => 80;
     
     public override IEnumerable<CardModel> StartingDeck => [
         ModelDb.Card<StrikeIchigo>(),
@@ -39,7 +39,7 @@ public class Ichigo : PlaceholderCharacterModel
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<HollowMask>()
+        ModelDb.Relic<Zangetsu>()
     ];
     
     public override CardPoolModel CardPool => ModelDb.CardPool<IchigoCardPool>();

@@ -11,7 +11,7 @@ using Ichigo.IchigoCode.Mechanics;
 namespace Ichigo.IchigoCode.Powers;
 
 // Amount is the number of player turns remaining.
-public sealed class BankaiPower : IchigoPower
+public sealed class TrueBankaiPower : IchigoPower
 {
     private const decimal GetsugaDamageMultiplier = 2m;
     private const decimal FractureBonusDamage = 3m;
