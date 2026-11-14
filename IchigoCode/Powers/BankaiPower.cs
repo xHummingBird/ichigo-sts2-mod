@@ -85,4 +85,14 @@ public sealed class BankaiPower : IchigoPower
 
         await PowerCmd.Decrement(this);
     }
+
+    public static class CheckTrueBankai
+    {
+        // add if statement if the user is in truebankai
+        public static Task LoseHp(PlayerChoiceContext choiceContext, Creature owner, decimal amount, CardModel card, CardPlay cardPlay)
+        {
+            return CreatureCmd.Damage(choiceContext, owner, amount,
+                ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, card, cardPlay);
+        }
+    }
 }

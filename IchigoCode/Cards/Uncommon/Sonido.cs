@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using Ichigo.IchigoCode.Cards.Common;
 using Ichigo.IchigoCode.Character;
+using Ichigo.IchigoCode.Powers;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
 
@@ -23,8 +24,7 @@ public class Sonido() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CreatureCmd.Damage(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue,
-            ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
+        await BankaiPower.CheckTrueBankai.LoseHp(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue, this, cardPlay);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
         await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
     }
