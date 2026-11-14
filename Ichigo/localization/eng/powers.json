@@ -14,9 +14,9 @@
   "ICHIGO-SPIRITUAL_FRACTURE_POWER.description": "Takes 25% more damage from attacks.",
   "ICHIGO-SPIRITUAL_FRACTURE_POWER.smartDescription": "Takes 25% more damage from attacks.",
   
-  "ICHIGO-SOUL_DISRUPTION.description": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold].",
-  "ICHIGO-SOUL_DISRUPTION.smartDescription": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold]. Currently [blue]{Amount}[/blue].",
-  "ICHIGO-SOUL_DISRUPTION.title": "Soul Disruption",
+  "ICHIGO-SOUL_DISRUPTION_POWER.description": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-SOUL_DISRUPTION_POWER.smartDescription": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold]. Currently [blue]{Amount}[/blue].",
+  "ICHIGO-SOUL_DISRUPTION_POWER.title": "Soul Disruption",
 
   "ICHIGO-BANKAI_HOS_POWER.description": "[gold]Getsuga Tenshou[/gold] deals double damage and hits ALL enemies. Deal increased damage based on your percentage of HP lost.",
   "ICHIGO-BANKAI_HOS_POWER.smartDescription": "In [red]Bankai: Horn of Salvation[/gold] for {Amount} turn(s).",

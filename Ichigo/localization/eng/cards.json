@@ -30,5 +30,8 @@
   "ICHIGO-POWER_FUSION.description": "Discard your hand. Add a Getsuga Tenshou to your hand for each card discarded.",
 
   "ICHIGO-GETSUGA_INFUSION.title": "Getsuga Infusion",
-  "ICHIGO-GETSUGA_INFUSION.description": "Each [gold]Getsuga Tenshou[/gold] played this turn grants 2 Strength."
+  "ICHIGO-GETSUGA_INFUSION.description": "Each [gold]Getsuga Tenshou[/gold] played this turn grants 2 Strength.",
+
+  "ICHIGO-HOLLOWFICATION.title": "Hollowfication",
+  "ICHIGO-HOLLOWFICATION.description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()} next turn.\nDraw {Cards:diff()} cards."
 }
