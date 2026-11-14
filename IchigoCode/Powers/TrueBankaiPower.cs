@@ -14,29 +14,11 @@ namespace Ichigo.IchigoCode.Powers;
 public sealed class TrueBankaiPower : IchigoPower
 {
     private const decimal GetsugaDamageMultiplier = 2m;
-    private const decimal FractureBonusDamage = 3m;
     private const int BleedPerHit = 2;
 
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
-
-    public override decimal ModifyDamageAdditive(
-        Creature? target,
-        decimal amount,
-        ValueProp props,
-        Creature? dealer,
-        CardModel? cardSource,
-        CardPlay? cardPlay)
-    {
-        if (dealer != Owner || target == null)
-            return 0m;
-
-        if (!props.IsPoweredAttack())
-            return 0m;
-
-        return target.HasPower<SpiritualFracturePower>() ? FractureBonusDamage : 0m;
-    }
 
     public override decimal ModifyDamageMultiplicative(
         Creature? target,

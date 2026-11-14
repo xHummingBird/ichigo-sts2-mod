@@ -10,7 +10,7 @@ namespace Ichigo.IchigoCode.Powers;
 
 public sealed class SpiritualFracturePower : IchigoPower
 {
-    private const decimal DamageIncrease = 1.25m;
+    private const decimal DamageIncrease = 1.5m;
 
     public override PowerType Type => PowerType.Debuff;
 
@@ -27,11 +27,13 @@ public sealed class SpiritualFracturePower : IchigoPower
         if (target != Owner)
             return 1m;
 
-        if (props.IsUnpoweredAttack())
+        if (props.IsPoweredAttack() && ReiryokuManager.IsInTrueBankai(Owner))
         {
             if (ReiryokuManager.IsInTrueBankai(Owner))
-                return 1.5m;
-            return 1m;
+                return 2m;
+            else
+                return DamageIncrease;
         }
+        return 1m;
     }
 }
