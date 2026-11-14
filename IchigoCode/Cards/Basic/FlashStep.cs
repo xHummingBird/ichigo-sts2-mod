@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Character;
+using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Cards.Basic;
 
@@ -22,12 +23,7 @@ public class FlashStep() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		for (int i = 0; i < DynamicVars.Cards.IntValue; i++)
-		{
-			CardModel token = CombatState!.CreateCard<GetsugaTenshou>(Owner);
-			await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
-			await Cmd.Wait(0.25f);
-		}
+		await GetsugaTenshouTokens.AddToHand(CombatState!, Owner, DynamicVars.Cards.IntValue);
         await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
     }
 

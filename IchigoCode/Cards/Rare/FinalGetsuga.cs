@@ -17,7 +17,7 @@ public class FinalGetsuga() : IchigoCard(
     2,
     CardType.Skill,
     CardRarity.Rare,
-    TargetType.Enemy
+    TargetType.AnyEnemy
 )
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(0)];

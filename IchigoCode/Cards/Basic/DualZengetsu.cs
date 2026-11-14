@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Character;
+using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Cards.Basic;
 
@@ -21,12 +22,6 @@ public class DualZengetsu() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		for (int i = 0; i < DynamicVars.Cards.IntValue; i++)
-		{
-			CardModel token = CombatState!.CreateCard<GetsugaTenshou>(Owner);
-			CardCmd.Upgrade(token);
-			await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
-			await Cmd.Wait(0.25f);
-		}
+		await GetsugaTenshouTokens.AddToHand(CombatState!, Owner, DynamicVars.Cards.IntValue, upgrade: true);
     }
 }
