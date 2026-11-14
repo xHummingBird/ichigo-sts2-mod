@@ -11,7 +11,7 @@ using Ichigo.IchigoCode.Powers;
 
 namespace Ichigo.IchigoCode.Relics;
 
-public abstract class SummonRelicBase : IchigoRelic
+public abstract class IchigoRelicBase : IchigoRelic
 {
     [SavedProperty]
     public int StoredReiryoku { get; internal set; }
@@ -104,7 +104,7 @@ public abstract class SummonRelicBase : IchigoRelic
         Flash();
         ReiryokuManager.Reset(Owner);
 
-        await PowerCmd.Apply<BankaiPower>(
+        await PowerCmd.Apply<TrueBankaiPower>(
             choiceContext,
             Owner.Creature,
             BankaiTurns,

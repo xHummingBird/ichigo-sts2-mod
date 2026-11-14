@@ -6,16 +6,16 @@ namespace Ichigo.IchigoCode.Mechanics;
 
 public static class ReiryokuManager
 {
-    private static SummonRelicBase? FindSummonRelic(Player player)
+    private static IchigoRelicBase? FindIchigoRelic(Player player)
     {
         return player.Relics
-            .OfType<SummonRelicBase>()
+            .OfType<IchigoRelicBase>()
             .FirstOrDefault();
     }
 
     public static bool IsInBankai(Player player)
     {
-        return player.Creature.HasPower<BankaiPower>();
+        return player.Creature.HasPower<TrueBankaiPower>();
     }
 
     public static bool CanGainReiryoku(Player player)
@@ -25,12 +25,12 @@ public static class ReiryokuManager
 
     public static int GetReiryoku(Player player)
     {
-        return FindSummonRelic(player)?.StoredReiryoku ?? 0;
+        return FindIchigoRelic(player)?.StoredReiryoku ?? 0;
     }
 
     public static void SetReiryoku(Player player, int value)
     {
-        FindSummonRelic(player)?.SetReiryoku(value);
+        FindIchigoRelic(player)?.SetReiryoku(value);
     }
 
     public static void GainReiryoku(Player player, int amount)
@@ -43,7 +43,7 @@ public static class ReiryokuManager
 
     public static bool IsFull(Player player)
     {
-        SummonRelicBase? relic = FindSummonRelic(player);
+        IchigoRelicBase? relic = FindIchigoRelic(player);
 
         return relic != null && relic.StoredReiryoku >= relic.MaxReiryoku;
     }

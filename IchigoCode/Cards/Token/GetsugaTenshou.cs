@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using Ichigo.IchigoCode.Cards;
+using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Cards.Token;
 
@@ -14,7 +15,7 @@ public sealed class GetsugaTenshou() : IchigoCard(
     CardType.Attack,
     CardRarity.Token,
     TargetType.AnyEnemy
-)
+), IGetsugaTenshouCard
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(4m, ValueProp.Move)
