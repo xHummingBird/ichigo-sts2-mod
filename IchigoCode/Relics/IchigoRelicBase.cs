@@ -36,6 +36,16 @@ public abstract class IchigoRelicBase : IchigoRelic
     public override Task BeforeCombatStart()
     {
         ReiryokuManager.Reset(Owner);
+        
+        var room = Owner.RunState.CurrentRoom;
+
+        if (!room.RoomType.IsCombatRoom())
+            return Task.CompletedTask;
+        
+        BattleTheme.Play(
+            RunManager.Instance.NetService.NetId,
+            Owner.RunState.CurrentActIndex + 1,
+            room.RoomType);
 
         return Task.CompletedTask;
     }

@@ -34,7 +34,7 @@ public class Ichigo : PlaceholderCharacterModel
     public override Color NameColor => Color;
 
     public override CharacterGender Gender =>
-        CharacterGender.Neutral;
+        CharacterGender.Masculine;
 
     public override int StartingHp => 80;
 
@@ -93,15 +93,23 @@ public class Ichigo : PlaceholderCharacterModel
         new(
             EnergyCounterPaths,
             new Color(0.2f, 0.2f, 0.2f),
-            new Color(1f, 1f, 1f));
+            Colors.White);
 
     private string EnergyCounterPaths(int i)
     {
-        return i switch
-        {
-            1 => "charui/big_energy.png".ImagePath(),
-            _ => "charui/blank.png".ImagePath()
-        };
+        string path =
+            i switch
+            {
+                1 => "res://Ichigo/images/charui/big_energy.png",
+                _ => "res://Ichigo/images/charui/blank.png"
+            };
+
+        GD.Print(
+            $"[Ichigo Energy] Index: {i}, " +
+            $"Path: {path}, " +
+            $"Exists: {ResourceLoader.Exists(path)}");
+
+        return path;
     }
 
     public override string CustomIconTexturePath =>

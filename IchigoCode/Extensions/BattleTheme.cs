@@ -28,10 +28,10 @@ public static class BattleTheme
         _vanillaMusicMuted;
 
     private const string VictoryFanfare =
-        "res://Ichigo/music/";
+        "res://Ichigo/music/05. Clear ~ Results Screen.mp3";
 
     private const string VictoryFanfareShort =
-        "res://Ichigo/music/110 Victory!.mp3";
+        "res://Ichigo/music/05. Clear ~ Results Screen.mp3";
     
 
     // ============================================================
@@ -40,26 +40,23 @@ public static class BattleTheme
 
     private static readonly string[] Act1Normal =
     [
-        "res://Ichigo/music/109 Battle.mp3",
-        "res://Ichigo/music/211 Blitz Off.mp3"
+        "res://Ichigo/music/01. Quest.mp3",
+        "res://Ichigo/music/04. Title.mp3"
     ];
 
     private static readonly string[] Act2Normal =
     [
-        "res://Ichigo/music/109 Battle.mp3",
-        "res://Ichigo/music/211 Blitz Off.mp3",
-        "res://Ichigo/music/106 Hurry!!.mp3",
-        "res://Ichigo/music/308 Pursuit.mp3"
+        "res://Ichigo/music/01. Quest.mp3",
+        "res://Ichigo/music/04. Title.mp3",
+        "res://Ichigo/music/07. Co-Op Raid -  PvP Battle.mp3",
     ];
 
     private static readonly string[] Act3Normal =
     [
-        "res://Ichigo/music/109 Battle.mp3",
-        "res://Ichigo/music/211 Blitz Off.mp3",
-        "res://Ichigo/music/106 Hurry!!.mp3",
-        "res://Ichigo/music/308 Pursuit.mp3",
-        "res://Ichigo/music/314 Assault.mp3",
-        "res://Ichigo/music/408 Someday the Dream Will End.mp3"
+        "res://Ichigo/music/01. Quest.mp3",
+        "res://Ichigo/music/04. Title.mp3",
+        "res://Ichigo/music/100. Unknown (Arena Battle).mp3",
+        "res://Ichigo/music/106. REalize (Witch Battle 2).mp3",
     ];
 
     // ============================================================
@@ -68,14 +65,12 @@ public static class BattleTheme
 
     private static readonly string[] Act1Elite =
     [
-        "res://Ichigo/music/106 Hurry!!.mp3"
+        "res://Ichigo/music/07. Co-Op Raid -  PvP Battle.mp3"
     ];
 
     private static readonly string[] Act2Elite =
     [
-        "res://Ichigo/music/106 Hurry!!.mp3",
-        "res://Ichigo/music/116 Enemy Attack.mp3",
-        "res://Ichigo/music/310 Crisis.mp3"
+        "res://Ichigo/music/100. Unknown (Arena Battle).mp3",
     ];
 
     private static readonly string[] Act3Elite =
@@ -91,21 +86,18 @@ public static class BattleTheme
 
     private static readonly string[] Act1Boss =
     [
-        "res://Ichigo/music/116 Enemy Attack.mp3",
-        "res://Ichigo/music/310 Crisis.mp3"
+        "res://Ichigo/music/07. Co-Op Raid -  PvP Battle.mp3",
+        "res://Ichigo/music/106. REalize (Witch Battle 2).mp3"
     ];
 
     private static readonly string[] Act2Boss =
     [
-        "res://Ichigo/music/410 Challenge.mp3",
-        "res://Ichigo/music/415 Seymour Battle.mp3"
+        "res://Ichigo/music/02. Boss Battle.mp3",
     ];
 
     private static readonly string[] Act3Boss =
     [
-        "res://Ichigo/music/105b Other World (Alternate 2).mp3",
-        "res://Ichigo/music/417 Aeon Battle.mp3",
-        "res://Ichigo/music/418 Decisive Battle.mp3"
+        "res://Ichigo/music/90. Holy Light (Quincy Battle).mp3",
     ];
 
     // ============================================================

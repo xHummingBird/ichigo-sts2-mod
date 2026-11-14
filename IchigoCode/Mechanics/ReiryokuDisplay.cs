@@ -38,7 +38,7 @@ public partial class ReiryokuDisplay : Control
      * Positive Y = down
      */
     private static readonly Vector2 LabelPositionOffset =
-        new(0f, 14f);
+        new(0f, 11f);
 
     /*
      * Ichigo has only one display state.
@@ -300,7 +300,7 @@ public partial class ReiryokuDisplay : Control
 
         _reiryokuLabel.AddThemeFontSizeOverride(
             "normal_font_size",
-            24);
+            22);
 
         _reiryokuLabel.AddThemeColorOverride(
             "default_color",

@@ -73,7 +73,7 @@ public class GetsugaTenshou() : IchigoCard(
 
             if (ownerCreature != null && Owner?.Character is Character.Ichigo ichigo)
             {
-                AudioHelper.PlayRandomAttack();
+                AudioHelper.PlayRandomGetsuga();
                 await ichigo.DashTo(ownerCreature, cardPlay.Target, distance: 600f, durationSeconds: 0.1F,
                     overrideAnim: "getsuga");
                 SfxCmd.Play("res://Ichigo/sfx/from_cloud/sword_swing_heavy.wav");
