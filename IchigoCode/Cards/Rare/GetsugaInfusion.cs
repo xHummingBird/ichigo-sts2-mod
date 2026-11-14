@@ -19,6 +19,6 @@ public class GetsugaInfusion() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<GetsugaTenshouCounterPower>(choiceContext, Owner.Creature, 0m, Owner.Creature, this);
+        await PowerCmd.Apply<GetsugaTenshouCounterPower>(choiceContext, Owner.Creature, 1m, Owner.Creature, this);
     }
 }
