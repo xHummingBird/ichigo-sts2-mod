@@ -5,7 +5,6 @@
   "ICHIGO-TRUE_BANKAI_POWER.title": "True Bankai",
   "ICHIGO-TRUE_BANKAI_POWER.description": "[gold]Getsuga Tenshou[/gold] deals double damage and applies [gold]Bleed[/gold]. Attacks deal 3 additional damage to enemies with [gold]Spiritual Fracture[/gold]. You cannot gain Reiryoku.",
   "ICHIGO-TRUE_BANKAI_POWER.smartDescription": "In [blue]True Bankai[/blue] for {Amount} turn(s).",
-
   "ICHIGO-BLEED_POWER.title": "Bleed",
   "ICHIGO-BLEED_POWER.description": "At the start of its turn, loses HP equal to the amount of [gold]Bleed[/gold], then reduces [gold]Bleed[/gold] by 1.",
   "ICHIGO-BLEED_POWER.smartDescription": "At the start of its turn, loses [blue]{Amount}[/blue] HP, then reduces [gold]Bleed[/gold] by 1.",
