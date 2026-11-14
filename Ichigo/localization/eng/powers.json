@@ -1,4 +1,7 @@
 {
+  "ICHIGO-BANKAI_HOS_POWER.title": "Bankai Hos",
+  "ICHIGO-BANKAI_HOS_POWER.description": "Attacks deal bonus damage equal to the percentage of your HP lost. [gold]Getsuga Tenshou[/gold] deals double damage.",
+  "ICHIGO-BANKAI_HOS_POWER.smartDescription": "Attacks deal bonus damage equal to the percentage of your HP lost. [gold]Getsuga Tenshou[/gold] deals double damage.",
   "ICHIGO-GETSUGA_TENSHOU_COUNTER_POWER.title": "Getsuga Count",
   "ICHIGO-GETSUGA_TENSHOU_COUNTER_POWER.description": "[gold]Getsuga Tenshou[/gold] cards played this turn: [blue]{Amount}[/blue]. Gain 2 Strength for each one.",
   "ICHIGO-GETSUGA_TENSHOU_COUNTER_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards played this turn: [blue]{Amount}[/blue]. Gain 2 Strength for each one.",

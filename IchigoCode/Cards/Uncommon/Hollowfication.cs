@@ -32,7 +32,7 @@ public class Hollowfication() : IchigoCard(
                 ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
         }
         await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
-        await CommonActions.Draw(this, choiceContext);
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
 
     }
 

@@ -18,9 +18,14 @@ public static class ReiryokuManager
         return player.Creature.HasPower<TrueBankaiPower>();
     }
 
+    public static bool IsInBankaiHos(Player player)
+    {
+        return player.Creature.HasPower<BankaiHosPower>();
+    }
+
     public static bool CanGainReiryoku(Player player)
     {
-        return !IsInTrueBankai(player);
+        return !IsInTrueBankai(player) && !IsInBankaiHos(player);
     }
 
     public static int GetReiryoku(Player player)
