@@ -98,7 +98,7 @@ public abstract class IchigoRelicBase : IchigoRelic
             return;
 
         // Bankai cannot be stacked.
-        if (ReiryokuManager.IsInBankai(Owner))
+        if (ReiryokuManager.IsInTrueBankai(Owner))
             return;
 
         Flash();
