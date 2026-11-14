@@ -18,6 +18,7 @@
   "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
   "ICHIGO-FINAL_GETSUGA.description": "Play all Getsuga Tenshou in your Exhaust Pile. Upgrade them first if this card is upgraded.",
   "ICHIGO-POWER_FUSION.title": "Power Fusion",
-  "ICHIGO-POWER_FUSION.description": "Discard your hand. Add a Getsuga Tenshou to your hand for each card discarded."
-  
+  "ICHIGO-POWER_FUSION.description": "Discard your hand. Add a Getsuga Tenshou to your hand for each card discarded.",
+  "ICHIGO-GETSUGA_INFUSION.title": "Getsuga Infusion",
+  "ICHIGO-GETSUGA_INFUSION.description": "Each [gold]Getsuga Tenshou[/gold] played this turn grants 2 Strength."
 }
