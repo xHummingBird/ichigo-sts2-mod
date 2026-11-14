@@ -1,14 +1,18 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
+
+using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Powers;
 
 public sealed class SpiritualFracturePower : IchigoPower
 {
-    private const decimal DamageIncrease = 1.25m;
+    private const decimal BaseDamageIncrease = 1.25m;
+    private const decimal BankaiDamageIncrease = 1.5m;
 
     public override PowerType Type => PowerType.Debuff;
 
@@ -25,6 +29,13 @@ public sealed class SpiritualFracturePower : IchigoPower
         if (target != Owner)
             return 1m;
 
-        return props.IsPoweredAttack() ? DamageIncrease : 1m;
+        if (!props.IsPoweredAttack())
+            return 1m;
+
+        Player? attacker = dealer?.Player;
+        if (attacker is not null && ReiryokuManager.IsInTrueBankai(attacker))
+            return BankaiDamageIncrease;
+
+        return BaseDamageIncrease;
     }
 }

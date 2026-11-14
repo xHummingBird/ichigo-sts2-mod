@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Models;
 namespace Ichigo.IchigoCode.Powers;
 
 // Does nothing on its own; at the threshold it is consumed and becomes Spiritual Fracture.
-public sealed class SoulDisruption : IchigoPower
+public sealed class SoulDisruptionPower : IchigoPower
 {
     private const int FractureThreshold = 3;
 

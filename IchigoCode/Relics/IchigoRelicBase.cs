@@ -27,7 +27,7 @@ public abstract class IchigoRelicBase : IchigoRelic
 
     protected virtual int ReiryokuPerGetsugaTenshou => 6;
 
-    protected virtual int BankaiTurns => 3;
+    protected virtual int BankaiHosTurns => 2;
 
     public override bool ShowCounter => true;
 
@@ -51,7 +51,7 @@ public abstract class IchigoRelicBase : IchigoRelic
 
         ReiryokuManager.GainReiryoku(Owner, ReiryokuPerTurn);
 
-        await CheckBankaiReady(new ThrowingPlayerChoiceContext(), null);
+        await CheckBankaiReady(new BlockingPlayerChoiceContext(), null);
     }
 
     public override async Task AfterCardPlayed(
@@ -115,17 +115,28 @@ public abstract class IchigoRelicBase : IchigoRelic
             return;
 
         // Bankai cannot be stacked.
-        if (ReiryokuManager.IsInBankai(Owner))
+        if (ReiryokuManager.IsInTrueBankai(Owner) || ReiryokuManager.IsInBankaiHos(Owner))
+            return;
+
+
+        ICombatState? combatState = Owner.Creature.CombatState;
+        if (combatState is null)
+            return;
+
+        var options = new List<CardModel>
+        {
+            combatState.CreateCard<Ichigo.IchigoCode.Cards.Ancient.BankaiHos>(Owner),
+            combatState.CreateCard<Ichigo.IchigoCode.Cards.Ancient.TrueBankai>(Owner)
+        };
+
+        CardModel? chosen = await CardSelectCmd.FromChooseACardScreen(choiceContext, options, Owner, canSkip: false);
+        if (chosen is null)
             return;
 
         Flash();
         ReiryokuManager.Reset(Owner);
+        CardCmd.ApplyKeyword(chosen, CardKeyword.Exhaust );
+        await CardCmd.AutoPlay(choiceContext, chosen, null);
 
-        await PowerCmd.Apply<TrueBankaiPower>(
-            choiceContext,
-            Owner.Creature,
-            BankaiTurns,
-            Owner.Creature,
-            card);
     }
 }
