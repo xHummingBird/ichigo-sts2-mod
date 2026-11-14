@@ -21,5 +21,8 @@
   "ICHIGO-BRINGER_LIGHT.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "ICHIGO-SONIDO.title": "Sonido",
-  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}."
+  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}.",
+
+  "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
+  "ICHIGO-FINAL_GETSUGA.description": "Play all Getsuga Tenshou in your Exhaust Pile. Upgrade them first if this card is upgraded."
 }
