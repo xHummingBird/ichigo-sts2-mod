@@ -21,5 +21,21 @@
   "ICHIGO-BRINGER_LIGHT.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "ICHIGO-SONIDO.title": "Sonido",
-  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}."
+  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}.",
+
+  "ICHIGO-BANKAI_HOS.title": "Bankai Hos",
+  "ICHIGO-BANKAI_HOS.description": "Enter [gold]Bankai Hos[/gold] for [blue]{Turns}[/blue] turns.",
+  "ICHIGO-TRUE_BANKAI.title": "True Bankai",
+  "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns}[/blue] turns.",
+  "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
+  "ICHIGO-FINAL_GETSUGA.description": "Play all Getsuga Tenshou in your Exhaust Pile. Upgrade them first if this card is upgraded.",
+
+  "ICHIGO-POWER_FUSION.title": "Power Fusion",
+  "ICHIGO-POWER_FUSION.description": "Discard your hand. Add a Getsuga Tenshou to your hand for each card discarded.",
+
+  "ICHIGO-GETSUGA_INFUSION.title": "Getsuga Infusion",
+  "ICHIGO-GETSUGA_INFUSION.description": "Each [gold]Getsuga Tenshou[/gold] played this turn grants 2 Strength.",
+
+  "ICHIGO-HOLLOWFICATION.title": "Hollowfication",
+  "ICHIGO-HOLLOWFICATION.description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()} next turn.\nDraw {Cards:diff()} cards."
 }
