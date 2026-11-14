@@ -77,7 +77,7 @@ public class GetsugaTenshou() : IchigoCard(
                 await ichigo.DashTo(ownerCreature, cardPlay.Target, distance: 600f, durationSeconds: 0.1F,
                     overrideAnim: "getsuga");
                 SfxCmd.Play("res://Ichigo/sfx/from_cloud/sword_swing_heavy.wav");
-                SfxCmd.Play("res://Ichigo/sfx/getsuga_3.wav", 0.8f);
+                SfxCmd.Play("res://Ichigo/sfx/getsuga_3.wav", 0.6f);
                 await Task.Delay(216);
                 ichigo.PlayVfxOnTarget(
                     cardPlay.Target,

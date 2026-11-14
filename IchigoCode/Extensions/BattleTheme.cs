@@ -75,9 +75,9 @@ public static class BattleTheme
 
     private static readonly string[] Act3Elite =
     [
-        "res://Ichigo/music/106 Hurry!!.mp3",
-        "res://Ichigo/music/116 Enemy Attack.mp3",
-        "res://Ichigo/music/310 Crisis.mp3"
+        "res://Ichigo/music/07. Co-Op Raid -  PvP Battle.mp3",
+        "res://Ichigo/music/106. REalize (Witch Battle 2).mp3",
+        "res://Ichigo/music/02. Boss Battle.mp3",
     ];
 
     // ============================================================
