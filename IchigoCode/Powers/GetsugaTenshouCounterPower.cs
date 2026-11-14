@@ -32,7 +32,8 @@ public sealed class GetsugaTenshouCounterPower : IchigoPower
         if (side != Owner.Side)
             return;
 
-        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner, -2m * Amount, Owner, null);
+        // Amount starts at 1 (the Infusion itself), so subtract it to get the plays this turn.
+        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner, -2m * (Amount - 1m), Owner, null);
         await PowerCmd.Remove(this);
     }
 }
