@@ -1,6 +1,8 @@
-﻿namespace Ichigo.IchigoCode.Relics;
+﻿using MegaCrit.Sts2.Core.Entities.Relics;
 
-public class Zangetsu
+namespace Ichigo.IchigoCode.Relics;
+
+public class Zangetsu : IchigoRelicBase
 {
-    
+    public override RelicRarity Rarity => RelicRarity.Starter;
 }

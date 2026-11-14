@@ -24,9 +24,9 @@ public class Hollowfication() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await BankaiPower.CheckTrueBankai.LoseHp(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue, this, cardPlay);
+        await TrueBankaiPower.CheckTrueBankai.LoseHp(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue, this, cardPlay);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
-        await CommonActions.DrawCards(DynamicVars.Cards.IntValue, Owner, cardPlay);
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.IntValue, Owner);
 
     }
 
