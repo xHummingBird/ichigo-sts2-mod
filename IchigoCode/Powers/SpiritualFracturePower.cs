@@ -4,6 +4,8 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
+using Ichigo.IchigoCode.Mechanics;
+
 namespace Ichigo.IchigoCode.Powers;
 
 public sealed class SpiritualFracturePower : IchigoPower
@@ -25,6 +27,11 @@ public sealed class SpiritualFracturePower : IchigoPower
         if (target != Owner)
             return 1m;
 
-        return props.IsPoweredAttack() ? DamageIncrease : 1m;
+        if (props.IsUnpoweredAttack())
+        {
+            if (ReiryokuManager.IsInTrueBankai(Owner))
+                return 1.5m;
+            return 1m;
+        }
     }
 }
