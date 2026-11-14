@@ -1,18 +1,25 @@
 {
   "ICHIGO-DEFEND_ICHIGO.title": "Defend",
-  "ICHIGO-DEFEND_ICHIGO.description": "Gain {Block} Block.",
+  "ICHIGO-DEFEND_ICHIGO.description": "Gain {Block:diff()} [gold]Block[/gold].",
+
   "ICHIGO-GETSUGA_TENSHOU.title": "Getsuga Tenshou",
-  "ICHIGO-GETSUGA_TENSHOU.description": "Deal {Damage} damage. Exhaust.",
+  "ICHIGO-GETSUGA_TENSHOU.description": "Deal {Damage:diff()} damage{TargetType:choose(AllEnemies): to ALL enemies|}.",
+
   "ICHIGO-STRIKE_ICHIGO.title": "Strike",
-  "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage} damage.",
-  "ICHIGO-DUAL_ZENGETSU.title": "Dual Zengetsu",
-  "ICHIGO-DUAL_ZENGETSU.description": "Creates {Cards} upgraded Getsuga Tenshou to your hand.",
+  "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage:diff()} damage.",
+
+  "ICHIGO-DUAL_ZANGETSU.title": "Dual Zangetsu",
+  "ICHIGO-DUAL_ZANGETSU.description": "Add {Cards:diff()} [gold]{IfUpgraded:show:Upgraded Getsuga Tenshou|Getsuga Tenshou}[/gold] into your [gold]Hand[/gold].",
+
   "ICHIGO-FLASH_STEP.title": "Flash Step",
-  "ICHIGO-FLASH_STEP.description": "Add {Cards} Getsuga Tenshou to your hand. Gain {Block} Block.",
+  "ICHIGO-FLASH_STEP.description": "Add {Cards:diff()} [gold]{Cards:plural:Getsuga Tenshou|Getsuga Tenshous}[/gold] into your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
+
   "ICHIGO-SPIRITUAL_AWARENESS.title": "Spiritual Awareness",
-  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Energy} Energy. Gain {Cards} Reiryoku.",
+  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Energy:energyIcons()}.\nGain {Cards:diff()} [gold]Reiryoku[/gold].",
+
   "ICHIGO-BRINGER_LIGHT.title": "Bringer Light",
-  "ICHIGO-BRINGER_LIGHT.description": "Gain {Block} Block. Draw {Cards} cards.",
+  "ICHIGO-BRINGER_LIGHT.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
   "ICHIGO-SONIDO.title": "Sonido",
-  "ICHIGO-SONIDO.description": "Lose {HpLoss} HP. Gain {Energy} Energy. Gain {Block} Block."
+  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}."
 }

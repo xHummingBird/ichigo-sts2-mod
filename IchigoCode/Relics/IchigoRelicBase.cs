@@ -1,3 +1,4 @@
+using Ichigo.IchigoCode.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -8,6 +9,8 @@ using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using Ichigo.IchigoCode.Mechanics;
 using Ichigo.IchigoCode.Powers;
+using MegaCrit.Sts2.Core.Context;
+using MegaCrit.Sts2.Core.Runs;
 
 namespace Ichigo.IchigoCode.Relics;
 
@@ -73,10 +76,24 @@ public abstract class IchigoRelicBase : IchigoRelic
 
         await CheckBankaiReady(choiceContext, card);
     }
+    
 
     public override Task AfterCombatVictory(CombatRoom room)
     {
+        Creature? creature = Owner?.Creature;
+        
         ReiryokuManager.Reset(Owner);
+        
+        if (!LocalContext.IsMe(creature))
+            return Task.CompletedTask;
+        
+        // Only boss combats play the fanfare and delay Tidus's rewards.
+        bool isBoss =
+            room.RoomType == RoomType.Boss;
+        
+        BattleTheme.PlayVictoryFanfare(
+            RunManager.Instance.NetService.NetId,
+            isBoss);
 
         return Task.CompletedTask;
     }

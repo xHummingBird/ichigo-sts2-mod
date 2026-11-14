@@ -1,7 +1,7 @@
 {
   "ICHIGO-TRUE_BANKAI_POWER.title": "True Bankai",
-  "ICHIGO-TRUE_BANKAI_POWER.description": "[gold]Getsuga Tenshou[/gold] deals double damage and applies [gold]Bleed[/gold]. Attacks deal 3 additional damage to enemies with [gold]Spiritual Fracture[/gold]. You cannot gain Reiryoku. Lasts [blue]{Amount}[/blue] turn(s).",
-  "ICHIGO-TRUE_BANKAI_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] deals double damage and applies [gold]Bleed[/gold]. Attacks deal 3 additional damage to enemies with [gold]Spiritual Fracture[/gold]. You cannot gain Reiryoku. Lasts [blue]{Amount}[/blue] turn(s).",
+  "ICHIGO-TRUE_BANKAI_POWER.description": "Lasts 3 turns. [gold]Getsuga Tenshou[/gold] deals double damage and hits ALL enemies. Heal HP lost from cards. Double the damage amplification of [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-TRUE_BANKAI_POWER.smartDescription": "In [blue]True Bankai[/blue] for {Amount} turn(s).",
 
   "ICHIGO-BLEED_POWER.title": "Bleed",
   "ICHIGO-BLEED_POWER.description": "At the start of its turn, loses HP equal to the amount of [gold]Bleed[/gold], then reduces [gold]Bleed[/gold] by 1.",
@@ -10,8 +10,12 @@
   "ICHIGO-SPIRITUAL_FRACTURE_POWER.title": "Spiritual Fracture",
   "ICHIGO-SPIRITUAL_FRACTURE_POWER.description": "Takes 25% more damage from attacks.",
   "ICHIGO-SPIRITUAL_FRACTURE_POWER.smartDescription": "Takes 25% more damage from attacks.",
+  
+  "ICHIGO-SOUL_DISRUPTION.description": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-SOUL_DISRUPTION.smartDescription": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold]. Currently [blue]{Amount}[/blue].",
+  "ICHIGO-SOUL_DISRUPTION.title": "Soul Disruption",
 
-  "ICHIGO-SPIRITUAL_PRESSURE_POWER.title": "Spiritual Pressure",
-  "ICHIGO-SPIRITUAL_PRESSURE_POWER.description": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold].",
-  "ICHIGO-SPIRITUAL_PRESSURE_POWER.smartDescription": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold]. Currently [blue]{Amount}[/blue]."
+  "ICHIGO-BANKAI_HOS_POWER.description": "Lasts 2 turns. [gold]Getsuga Tenshou[/gold] deals double damage and hits ALL enemies. Deal increased damage based on your percentage of HP lost.",
+  "ICHIGO-BANKAI_HOS_POWER.smartDescription": "In [red]Bankai: Horn of Salvation[/gold] for {Amount} turn(s).",
+  "ICHIGO-BANKAI_HOS_POWER.title": "Bankai: Horn of Salvation"
 }

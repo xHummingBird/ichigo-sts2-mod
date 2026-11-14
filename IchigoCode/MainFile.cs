@@ -1,5 +1,8 @@
+using System.Reflection;
+using BaseLib.Config;
 using Godot;
 using HarmonyLib;
+using Ichigo.IchigoCode.Extensions;
 using MegaCrit.Sts2.Core.Modding;
 
 namespace Ichigo.IchigoCode;
@@ -15,7 +18,12 @@ public partial class MainFile : Node
     public static void Initialize()
     {
         Harmony harmony = new(ModId);
-
-        harmony.PatchAll();
+        var assembly = Assembly.GetExecutingAssembly();
+        Godot.Bridge.ScriptManagerBridge.LookupScriptsInAssembly(assembly);
+        harmony.PatchAll(assembly);
+            
+        ModConfigRegistry.Register(
+            ModId,
+            new IchigoConfig());
     }
 }

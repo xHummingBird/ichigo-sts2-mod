@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using Ichigo.IchigoCode.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -18,10 +19,31 @@ public class StrikeIchigo() : IchigoCard(
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6, ValueProp.Move)];
 
-    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, cardPlay, vfx: "vfx/vfx_attack_slash")
+        var ownerCreature = Owner?.Creature;
+
+        if (ownerCreature != null && Owner?.Character is Character.Ichigo ichigo)
+        {
+            AudioHelper.PlayRandomAttack();
+            await ichigo.DashTo(ownerCreature, play.Target, distance: 250f, durationSeconds: 0.2F, overrideAnim: "attack");
+            SfxCmd.Play("res://Ichigo/sfx/from_cloud/sword_swing.wav");
+            SfxCmd.Play("res://Ichigo/sfx/slash_1.wav");
+            await Task.Delay(50);
+            ichigo.PlayVfxOnTarget(
+                play.Target,
+                "res://Ichigo/scenes/vfx.tscn",
+                "hit"
+            );
+            await CommonActions.CardAttack(this, play.Target)
+                .WithHitFx(null)
+                .Execute(choiceContext);
+            await ichigo.Retreat(ownerCreature, duration: 0.2F);
+        }
+        else  await CommonActions.CardAttack(this, play.Target)
+            .WithHitFx(null, "res://Ichigo/sfx/slash_1.wav")
             .Execute(choiceContext);
+        
     }
     protected override void OnUpgrade()
     {

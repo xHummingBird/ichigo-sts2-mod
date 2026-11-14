@@ -24,8 +24,11 @@ public class FlashStep() : IchigoCard(
     {
 		for (int i = 0; i < DynamicVars.Cards.IntValue; i++)
 		{
-			CardModel token = CombatState!.CreateCard<GetsugaTenshou>(Owner);
-			await CardPileCmd.AddGeneratedCardToCombat(token, PileType.Hand, Owner);
+            CardModel? getsuga =
+                await GetsugaTenshou.CreateInHand(
+                    Owner,
+                    CombatState!,
+                    Owner);
 			await Cmd.Wait(0.25f);
 		}
         await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
