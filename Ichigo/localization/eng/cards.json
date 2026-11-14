@@ -7,6 +7,7 @@
   "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage} damage.",
   "ICHIGO-DUAL_ZENGETSU.title": "Dual Zengetsu",
   "ICHIGO-DUAL_ZENGETSU.description": "Creates {Cards} upgraded Getsuga Tenshou to your hand.",
+<<<<<<< HEAD
   "ICHIGO-FLASH_STEP.title": "Flash Step",
   "ICHIGO-FLASH_STEP.description": "Add {Cards} Getsuga Tenshou to your hand. Gain {Block} Block.",
   "ICHIGO-SPIRITUAL_AWARENESS.title": "Spiritual Awareness",
@@ -15,4 +16,9 @@
   "ICHIGO-BRINGER_LIGHT.description": "Gain {Block} Block. Draw {Cards} cards.",
   "ICHIGO-SONIDO.title": "Sonido",
   "ICHIGO-SONIDO.description": "Lose {HpLoss} HP. Gain {Energy} Energy. Gain {Block} Block."
+=======
+  "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
+  "ICHIGO-FINAL_GETSUGA.description": "Play all Getsuga Tenshou in your Exhaust Pile. Upgrade them first if this card is upgraded."
+  
+>>>>>>> 603714c (feat: final getsuga card)
 }
