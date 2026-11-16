@@ -51,5 +51,8 @@
   "ICHIGO-POWER_OF_VISORED.description": "Lose {HpLoss:diff()} HP.\nAdd {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
 
   "ICHIGO-IRON_BODY.title": "Iron Body",
-  "ICHIGO-IRON_BODY.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
+  "ICHIGO-IRON_BODY.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-SPIRIT_SURGE.title": "Spirit Surge",
+  "ICHIGO-SPIRIT_SURGE.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {Cards:diff()} [gold]Spiritual Fracture[/gold] to an enemy."
 }
