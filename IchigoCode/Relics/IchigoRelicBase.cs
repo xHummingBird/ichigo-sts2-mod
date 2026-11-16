@@ -39,7 +39,7 @@ public abstract class IchigoRelicBase : IchigoRelic
         
         var room = Owner.RunState.CurrentRoom;
 
-        if (!room.RoomType.IsCombatRoom())
+        if (room == null || !room.RoomType.IsCombatRoom())
             return Task.CompletedTask;
         
         BattleTheme.Play(
@@ -91,8 +91,9 @@ public abstract class IchigoRelicBase : IchigoRelic
     public override Task AfterCombatVictory(CombatRoom room)
     {
         Creature? creature = Owner?.Creature;
-        
-        ReiryokuManager.Reset(Owner);
+
+        if (Owner != null)
+            ReiryokuManager.Reset(Owner);
         
         if (!LocalContext.IsMe(creature))
             return Task.CompletedTask;

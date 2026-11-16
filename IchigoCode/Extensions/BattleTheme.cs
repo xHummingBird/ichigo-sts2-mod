@@ -141,11 +141,11 @@ public static class BattleTheme
 
         if (!string.IsNullOrEmpty(currentTrack))
         {
-            proxy.Call(
+            proxy?.Call(
                 "update_music",
                 currentTrack);
 
-            proxy.Call(
+            proxy?.Call(
                 "update_global_parameter",
                 "Progress",
                 7);
