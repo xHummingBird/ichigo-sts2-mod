@@ -9,7 +9,6 @@ using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.ValueProps;
 using Ichigo.IchigoCode.Cards;
 using Ichigo.IchigoCode.Cards.Token;
-using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
 
@@ -26,7 +25,15 @@ public class PowerFusion() : IchigoCard(
         int handSize = enumerable.Count();
         await CardCmd.Discard(choiceContext, enumerable);
 		await Cmd.CustomScaledWait(0f, 0.25f);
-		await GetsugaTenshouTokens.AddToHand(CombatState!, Owner, handSize);
+        for (int i = 0; i < handSize; i++)
+        {
+            await GetsugaTenshou.CreateInHand(
+                Owner,
+                CombatState!,
+                Owner);
+
+            await Cmd.Wait(0.25f);
+        }
     }
     
     protected override void OnUpgrade()

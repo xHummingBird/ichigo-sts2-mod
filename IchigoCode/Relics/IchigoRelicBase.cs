@@ -29,6 +29,8 @@ public abstract class IchigoRelicBase : IchigoRelic
 
     protected virtual int BankaiHosTurns => 2;
 
+    protected virtual int HealPerCombatVictory => 5;
+
     public override bool ShowCounter => true;
 
     public override int DisplayAmount => StoredReiryoku;
@@ -39,7 +41,7 @@ public abstract class IchigoRelicBase : IchigoRelic
         
         var room = Owner.RunState.CurrentRoom;
 
-        if (!room.RoomType.IsCombatRoom())
+        if (room == null || !room.RoomType.IsCombatRoom())
             return Task.CompletedTask;
         
         BattleTheme.Play(
@@ -88,15 +90,20 @@ public abstract class IchigoRelicBase : IchigoRelic
     }
     
 
-    public override Task AfterCombatVictory(CombatRoom room)
+    public override async Task AfterCombatVictory(CombatRoom room)
     {
         Creature? creature = Owner?.Creature;
         
-        ReiryokuManager.Reset(Owner);
+        Flash();
+        await CreatureCmd.Heal(base.Owner.Creature, HealPerCombatVictory);
+
+        if (Owner != null)
+            ReiryokuManager.Reset(Owner);
         
         if (!LocalContext.IsMe(creature))
-            return Task.CompletedTask;
+            return;
         
+
         // Only boss combats play the fanfare and delay Tidus's rewards.
         bool isBoss =
             room.RoomType == RoomType.Boss;
@@ -105,7 +112,7 @@ public abstract class IchigoRelicBase : IchigoRelic
             RunManager.Instance.NetService.NetId,
             isBoss);
 
-        return Task.CompletedTask;
+        return;
     }
 
     internal void SetReiryoku(int value)

@@ -26,21 +26,21 @@ public class StrikeIchigo() : IchigoCard(
         if (ownerCreature != null && Owner?.Character is Character.Ichigo ichigo)
         {
             AudioHelper.PlayRandomAttack();
-            await ichigo.DashTo(ownerCreature, play.Target, distance: 250f, durationSeconds: 0.2F, overrideAnim: "attack");
+            await ichigo.DashTo(ownerCreature, play.Target!, distance: 250f, durationSeconds: 0.2F, overrideAnim: "attack");
             SfxCmd.Play("res://Ichigo/sfx/from_cloud/sword_swing.wav");
             SfxCmd.Play("res://Ichigo/sfx/slash_1.wav");
             await Task.Delay(50);
             ichigo.PlayVfxOnTarget(
-                play.Target,
+                play.Target!,
                 "res://Ichigo/scenes/vfx.tscn",
                 "hit"
             );
-            await CommonActions.CardAttack(this, play.Target)
+            await CommonActions.CardAttack(this, play)
                 .WithHitFx(null)
                 .Execute(choiceContext);
             await ichigo.Retreat(ownerCreature, duration: 0.2F);
         }
-        else  await CommonActions.CardAttack(this, play.Target)
+        else  await CommonActions.CardAttack(this, play)
             .WithHitFx(null, "res://Ichigo/sfx/slash_1.wav")
             .Execute(choiceContext);
         

@@ -61,7 +61,7 @@ public class GetsugaTenshou() : IchigoCard(
         {
             attackCommand =
                 attackCommand.TargetingAllOpponents(
-                    CombatState);
+                    CombatState!);
         }
         else
         {
@@ -93,7 +93,7 @@ public class GetsugaTenshou() : IchigoCard(
             else await attackCommand.Execute(
                 choiceContext);
             if (!cardPlay.Target.HasPower<SpiritualFracturePower>())
-                await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, cardPlay.Target, 1, Owner.Creature, this);
+                await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, cardPlay.Target, 1, Owner!.Creature, this);
         }
     }
 

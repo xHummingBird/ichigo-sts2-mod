@@ -31,7 +31,7 @@ public class DualZangetsu() : IchigoCard(
                     CombatState!,
                     Owner);
 
-            if (getsuga != null & IsUpgraded)
+            if (getsuga != null && IsUpgraded)
                 CardCmd.Upgrade(getsuga);
 
             await Cmd.Wait(0.25f);

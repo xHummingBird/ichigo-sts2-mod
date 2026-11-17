@@ -48,5 +48,17 @@
   "ICHIGO-HYPER_SPEED_COMBAT.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Bankai[/gold]: Gain {Block:diff()} Block next turn.",
 
   "ICHIGO-POWER_OF_VISORED.title": "Power of Visored",
-  "ICHIGO-POWER_OF_VISORED.description": "Lose {HpLoss:diff()} HP.\nAdd {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
+  "ICHIGO-POWER_OF_VISORED.description": "Lose {HpLoss:diff()} HP.\nAdd {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-IRON_BODY.title": "Iron Body",
+  "ICHIGO-IRON_BODY.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-SPIRIT_SURGE.title": "Spirit Surge",
+  "ICHIGO-SPIRIT_SURGE.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {Cards:diff()} [gold]Spiritual Fracture[/gold] to an enemy.",
+
+  "ICHIGO-BERSERK.title": "Berserk",
+  "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\n[gold]Attack[/gold] cards in your [gold]Hand[/gold] become [gold]Free[/gold] this turn.",
+
+  "ICHIGO-TRUE_ZANGETSU.title": "True Zangetsu",
+  "ICHIGO-TRUE_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]{IfUpgraded:show:, upgraded|}. All [gold]Getsuga Tenshou[/gold] in your [gold]Hand[/gold] cost 0 this combat."
 }
