@@ -93,6 +93,9 @@ public abstract class IchigoRelicBase : IchigoRelic
     public override async Task AfterCombatVictory(CombatRoom room)
     {
         Creature? creature = Owner?.Creature;
+        
+        Flash();
+        await CreatureCmd.Heal(base.Owner.Creature, HealPerCombatVictory);
 
         if (Owner != null)
             ReiryokuManager.Reset(Owner);
@@ -100,7 +103,7 @@ public abstract class IchigoRelicBase : IchigoRelic
         if (!LocalContext.IsMe(creature))
             return;
         
-        await CreatureCmd.Heal(base.Owner.Creature, HealPerCombatVictory);
+
         // Only boss combats play the fanfare and delay Tidus's rewards.
         bool isBoss =
             room.RoomType == RoomType.Boss;
