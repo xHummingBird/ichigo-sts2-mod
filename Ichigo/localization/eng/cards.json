@@ -63,5 +63,8 @@
   "ICHIGO-TRUE_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]{IfUpgraded:show:, upgraded|}. All [gold]Getsuga Tenshou[/gold] in your [gold]Hand[/gold] cost 0 this combat.",
 
   "ICHIGO-MASTER_SWORDSMAN.title": "Master Swordsman",
-  "ICHIGO-MASTER_SWORDSMAN.description": "Draw {Cards:diff()} {Cards:plural:card|cards}."
+  "ICHIGO-MASTER_SWORDSMAN.description": "Draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "ICHIGO-CHANNEL.title": "Channel",
+  "ICHIGO-CHANNEL.description": "Gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
 }
