@@ -20,13 +20,16 @@ public class InnerHollow() : IchigoCard(
     0,
     CardType.Skill,
     CardRarity.Rare,
-    TargetType.Self
-)
+    TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => 
     [
         new HpLossVar(2m),
         new DynamicVar("Strength", 1)
+    ];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromPower<TrueBankaiPower>()
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
