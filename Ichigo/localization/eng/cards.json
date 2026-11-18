@@ -60,5 +60,8 @@
   "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\n[gold]Attack[/gold] cards in your [gold]Hand[/gold] become [gold]Free[/gold] this turn.",
 
   "ICHIGO-TRUE_ZANGETSU.title": "True Zangetsu",
-  "ICHIGO-TRUE_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]{IfUpgraded:show:, upgraded|}. All [gold]Getsuga Tenshou[/gold] in your [gold]Hand[/gold] cost 0 this combat."
+  "ICHIGO-TRUE_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]{IfUpgraded:show:, upgraded|}. All [gold]Getsuga Tenshou[/gold] in your [gold]Hand[/gold] cost 0 this combat.",
+
+  "ICHIGO-MASTER_SWORDSMAN.title": "Master Swordsman",
+  "ICHIGO-MASTER_SWORDSMAN.description": "Draw {Cards:diff()} {Cards:plural:card|cards}."
 }
