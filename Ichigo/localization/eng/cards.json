@@ -36,7 +36,7 @@
   "ICHIGO-POWER_FUSION.description": "Discard your [gold]Hand[/gold].\nAdd a [gold]Getsuga Tenshou[/gold] into your Hand for each card discarded.",
 
   "ICHIGO-GETSUGA_INFUSION.title": "Getsuga Infusion",
-  "ICHIGO-GETSUGA_INFUSION.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] this turn, gain 2 Strength.",
+  "ICHIGO-GETSUGA_INFUSION.description": "Whenever you play a [gold]Getsuga[/gold] card this turn, gain 1 Strength.",
 
   "ICHIGO-HOLLOWFICATION.title": "Hollowfication",
   "ICHIGO-HOLLOWFICATION.description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
@@ -58,6 +58,9 @@
 
   "ICHIGO-BERSERK.title": "Berserk",
   "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\n[gold]Attack[/gold] cards in your [gold]Hand[/gold] become [gold]Free[/gold] this turn.",
+
+  "ICHIGO-INNER_HOLLOW.title": "Inner Hollow",
+  "ICHIGO-INNER_HOLLOW.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\nGain {Strength:diff()} [gold]Strength[/gold].",
 
   "ICHIGO-TRUE_ZANGETSU.title": "True Zangetsu",
   "ICHIGO-TRUE_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]{IfUpgraded:show:, upgraded|}. All [gold]Getsuga Tenshou[/gold] in your [gold]Hand[/gold] cost 0 this combat.",
