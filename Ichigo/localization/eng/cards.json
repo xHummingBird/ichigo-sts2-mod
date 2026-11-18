@@ -15,7 +15,10 @@
   "ICHIGO-FLASH_STEP.description": "Add {Cards:diff()} [gold]{Cards:plural:Getsuga Tenshou|Getsuga Tenshous}[/gold] into your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
 
   "ICHIGO-SPIRITUAL_AWARENESS.title": "Spiritual Awareness",
-  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Energy:energyIcons()}.\nGain {Cards:diff()} [gold]Reiryoku[/gold].",
+  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-ENERGY_MANIPULATION.title": "Energy Manipulation",
+  "ICHIGO-ENERGY_MANIPULATION.description": "Gain {Energy:energyIcons()}.\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
 
   "ICHIGO-BRINGER_LIGHT.title": "Bringer Light",
   "ICHIGO-BRINGER_LIGHT.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
