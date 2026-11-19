@@ -21,8 +21,8 @@ public class SpiritualAwareness() : IchigoCard(
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => 
         [
-            new EnergyVar(1), 
-            new DynamicVar("Reiryoku", 8)
+            new BlockVar(7, ValueProp.Move), 
+            new DynamicVar("Reiryoku", 7)
         ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
@@ -31,13 +31,13 @@ public class SpiritualAwareness() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
+		await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
         ReiryokuManager.GainReiryoku(Owner, DynamicVars["Reiryoku"].IntValue);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Energy.UpgradeValueBy(1m);
-        DynamicVars["Reiryoku"].UpgradeValueBy(4m);
+        DynamicVars.Block.UpgradeValueBy(3m);
+        DynamicVars["Reiryoku"].UpgradeValueBy(3m);
     }
 }

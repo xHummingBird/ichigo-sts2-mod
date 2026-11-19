@@ -35,10 +35,14 @@ public sealed class SpiritualFracturePower : IchigoPower
             return 1m;
 
         Player? attacker = dealer?.Player;
-        if (attacker is not null && ReiryokuManager.IsInTrueBankai(attacker))
-            return BankaiDamageIncrease;
+        decimal increase = attacker is not null && ReiryokuManager.IsInTrueBankai(attacker)
+            ? BankaiDamageIncrease
+            : BaseDamageIncrease;
 
-        return BaseDamageIncrease;
+        if (dealer is not null && dealer.HasPower<PowerNullificationPower>())
+            increase = 1m + (increase - 1m) * 2m;
+
+        return increase;
     }
 
     public override async Task AfterApplied(

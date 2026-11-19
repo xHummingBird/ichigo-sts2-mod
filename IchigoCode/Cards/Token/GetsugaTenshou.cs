@@ -19,7 +19,7 @@ public class GetsugaTenshou() : IchigoCard(
     0,
     CardType.Attack,
     CardRarity.Token,
-    TargetType.AnyEnemy), IGetsugaTenshouCard
+    TargetType.AnyEnemy), IGetsugaTenshouCard, IGetsugaCard
 {
     public override TargetType TargetType =>
         IsInBankai

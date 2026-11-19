@@ -15,7 +15,10 @@
   "ICHIGO-FLASH_STEP.description": "Add {Cards:diff()} [gold]{Cards:plural:Getsuga Tenshou|Getsuga Tenshous}[/gold] into your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
 
   "ICHIGO-SPIRITUAL_AWARENESS.title": "Spiritual Awareness",
-  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Energy:energyIcons()}.\nGain {Cards:diff()} [gold]Reiryoku[/gold].",
+  "ICHIGO-SPIRITUAL_AWARENESS.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-ENERGY_MANIPULATION.title": "Energy Manipulation",
+  "ICHIGO-ENERGY_MANIPULATION.description": "Gain {Energy:energyIcons()}.\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
 
   "ICHIGO-BRINGER_LIGHT.title": "Bringer Light",
   "ICHIGO-BRINGER_LIGHT.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
@@ -36,7 +39,7 @@
   "ICHIGO-POWER_FUSION.description": "Discard your [gold]Hand[/gold].\nAdd a [gold]Getsuga Tenshou[/gold] into your Hand for each card discarded.",
 
   "ICHIGO-GETSUGA_INFUSION.title": "Getsuga Infusion",
-  "ICHIGO-GETSUGA_INFUSION.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] this turn, gain 2 Strength.",
+  "ICHIGO-GETSUGA_INFUSION.description": "Whenever you play a [gold]Getsuga[/gold] card this turn, gain 1 Strength.",
 
   "ICHIGO-HOLLOWFICATION.title": "Hollowfication",
   "ICHIGO-HOLLOWFICATION.description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
@@ -59,6 +62,18 @@
   "ICHIGO-BERSERK.title": "Berserk",
   "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\n[gold]Attack[/gold] cards in your [gold]Hand[/gold] become [gold]Free[/gold] this turn.",
 
+  "ICHIGO-INNER_HOLLOW.title": "Inner Hollow",
+  "ICHIGO-INNER_HOLLOW.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\nGain {Strength:diff()} [gold]Strength[/gold].",
+
+  "ICHIGO-POWER_NULLIFICATION.title": "Power Nullification",
+  "ICHIGO-POWER_NULLIFICATION.description": "Double the bonus damage from [gold]Spiritual Fracture[/gold] on all enemies for {Turns:diff()} {Turns:plural:turn|turns}.",
+
   "ICHIGO-TRUE_ZANGETSU.title": "True Zangetsu",
-  "ICHIGO-TRUE_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]{IfUpgraded:show:, upgraded|}. All [gold]Getsuga Tenshou[/gold] in your [gold]Hand[/gold] cost 0 this combat."
+  "ICHIGO-TRUE_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]{IfUpgraded:show:, upgraded|}. All [gold]Getsuga Tenshou[/gold] in your [gold]Hand[/gold] cost 0 this combat.",
+
+  "ICHIGO-MASTER_SWORDSMAN.title": "Master Swordsman",
+  "ICHIGO-MASTER_SWORDSMAN.description": "Draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "ICHIGO-CHANNEL.title": "Channel",
+  "ICHIGO-CHANNEL.description": "Gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
 }
