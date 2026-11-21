@@ -81,5 +81,8 @@
   "ICHIGO-BLOOD_CHAINS.description": "Gain [gold]Block[/gold] for each [gold]Bleed[/gold] on living enemies. ({CalculatedBlock:diff()})",
 
   "ICHIGO-PINPOINT_SLASH.title": "Pinpoint Slash",
-  "ICHIGO-PINPOINT_SLASH.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] to an enemy."
+  "ICHIGO-PINPOINT_SLASH.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] to an enemy.",
+
+  "ICHIGO-PRECISE_CUT.title": "Precise Cut",
+  "ICHIGO-PRECISE_CUT.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] plus 1 for each [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold] to an enemy."
 }
