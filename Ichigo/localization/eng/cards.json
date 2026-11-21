@@ -84,5 +84,8 @@
   "ICHIGO-PINPOINT_SLASH.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] to an enemy.",
 
   "ICHIGO-PRECISE_CUT.title": "Precise Cut",
-  "ICHIGO-PRECISE_CUT.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] plus 1 for each [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold] to an enemy."
+  "ICHIGO-PRECISE_CUT.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] plus 1 for each [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold] to an enemy.",
+
+  "ICHIGO-AURA_SHIELD.title": "Aura Shield",
+  "ICHIGO-AURA_SHIELD.description": "Gain 4 [gold]Block[/gold]. Gain {GetsugaExhaustMultiplier:diff()} additional [gold]Block[/gold] for each Getsuga Tenshou card in your [gold]Exhaust[/gold] pile."
 }
