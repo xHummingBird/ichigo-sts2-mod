@@ -75,5 +75,8 @@
   "ICHIGO-MASTER_SWORDSMAN.description": "Draw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "ICHIGO-CHANNEL.title": "Channel",
-  "ICHIGO-CHANNEL.description": "Gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
+  "ICHIGO-CHANNEL.description": "Gain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-PINPOINT_SLASH.title": "Pinpoint Slash",
+  "ICHIGO-PINPOINT_SLASH.description": "Apply {BleedPower:diff()} [gold]Bleed[/gold] to an enemy."
 }
