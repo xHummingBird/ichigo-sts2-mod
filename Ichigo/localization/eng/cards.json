@@ -33,7 +33,7 @@
   "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns:diff()}[/blue] turns.",
 
   "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
-  "ICHIGO-FINAL_GETSUGA.description": "Play all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold]{IfUpgraded:show:, upgrading them first|}.",
+  "ICHIGO-FINAL_GETSUGA.description": "{IfUpgraded:show:[gold]Upgrade[/gold] and play|Play} all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold].",
 
   "ICHIGO-POWER_FUSION.title": "Power Fusion",
   "ICHIGO-POWER_FUSION.description": "Discard your [gold]Hand[/gold].\nAdd a [gold]Getsuga Tenshou[/gold] into your Hand for each card discarded.",
