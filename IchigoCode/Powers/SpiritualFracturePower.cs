@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
@@ -52,4 +53,16 @@ public sealed class SpiritualFracturePower : IchigoPower
         if (Owner.HasPower<SoulDisruptionPower>())
             await PowerCmd.Remove(Owner.GetPower<SoulDisruptionPower>());
     }
+
+    public override async Task AfterSideTurnStart(
+        CombatSide side,
+        IReadOnlyList<Creature> participants,
+        ICombatState combatState)
+    {
+        if (!participants.Contains(Owner))
+            return;
+        
+        await PowerCmd.Decrement(this);
+    }
+
 }

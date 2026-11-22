@@ -62,6 +62,7 @@ public class GetsugaTenshou() : IchigoCard(
             attackCommand =
                 attackCommand.TargetingAllOpponents(
                     CombatState!);
+            await attackCommand.Execute(choiceContext);
         }
         else
         {

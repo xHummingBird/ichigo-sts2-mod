@@ -23,12 +23,16 @@ public class PowerNullification() : IchigoCard(
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DynamicVar("Turns", 3)
+        new DynamicVar("Turns", 3),
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<PowerNullificationPower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);
+    }
+    protected override void OnUpgrade()
+    {
+        AddKeyword(CardKeyword.Retain);
     }
 }
 
