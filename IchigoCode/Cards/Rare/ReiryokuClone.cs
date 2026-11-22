@@ -15,7 +15,7 @@ using Ichigo.IchigoCode.Powers;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
 
-public class ReiatsuClone() : IchigoCard(
+public class ReiryokuClone() : IchigoCard(
     1,
     CardType.Skill,
     CardRarity.Rare,
@@ -28,7 +28,7 @@ public class ReiatsuClone() : IchigoCard(
     ];
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<ReiatsuClonePower>()
+        HoverTipFactory.FromPower<ReiryokuClonePower>()
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -41,7 +41,7 @@ public class ReiatsuClone() : IchigoCard(
         {
             counter += 1;
         }
-        await PowerCmd.Apply<ReiatsuClonePower>(choiceContext, Owner.Creature, counter, Owner.Creature, this);
+        await PowerCmd.Apply<ReiryokuClonePower>(choiceContext, Owner.Creature, counter, Owner.Creature, this);
 
     }
 

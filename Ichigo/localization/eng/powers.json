@@ -35,7 +35,7 @@
   "ICHIGO-DEFENSE_POWER.description": "Takes 50% less damage from attacks by enemies with [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold].",
   "ICHIGO-DEFENSE_POWER.smartDescription": "Takes 50% less damage from attacks by enemies with [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold] for [blue]{Amount}[/blue] turn(s).",
 
-  "ICHIGO-REIATSU_CLONE_POWER.title": "Reiatsu Clone",
-  "ICHIGO-REIATSU_CLONE_POWER.description": "Your next [gold]Attack[/gold] is played {Amount} additional time(s).",
-  "ICHIGO-REIATSU_CLONE_POWER.smartDescription": "Your next [gold]Attack[/gold] is played [blue]{Amount}[/blue] additional time(s)."
+  "ICHIGO-REIRYOKU_CLONE_POWER.title": "Reiryoku Clone",
+  "ICHIGO-REIRYOKU_CLONE_POWER.description": "Your next [gold]Attack[/gold] is played {Amount} additional time(s).",
+  "ICHIGO-REIRYOKU_CLONE_POWER.smartDescription": "Your next [gold]Attack[/gold] is played [blue]{Amount}[/blue] additional time(s)."
 }
