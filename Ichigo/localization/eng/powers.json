@@ -37,5 +37,9 @@
 
   "ICHIGO-REIRYOKU_CLONE_POWER.title": "Reiryoku Clone",
   "ICHIGO-REIRYOKU_CLONE_POWER.description": "Your next [gold]Attack[/gold] is played {Amount} additional time(s).",
-  "ICHIGO-REIRYOKU_CLONE_POWER.smartDescription": "Your next [gold]Attack[/gold] is played [blue]{Amount}[/blue] additional time(s)."
+  "ICHIGO-REIRYOKU_CLONE_POWER.smartDescription": "Your next [gold]Attack[/gold] is played [blue]{Amount}[/blue] additional time(s).",
+
+  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.title": "Substitute Shinigami",
+  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.description": "Whenever you play a card costing 2 or more Energy, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.smartDescription": "Whenever you play a card costing [blue]2[/blue] or more Energy, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]."
 }

@@ -98,6 +98,9 @@
   "ICHIGO-REIATSU_CLONE.title": "Reiatsu Clone",
   "ICHIGO-REIATSU_CLONE.description": "Gain {Counter:diff()} [gold]Reiryoku Clone[/gold] (1 more while in [gold]Bankai[/gold]).",
 
+  "ICHIGO-SUBSTITUTE_SHINIGAMI.title": "Substitute Shinigami",
+  "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Gain {Turns:diff()} [gold]Substitute Shinigami[/gold].",
+
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.title": "Bankai: Tensai Zangetsu",
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. If you are not in [gold]Bankai[/gold], gain {Reiryoku:diff()} [gold]Reiryoku[/gold]. If you are, add 2 turns to your current [gold]Bankai[/gold]."
 }
