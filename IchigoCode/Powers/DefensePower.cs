@@ -32,14 +32,12 @@ public sealed class DefensePower : IchigoPower
     {
         bool hasDebuff = CombatState?.Enemies.Any(e => e.IsAlive
             && (e.HasPower<BleedPower>() || e.HasPower<SpiritualFracturePower>())) == true;
-            
+
         if (target != Owner)
             return 1m;
 
         if (!props.IsPoweredAttack())
             return 1m;
-
-
 
         if (!hasDebuff)
             return 1m;
