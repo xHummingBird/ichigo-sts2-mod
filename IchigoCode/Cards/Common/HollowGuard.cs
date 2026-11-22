@@ -15,7 +15,7 @@ using Ichigo.IchigoCode.Powers;
 namespace Ichigo.IchigoCode.Cards.Common;
 
 public class HollowGuard() : IchigoCard(
-    0,
+    1,
     CardType.Skill,
     CardRarity.Common,
     TargetType.Self
