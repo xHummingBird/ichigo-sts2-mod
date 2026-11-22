@@ -15,7 +15,7 @@ using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
 
-public class ReiryokuBarrier() : IchigoCard(
+public class ReiatsuBarrier() : IchigoCard(
     1,
     CardType.Skill,
     CardRarity.Uncommon,

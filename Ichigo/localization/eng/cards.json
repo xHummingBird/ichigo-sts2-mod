@@ -89,14 +89,14 @@
   "ICHIGO-AURA_SHIELD.title": "Aura Shield",
   "ICHIGO-AURA_SHIELD.description": "Gain 4 [gold]Block[/gold]. Gain {GetsugaExhaustMultiplier:diff()} additional [gold]Block[/gold] for each Getsuga Tenshou card in your [gold]Exhaust[/gold] pile.",
 
-  "ICHIGO-REIRYOKU_BARRIER.title": "Reiryoku Barrier",
-  "ICHIGO-REIRYOKU_BARRIER.description": "If an enemy has [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold], gain [gold]Defense[/gold] for {Turns:diff()} {Turns:plural:turn|turns}.",
+  "ICHIGO-REIATSU_BARRIER.title": "Reiatsu Barrier",
+  "ICHIGO-REIATSU_BARRIER.description": "If an enemy has [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold], gain [gold]Defense[/gold] for {Turns:diff()} {Turns:plural:turn|turns}.",
 
   "ICHIGO-HOLLOW_GUARD.title": "Hollow Guard",
   "ICHIGO-HOLLOW_GUARD.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
 
-  "ICHIGO-REIRYOKU_CLONE.title": "Reiryoku Clone",
-  "ICHIGO-REIRYOKU_CLONE.description": "Gain {Counter:diff()} [gold]Reiryoku Clone[/gold] (1 more while in [gold]Bankai[/gold]).",
+  "ICHIGO-REIATSU_CLONE.title": "Reiatsu Clone",
+  "ICHIGO-REIATSU_CLONE.description": "Gain {Counter:diff()} [gold]Reiryoku Clone[/gold] (1 more while in [gold]Bankai[/gold]).",
 
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.title": "Bankai: Tensai Zangetsu",
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. If you are not in [gold]Bankai[/gold], gain {Reiryoku:diff()} [gold]Reiryoku[/gold]. If you are, add 2 turns to your current [gold]Bankai[/gold]."

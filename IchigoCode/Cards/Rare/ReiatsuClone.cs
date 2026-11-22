@@ -15,7 +15,7 @@ using Ichigo.IchigoCode.Powers;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
 
-public class ReiryokuClone() : IchigoCard(
+public class ReiatsuClone() : IchigoCard(
     1,
     CardType.Skill,
     CardRarity.Rare,
