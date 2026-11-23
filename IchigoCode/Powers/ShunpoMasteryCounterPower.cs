@@ -12,26 +12,17 @@ using MegaCrit.Sts2.Core.Commands;
 
 namespace Ichigo.IchigoCode.Powers;
 
-// Amount is the damage dealt to all enemies each time the owner loses HP; lasts the entire battle.
-public sealed class InnerHollowPower : IchigoPower
+public sealed class ShunpoMasteryCounterPower : IchigoPower
 {
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task AfterDamageReceived(
-        PlayerChoiceContext choiceContext,
-        Creature target,
-        DamageResult result,
-        ValueProp props,
-        Creature? dealer,
-        CardModel? cardSource)
+    public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (target != Owner || result.UnblockedDamage <= 0)
+        if (card.Owner.Creature != Owner || card is not IGetsugaCard)
             return;
-
         Flash();
-        await CreatureCmd.Damage(choiceContext, Owner.CombatState!.HittableEnemies, Amount,
-            ValueProp.Unpowered, Owner);
+        await CreatureCmd.GainBlock(Owner, DynamicVars.Block, cardPlay);
     }
 }

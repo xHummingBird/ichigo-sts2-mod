@@ -62,11 +62,11 @@
   "ICHIGO-BERSERK.title": "Berserk",
   "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\n[gold]Attack[/gold] cards in your [gold]Hand[/gold] become [gold]Free[/gold] this turn.",
 
-  "ICHIGO-ENHANCED_REFLEXES.title": "Enhanced Reflexes",
-  "ICHIGO-ENHANCED_REFLEXES.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nGain {Strength:diff()} [gold]Strength[/gold].",
-
   "ICHIGO-INNER_HOLLOW.title": "Inner Hollow",
-  "ICHIGO-INNER_HOLLOW.description": "Whenever you lose HP, deal {Damage:diff()} damage to ALL enemies.",
+  "ICHIGO-INNER_HOLLOW.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nGain {Strength:diff()} [gold]Strength[/gold].",
+
+  "ICHIGO-ENHANCED_REFLEXES.title": "Enhanced Reflexes",
+  "ICHIGO-ENHANCED_REFLEXES.description": "Whenever you lose HP, deal {Damage:diff()} damage to ALL enemies.",
 
   "ICHIGO-POWER_NULLIFICATION.title": "Power Nullification",
   "ICHIGO-POWER_NULLIFICATION.description": "Your attacks deal double the bonus damage from [gold]Spiritual Fracture[/gold] for {Turns:diff()} {Turns:plural:turn|turns}.",
@@ -111,5 +111,8 @@
   "ICHIGO-SPIRIT_MASTERY.description": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
 
   "ICHIGO-THE_RESOLVE_TO_KILL.title": "The Resolve to Kill",
-  "ICHIGO-THE_RESOLVE_TO_KILL.description": "For {Turns:diff()} turn(s): [gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage."
+  "ICHIGO-THE_RESOLVE_TO_KILL.description": "For {Turns:diff()} turn(s): [gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage.",
+
+  "ICHIGO-SHUNPO_MASTERY.title": "Shunpo Mastery",
+  "ICHIGO-SHUNPO_MASTERY.description": "Whenever you play a [gold]Getsuga Tenshou[/gold], gain {Block:diff()} [gold]Block[/gold]."
 }

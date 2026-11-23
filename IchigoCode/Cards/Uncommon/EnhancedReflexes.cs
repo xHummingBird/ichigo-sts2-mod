@@ -11,7 +11,7 @@ using Ichigo.IchigoCode.Powers;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
 
-public class InnerHollow() : IchigoCard(
+public class EnhancedReflexes() : IchigoCard(
     1,
     CardType.Power,
     CardRarity.Uncommon,
@@ -22,7 +22,7 @@ public class InnerHollow() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<InnerHollowPower>(choiceContext, Owner.Creature, DynamicVars.Damage.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<EnhancedReflexesPower>(choiceContext, Owner.Creature, DynamicVars.Damage.BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -16,7 +16,7 @@ using Ichigo.IchigoCode.Powers;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
 
-public class EnhancedReflexes() : IchigoCard(
+public class InnerHollow() : IchigoCard(
     0,
     CardType.Skill,
     CardRarity.Rare,
