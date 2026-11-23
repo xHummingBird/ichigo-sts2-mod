@@ -207,7 +207,9 @@ public class Ichigo : PlaceholderCharacterModel
 
         if (baseAnimation == "die" ||
             baseAnimation == "victory_before" ||
-            baseAnimation == "victory")
+            baseAnimation == "victory" || 
+            baseAnimation == "bankai_true" || 
+            baseAnimation == "bankai_hos")
         {
             return baseAnimation;
         }
@@ -614,6 +616,33 @@ public class Ichigo : PlaceholderCharacterModel
         }
 
         return vfx;
+    }
+    
+    public Control PlayCutIn(string animName)
+    {
+        var scene = GD.Load<PackedScene>(
+            "res://Ichigo/scenes/cutin.tscn");
+
+        var cutIn = scene.Instantiate<Control>();
+
+        NGame.Instance.AddChild(cutIn);
+
+        var visualAnchor =
+            cutIn.GetNode<Node2D>("Visuals");
+
+        var viewportSize =
+            cutIn.GetViewportRect().Size;
+
+        visualAnchor.Position =
+            viewportSize / 2f;
+
+        var animPlayer =
+            cutIn.GetNode<AnimationPlayer>("AnimationPlayer");
+
+        if (animPlayer.HasAnimation(animName))
+            animPlayer.Play(animName);
+
+        return cutIn;
     }
 
     // =========================================================================

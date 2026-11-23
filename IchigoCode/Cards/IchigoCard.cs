@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.ValueProps;
+using MegaCrit.Sts2.Core.Localization;
 
 namespace Ichigo.IchigoCode.Cards;
 
@@ -41,5 +42,14 @@ public abstract class IchigoCard(int cost, CardType type, CardRarity rarity, Tar
 
         await CreatureCmd.Damage(choiceContext, Owner.Creature, amount,
             ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
+    
+    protected override void AddExtraArgsToDescription(
+        LocString description)
+    {
+        base.AddExtraArgsToDescription(description);
+
+        description.Add(
+            "BankaiIcon",
+            "[img]res://Ichigo/images/charui/bankai_icon.png[/img]");
     }
 }

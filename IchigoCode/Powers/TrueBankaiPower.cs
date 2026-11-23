@@ -1,3 +1,4 @@
+using Ichigo.IchigoCode.Cards.Token;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -14,7 +15,6 @@ namespace Ichigo.IchigoCode.Powers;
 public sealed class TrueBankaiPower : IchigoPower
 {
     private const decimal GetsugaDamageMultiplier = 2m;
-    private const int BleedPerHit = 2;
 
     public override PowerType Type => PowerType.Buff;
 
@@ -34,29 +34,9 @@ public sealed class TrueBankaiPower : IchigoPower
         if (!props.IsPoweredAttack())
             return 1m;
 
-        return cardSource is IGetsugaTenshouCard ? GetsugaDamageMultiplier : 1m;
+        return cardSource is GetsugaTenshou ? GetsugaDamageMultiplier : 1m;
     }
-
-    public override async Task AfterDamageGiven(
-        PlayerChoiceContext choiceContext,
-        Creature? dealer,
-        DamageResult result,
-        ValueProp props,
-        Creature target,
-        CardModel? cardSource)
-    {
-        if (dealer != Owner || target == Owner)
-            return;
-
-        if (cardSource is not IGetsugaTenshouCard || !props.IsPoweredAttack())
-            return;
-
-        if (result.UnblockedDamage <= 0)
-            return;
-
-        await PowerCmd.Apply<BleedPower>(choiceContext, target, BleedPerHit, Owner, cardSource);
-    }
-
+    
     public override async Task AfterSideTurnEnd(
         PlayerChoiceContext choiceContext,
         CombatSide side,

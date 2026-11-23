@@ -59,10 +59,56 @@ public class GetsugaTenshou() : IchigoCard(
 
         if (IsInBankai)
         {
-            attackCommand =
-                attackCommand.TargetingAllOpponents(
-                    CombatState!);
-            await attackCommand.Execute(choiceContext);
+            var ownerCreature = Owner?.Creature;
+            var firstEnemy = CombatState.HittableEnemies.FirstOrDefault();
+
+            if (ownerCreature != null &&
+                firstEnemy != null &&
+                Owner?.Character is Character.Ichigo ichigo)
+            {
+                AudioHelper.PlayRandomGetsuga();
+
+                await ichigo.DashTo(
+                    ownerCreature,
+                    firstEnemy,
+                    distance: 600f,
+                    durationSeconds: 0.1F,
+                    overrideAnim: "getsuga");
+
+                SfxCmd.Play("res://Ichigo/sfx/from_cloud/sword_swing_heavy.wav");
+                SfxCmd.Play("res://Ichigo/sfx/getsuga_3.wav", 0.6f);
+
+                await Task.Delay(216);
+
+                foreach (var enemy in CombatState.HittableEnemies)
+                    ichigo.PlayVfxOnTarget(
+                        enemy,
+                        "res://Ichigo/scenes/vfx.tscn",
+                        "hit"
+                    );
+
+                await attackCommand
+                    .TargetingAllOpponents(CombatState)
+                    .WithHitFx(null, "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
+                    .Execute(choiceContext);
+
+                await ichigo.Retreat(
+                    ownerCreature,
+                    duration: 0.1F);
+            }
+            else
+            {
+                await attackCommand
+                    .TargetingAllOpponents(CombatState)
+                    .WithHitFx(null, "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
+                    .Execute(choiceContext);
+            }
+
+            foreach (var enemy in CombatState.HittableEnemies)
+            {
+                if (!enemy.HasPower<SpiritualFracturePower>())
+                    await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, enemy, 1, Owner!.Creature, this);
+            }
         }
         else
         {

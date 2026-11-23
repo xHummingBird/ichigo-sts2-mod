@@ -1,10 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://bwb6oc7ex6eu8"]
+[gd_scene load_steps=18 format=3 uid="uid://bwb6oc7ex6eu8"]
 
 [ext_resource type="Texture2D" uid="uid://d2d6dqpx2s2t3" path="res://Ichigo/images/vfx/hit_yellow_00.png" id="1_x584k"]
 [ext_resource type="Texture2D" uid="uid://6bjuuba18kk0" path="res://Ichigo/images/vfx/hit_yellow_01.png" id="2_6hosq"]
 [ext_resource type="Texture2D" uid="uid://dplg774feitdi" path="res://Ichigo/images/vfx/hit_yellow_02.png" id="3_r02rr"]
 [ext_resource type="Texture2D" uid="uid://deoy2lpioncma" path="res://Ichigo/images/vfx/hit_yellow_03.png" id="4_15ig2"]
 [ext_resource type="Texture2D" uid="uid://b5jh6r1oi4qqt" path="res://Ichigo/images/vfx/hit_yellow_04.png" id="5_36pua"]
+[ext_resource type="Texture2D" uid="uid://cpaxtwqy7or8x" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_1.png" id="6_dub3y"]
+[ext_resource type="Texture2D" uid="uid://b2bdst5fnslsb" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_2.png" id="7_a4ogu"]
+[ext_resource type="Texture2D" uid="uid://bofp3gahio5b6" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_3.png" id="8_60wp5"]
+[ext_resource type="Texture2D" uid="uid://1vlg5r1dl11d" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_4.png" id="9_n222v"]
+[ext_resource type="Texture2D" uid="uid://cgdwaxnc8mqae" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_5.png" id="10_iut5l"]
+[ext_resource type="Texture2D" uid="uid://cmkmr73nhkpow" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_6.png" id="11_pogfu"]
+[ext_resource type="Texture2D" uid="uid://cctihlchhelvv" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_7.png" id="12_kodms"]
+[ext_resource type="Texture2D" uid="uid://dfo1mkg0h5dip" path="res://Ichigo/images/vfx/jujisho_hit/jujisho_hit_8.png" id="13_1s3fw"]
 
 [sub_resource type="Animation" id="Animation_luwgs"]
 length = 0.001
@@ -181,10 +189,99 @@ tracks/6/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_ikp48"]
+resource_name = "jujisho_hit"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("vfx1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_dub3y"), ExtResource("7_a4ogu"), ExtResource("8_60wp5"), ExtResource("9_n222v"), ExtResource("10_iut5l"), ExtResource("11_pogfu"), ExtResource("12_kodms"), ExtResource("13_1s3fw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("vfx1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("vfx1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -106)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("vfx1:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("vfx1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("vfx1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("vfx2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_itrd3"]
 _data = {
 &"RESET": SubResource("Animation_luwgs"),
-&"hit": SubResource("Animation_h6q68")
+&"hit": SubResource("Animation_h6q68"),
+&"jujisho_hit": SubResource("Animation_ikp48")
 }
 
 [node name="Vfx" type="Node2D"]
