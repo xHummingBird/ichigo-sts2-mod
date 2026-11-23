@@ -31,12 +31,12 @@ public class ReiatsuBarrier() : IchigoCard(
     [
         HoverTipFactory.FromPower<BleedPower>(),
         HoverTipFactory.FromPower<SpiritualFracturePower>(),
-        HoverTipFactory.FromPower<DefensePower>()
+        HoverTipFactory.FromPower<ReiatsuBarrierPower>()
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<DefensePower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<ReiatsuBarrierPower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);
         await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
     }
 

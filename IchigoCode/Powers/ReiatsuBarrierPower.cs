@@ -14,7 +14,7 @@ using MegaCrit.Sts2.Core.Commands;
 
 namespace Ichigo.IchigoCode.Powers;
 
-public sealed class DefensePower : IchigoPower
+public sealed class ReiatsuBarrierPower : IchigoPower
 {
     public override PowerType Type => PowerType.Buff;
 
