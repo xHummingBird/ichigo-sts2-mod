@@ -3,7 +3,7 @@
   "ICHIGO-DEFEND_ICHIGO.description": "Gain {Block:diff()} [gold]Block[/gold].",
 
   "ICHIGO-GETSUGA_TENSHOU.title": "Getsuga Tenshou",
-  "ICHIGO-GETSUGA_TENSHOU.description": "Deal {Damage:diff()} damage{TargetType:choose(AllEnemies): to ALL enemies|}.",
+  "ICHIGO-GETSUGA_TENSHOU.description": "Deal {Damage:diff()} damage. \n{BankaiIcon}: Double damage and hits ALL enemies.",
 
   "ICHIGO-STRIKE_ICHIGO.title": "Strike",
   "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage:diff()} damage.",
@@ -27,10 +27,10 @@
   "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}.",
 
   "ICHIGO-BANKAI_HOS.title": "Bankai: Horn of Salvation",
-  "ICHIGO-BANKAI_HOS.description": "Enter [gold]Bankai: Horn of Salvation[/gold] for [blue]{Turns:diff()}[/blue] turns.",
+  "ICHIGO-BANKAI_HOS.description": "Enter [gold]Bankai: Horn of Salvation[/gold] for [blue]{Turns:diff()}[/blue] turns. Deal bonus damage equal to percentage of missing HP.",
 
   "ICHIGO-TRUE_BANKAI.title": "True Bankai",
-  "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns:diff()}[/blue] turns.",
+  "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns:diff()}[/blue] turns. Double the effectiveness of [gold]Spiritual Fracture[/gold] and heal HP lost from playing cards.",
 
   "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
   "ICHIGO-FINAL_GETSUGA.description": "{IfUpgraded:show:[gold]Upgrade[/gold] and play|Play} all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold].",
@@ -93,11 +93,14 @@
   "ICHIGO-REIRYOKU_BARRIER.description": "If an enemy has [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold], gain [gold]Defense[/gold] for {Turns:diff()} {Turns:plural:turn|turns}.",
 
   "ICHIGO-HOLLOW_GUARD.title": "Hollow Guard",
-  "ICHIGO-HOLLOW_GUARD.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
+  "ICHIGO-HOLLOW_GUARD.description": "Lose {HpLoss:diff()} HP.\nGain {Block:diff()} [gold]Block[/gold].",
 
   "ICHIGO-REIRYOKU_CLONE.title": "Reiryoku Clone",
   "ICHIGO-REIRYOKU_CLONE.description": "Gain {Counter:diff()} [gold]Reiryoku Clone[/gold] (1 more while in [gold]Bankai[/gold]).",
 
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.title": "Bankai: Tensai Zangetsu",
-  "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. If you are not in [gold]Bankai[/gold], gain {Reiryoku:diff()} [gold]Reiryoku[/gold]. If you are, add 2 turns to your current [gold]Bankai[/gold]."
+  "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]. \n{BankaiIcon}: Add 2 turns to your current [gold]Bankai[/gold].",
+
+  "ICHIGO-GETSUGA_JUJISHO.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Double additional damage.",
+  "ICHIGO-GETSUGA_JUJISHO.title": "Getsuga Jujisho"
 }

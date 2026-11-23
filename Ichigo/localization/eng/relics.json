@@ -3,7 +3,15 @@
   "ICHIGO-HOLLOW_MASK.description": "Gain [gold]5[/gold] Reiryoku at the start of your turn, [gold]3[/gold] when you play an Attack and [gold]6[/gold] when you play a [gold]Getsuga Tenshou[/gold]. At [gold]100[/gold] Reiryoku, enter [gold]Bankai[/gold].",
   "ICHIGO-HOLLOW_MASK.flavor": "",
 
-  "ICHIGO-ZANGETSU.description": "Gain 5 [blue]Reiryoku[/blue] at the start of every turn.",
+  "ICHIGO-ZANGETSU.description": "Gain 5 [blue]Reiryoku[/blue] at the start of every turn. Heal 5 HP at the end of combat.",
   "ICHIGO-ZANGETSU.flavor": "",
-  "ICHIGO-ZANGETSU.title": "Zangetsu"
+  "ICHIGO-ZANGETSU.title": "Zangetsu",
+
+  "ICHIGO-HOUGYOKU.description": "[gold]Bankai[/gold] lasts 1 more turn.",
+  "ICHIGO-HOUGYOKU.flavor": "",
+  "ICHIGO-HOUGYOKU.title": "Hougyoku",
+  
+  "ICHIGO-TENSA_ZANGETSU.description": "Gain 2 additional [blue]Reiryoku[/blue] at the start of every turn and from attacks. Heal 7 HP at the end of combat.",
+  "ICHIGO-TENSA_ZANGETSU.flavor": "",
+  "ICHIGO-TENSA_ZANGETSU.title": "Tensa Zangetsu"
 }

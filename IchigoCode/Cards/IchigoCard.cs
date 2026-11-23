@@ -4,6 +4,7 @@ using BaseLib.Utils;
 using Ichigo.IchigoCode.Character;
 using Ichigo.IchigoCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Localization;
 
 namespace Ichigo.IchigoCode.Cards;
 
@@ -23,4 +24,14 @@ public abstract class IchigoCard(int cost, CardType type, CardRarity rarity, Tar
     //Uses card_portraits/card_name.png as image path. These should be smaller images.
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    
+    protected override void AddExtraArgsToDescription(
+        LocString description)
+    {
+        base.AddExtraArgsToDescription(description);
+
+        description.Add(
+            "BankaiFonon",
+            "[img]res://Ichigo/images/charui/bankai_icon.png[/img]");
+    }
 }

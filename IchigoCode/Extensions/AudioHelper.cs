@@ -96,11 +96,7 @@ public static class AudioHelper
     private static readonly string[] bankaiBeforeSfx =
     {
         "res://Ichigo/sounds/bankai_after_1.wav",
-        "res://Ichigo/sounds/bankai_after_2.wav",
         "res://Ichigo/sounds/bankai_after_3.wav",
-        "res://Ichigo/sounds/bankai_after_4.wav",
-        "res://Ichigo/sounds/bankai_after_5.wav",
-        "res://Ichigo/sounds/bankai_after_6.wav",
         "res://Ichigo/sounds/bankai_after_7.wav",
         "res://Ichigo/sounds/bankai_after_8.wav",
     };

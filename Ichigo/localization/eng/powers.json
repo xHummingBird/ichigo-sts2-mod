@@ -8,11 +8,11 @@
   "ICHIGO-GETSUGA_TENSHOU_COUNTER_POWER.smartDescription": "Whenever you play a [gold]Getsuga[/gold] card this turn, gain 1 Strength.",
   
   "ICHIGO-POWER_NULLIFICATION_POWER.title": "Power Nullification",
-  "ICHIGO-POWER_NULLIFICATION_POWER.description": "Your attacks deal double the bonus damage from [gold]Spiritual Fracture[/gold].",
-  "ICHIGO-POWER_NULLIFICATION_POWER.smartDescription": "Your attacks deal double the bonus damage from [gold]Spiritual Fracture[/gold] for [blue]{Amount}[/blue] turn(s).",
+  "ICHIGO-POWER_NULLIFICATION_POWER.description": "Double the effectiveness of [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-POWER_NULLIFICATION_POWER.smartDescription": "Double the effectiveness of [gold]Spiritual Fracture[/gold] for [blue]{Amount}[/blue] turn(s).",
 
   "ICHIGO-TRUE_BANKAI_POWER.title": "True Bankai",
-  "ICHIGO-TRUE_BANKAI_POWER.description": "[gold]Getsuga Tenshou[/gold] deals double damage and applies [gold]Bleed[/gold]. Attacks deal 3 additional damage to enemies with [gold]Spiritual Fracture[/gold]. You cannot gain Reiryoku.",
+  "ICHIGO-TRUE_BANKAI_POWER.description": "Double the effectiveness of [gold]Spiritual Fracture[/gold] and heal HP lost from playing cards.",
   "ICHIGO-TRUE_BANKAI_POWER.smartDescription": "In [blue]True Bankai[/blue] for {Amount} turn(s).",
   
   "ICHIGO-BLEED_POWER.title": "Bleed",
@@ -27,7 +27,7 @@
   "ICHIGO-SOUL_DISRUPTION_POWER.smartDescription": "At 3 stacks, becomes [gold]Spiritual Fracture[/gold]. Currently [blue]{Amount}[/blue].",
   "ICHIGO-SOUL_DISRUPTION_POWER.title": "Soul Disruption",
 
-  "ICHIGO-BANKAI_HOS_POWER.description": "[gold]Getsuga Tenshou[/gold] deals double damage and hits ALL enemies. Deal increased damage based on your percentage of HP lost.",
+  "ICHIGO-BANKAI_HOS_POWER.description": "Deal increased damage based on your percentage of HP lost.",
   "ICHIGO-BANKAI_HOS_POWER.smartDescription": "In [red]Bankai: Horn of Salvation[/red] for {Amount} turn(s).",
   "ICHIGO-BANKAI_HOS_POWER.title": "Bankai: Horn of Salvation",
 
