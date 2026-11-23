@@ -45,5 +45,9 @@
 
   "ICHIGO-THE_RESOLVE_TO_KILL_POWER.title": "The Resolve to Kill",
   "ICHIGO-THE_RESOLVE_TO_KILL_POWER.description": "[gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage.",
-  "ICHIGO-THE_RESOLVE_TO_KILL_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage for [blue]{Amount}[/blue] turn(s)."
+  "ICHIGO-THE_RESOLVE_TO_KILL_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage for [blue]{Amount}[/blue] turn(s).",
+
+  "ICHIGO-SPIRIT_MASTERY_COUNTER_POWER.title": "Spirit Mastery",
+  "ICHIGO-SPIRIT_MASTERY_COUNTER_POWER.description": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-SPIRIT_MASTERY_COUNTER_POWER.smartDescription": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold]."
 }

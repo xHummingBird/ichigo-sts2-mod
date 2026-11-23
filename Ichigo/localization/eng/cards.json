@@ -102,5 +102,11 @@
   "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Gain [gold]Substitute Shinigami[/gold] for {Turns:diff()} turns.",
 
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.title": "Bankai: Tensai Zangetsu",
-  "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. If you are not in [gold]Bankai[/gold], gain {Reiryoku:diff()} [gold]Reiryoku[/gold]. If you are, add 2 turns to your current [gold]Bankai[/gold]."
+  "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. If you are not in [gold]Bankai[/gold], gain {Reiryoku:diff()} [gold]Reiryoku[/gold]. If you are, add 2 turns to your current [gold]Bankai[/gold].",
+
+  "ICHIGO-SPIRIT_MASTERY.title": "Spirit Mastery",
+  "ICHIGO-SPIRIT_MASTERY.description": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
+
+  "ICHIGO-THE_RESOLVE_TO_KILL.title": "The Resolve to Kill",
+  "ICHIGO-THE_RESOLVE_TO_KILL.description": "For {Turns:diff()} turn(s): [gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage."
 }
