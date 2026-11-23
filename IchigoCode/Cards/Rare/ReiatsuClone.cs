@@ -26,10 +26,6 @@ public class ReiatsuClone() : IchigoCard(
     [
         new DynamicVar("Counter", 1)
     ];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<ReiryokuClonePower>()
-    ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var counter = DynamicVars["Counter"].BaseValue;

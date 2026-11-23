@@ -49,5 +49,9 @@
 
   "ICHIGO-SPIRIT_MASTERY_COUNTER_POWER.title": "Spirit Mastery",
   "ICHIGO-SPIRIT_MASTERY_COUNTER_POWER.description": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
-  "ICHIGO-SPIRIT_MASTERY_COUNTER_POWER.smartDescription": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold]."
+  "ICHIGO-SPIRIT_MASTERY_COUNTER_POWER.smartDescription": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
+
+  "ICHIGO-INNER_HOLLOW_POWER.title": "Inner Hollow",
+  "ICHIGO-INNER_HOLLOW_POWER.description": "Whenever you lose HP, deal [blue]{Amount}[/blue] damage to ALL enemies.",
+  "ICHIGO-INNER_HOLLOW_POWER.smartDescription": "Whenever you lose HP, deal [blue]{Amount}[/blue] damage to ALL enemies."
 }

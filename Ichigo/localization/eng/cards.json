@@ -24,13 +24,13 @@
   "ICHIGO-BRINGER_LIGHT.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "ICHIGO-SONIDO.title": "Sonido",
-  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}.",
+  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}.",
 
   "ICHIGO-BANKAI_HOS.title": "Bankai: Horn of Salvation",
-  "ICHIGO-BANKAI_HOS.description": "Enter [gold]Bankai: Horn of Salvation[/gold] for [blue]{Turns:diff()}[/blue] turns.",
+  "ICHIGO-BANKAI_HOS.description": "Enter [gold]Bankai: Horn of Salvation[/gold] for [blue]{Turns:diff()}[/blue] turns.\n[gold]Getsuga Tenshou[/gold] deals double damage and hits ALL enemies. Deal increased damage based on your percentage of HP lost.",
 
   "ICHIGO-TRUE_BANKAI.title": "True Bankai",
-  "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns:diff()}[/blue] turns.",
+  "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns:diff()}[/blue] turns.\n[gold]Getsuga Tenshou[/gold] deals double damage and applies [gold]Bleed[/gold]. Attacks deal 3 additional damage to enemies with [gold]Spiritual Fracture[/gold]. You cannot gain Reiryoku.",
 
   "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
   "ICHIGO-FINAL_GETSUGA.description": "Play all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold]{IfUpgraded:show:, upgrading them first|}.",
@@ -42,7 +42,7 @@
   "ICHIGO-GETSUGA_INFUSION.description": "Whenever you play a [gold]Getsuga[/gold] card this turn, gain 1 Strength.",
 
   "ICHIGO-HOLLOWFICATION.title": "Hollowfication",
-  "ICHIGO-HOLLOWFICATION.description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+  "ICHIGO-HOLLOWFICATION.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nGain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "ICHIGO-ARMOR_CLAD.title": "Armor-Clad",
   "ICHIGO-ARMOR_CLAD.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {BleedPower:diff()} [gold]Bleed[/gold].",
@@ -51,7 +51,7 @@
   "ICHIGO-HYPER_SPEED_COMBAT.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Bankai[/gold]: Gain {Block:diff()} Block next turn.",
 
   "ICHIGO-POWER_OF_VISORED.title": "Power of Visored",
-  "ICHIGO-POWER_OF_VISORED.description": "Lose {HpLoss:diff()} HP.\nAdd {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+  "ICHIGO-POWER_OF_VISORED.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nAdd {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
 
   "ICHIGO-IRON_BODY.title": "Iron Body",
   "ICHIGO-IRON_BODY.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
@@ -60,10 +60,13 @@
   "ICHIGO-SPIRIT_SURGE.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {Cards:diff()} [gold]Spiritual Fracture[/gold] to an enemy.",
 
   "ICHIGO-BERSERK.title": "Berserk",
-  "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\n[gold]Attack[/gold] cards in your [gold]Hand[/gold] become [gold]Free[/gold] this turn.",
+  "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\n[gold]Attack[/gold] cards in your [gold]Hand[/gold] become [gold]Free[/gold] this turn.",
+
+  "ICHIGO-ENHANCED_REFLEXES.title": "Enhanced Reflexes",
+  "ICHIGO-ENHANCED_REFLEXES.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nGain {Strength:diff()} [gold]Strength[/gold].",
 
   "ICHIGO-INNER_HOLLOW.title": "Inner Hollow",
-  "ICHIGO-INNER_HOLLOW.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\nGain {Strength:diff()} [gold]Strength[/gold].",
+  "ICHIGO-INNER_HOLLOW.description": "Whenever you lose HP, deal {Damage:diff()} damage to ALL enemies.",
 
   "ICHIGO-POWER_NULLIFICATION.title": "Power Nullification",
   "ICHIGO-POWER_NULLIFICATION.description": "Your attacks deal double the bonus damage from [gold]Spiritual Fracture[/gold] for {Turns:diff()} {Turns:plural:turn|turns}.",
@@ -90,13 +93,13 @@
   "ICHIGO-AURA_SHIELD.description": "Gain 4 [gold]Block[/gold]. Gain {GetsugaExhaustMultiplier:diff()} additional [gold]Block[/gold] for each Getsuga Tenshou card in your [gold]Exhaust[/gold] pile.",
 
   "ICHIGO-REIATSU_BARRIER.title": "Reiatsu Barrier",
-  "ICHIGO-REIATSU_BARRIER.description": "If an enemy has [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold], gain [gold]Defense[/gold] for {Turns:diff()} {Turns:plural:turn|turns}.",
+  "ICHIGO-REIATSU_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold].\nFor {Turns:diff()} {Turns:plural:turn|turns}, take 50% less damage from attacks by enemies with [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold].",
 
   "ICHIGO-HOLLOW_GUARD.title": "Hollow Guard",
-  "ICHIGO-HOLLOW_GUARD.description": "Lose {HpLoss:diff()} HP unless in [gold]True Bankai[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
+  "ICHIGO-HOLLOW_GUARD.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nGain {Block:diff()} [gold]Block[/gold].",
 
   "ICHIGO-REIATSU_CLONE.title": "Reiatsu Clone",
-  "ICHIGO-REIATSU_CLONE.description": "Gain {Counter:diff()} [gold]Reiryoku Clone[/gold] (1 more while in [gold]Bankai[/gold]).",
+  "ICHIGO-REIATSU_CLONE.description": "Your next [gold]Attack[/gold] is played {Counter:diff()} additional time(s) (1 more while in [gold]Bankai[/gold]).",
 
   "ICHIGO-SUBSTITUTE_SHINIGAMI.title": "Substitute Shinigami",
   "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Gain [gold]Substitute Shinigami[/gold] for {Turns:diff()} turns.",

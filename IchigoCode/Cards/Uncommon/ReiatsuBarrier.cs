@@ -30,8 +30,7 @@ public class ReiatsuBarrier() : IchigoCard(
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<BleedPower>(),
-        HoverTipFactory.FromPower<SpiritualFracturePower>(),
-        HoverTipFactory.FromPower<ReiatsuBarrierPower>()
+        HoverTipFactory.FromPower<SpiritualFracturePower>()
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
