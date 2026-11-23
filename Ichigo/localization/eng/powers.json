@@ -41,5 +41,9 @@
 
   "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.title": "Substitute Shinigami",
   "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.description": "Whenever you play a card costing 2 or more Energy, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
-  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.smartDescription": "Whenever you play a card costing [blue]2[/blue] or more Energy, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]."
+  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.smartDescription": "Whenever you play a card costing [blue]2[/blue] or more Energy, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+
+  "ICHIGO-THE_RESOLVE_TO_KILL_POWER.title": "The Resolve to Kill",
+  "ICHIGO-THE_RESOLVE_TO_KILL_POWER.description": "[gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage.",
+  "ICHIGO-THE_RESOLVE_TO_KILL_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage for [blue]{Amount}[/blue] turn(s)."
 }

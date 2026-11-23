@@ -19,11 +19,6 @@ public class SubstituteShinigami() : IchigoCard(
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Turns", 3m)];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<SubstituteShinigamiPower>()
-    ];
-
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<SubstituteShinigamiPower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);

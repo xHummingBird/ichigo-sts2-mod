@@ -33,7 +33,7 @@
   "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns:diff()}[/blue] turns.",
 
   "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
-  "ICHIGO-FINAL_GETSUGA.description": "{IfUpgraded:show:[gold]Upgrade[/gold] and play|Play} all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold].",
+  "ICHIGO-FINAL_GETSUGA.description": "Play all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold]{IfUpgraded:show:, upgrading them first|}.",
 
   "ICHIGO-POWER_FUSION.title": "Power Fusion",
   "ICHIGO-POWER_FUSION.description": "Discard your [gold]Hand[/gold].\nAdd a [gold]Getsuga Tenshou[/gold] into your Hand for each card discarded.",
@@ -99,7 +99,7 @@
   "ICHIGO-REIATSU_CLONE.description": "Gain {Counter:diff()} [gold]Reiryoku Clone[/gold] (1 more while in [gold]Bankai[/gold]).",
 
   "ICHIGO-SUBSTITUTE_SHINIGAMI.title": "Substitute Shinigami",
-  "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Gain {Turns:diff()} [gold]Substitute Shinigami[/gold].",
+  "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Gain [gold]Substitute Shinigami[/gold] for {Turns:diff()} turns.",
 
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.title": "Bankai: Tensai Zangetsu",
   "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. If you are not in [gold]Bankai[/gold], gain {Reiryoku:diff()} [gold]Reiryoku[/gold]. If you are, add 2 turns to your current [gold]Bankai[/gold]."
