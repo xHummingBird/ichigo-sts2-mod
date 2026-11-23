@@ -20,9 +20,10 @@ public sealed class ShunpoMasteryCounterPower : IchigoPower
 
     public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (card.Owner.Creature != Owner || card is not IGetsugaCard)
+        if (cardPlay.Card.Owner.Creature != Owner || cardPlay.Card is not IGetsugaTenshouCard)
             return;
+
         Flash();
-        await CreatureCmd.GainBlock(Owner, DynamicVars.Block, cardPlay);
+        await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, cardPlay);
     }
 }
