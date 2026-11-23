@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=3 uid="uid://b2pm22usx7add"]
+[gd_scene load_steps=142 format=3 uid="uid://b2pm22usx7add"]
 
 [ext_resource type="Texture2D" uid="uid://bs336h6oiq47y" path="res://Ichigo/images/spritesheets/shadow.png" id="1_b6drb"]
 [ext_resource type="Texture2D" uid="uid://cm5k3bbqw77g2" path="res://Ichigo/images/spritesheets/idle_base/Ichigo_TYBW 1_0.png" id="2_2qfc1"]
@@ -73,9 +73,7 @@
 [ext_resource type="Texture2D" uid="uid://bf2vpdswber7i" path="res://Ichigo/images/spritesheets/attack/jujisho/hos/Ichigo_TYBW 4_67.png" id="64_o1o28"]
 [ext_resource type="Texture2D" uid="uid://b4v7dmgjhxi26" path="res://Ichigo/images/spritesheets/attack/jujisho/hos/Ichigo_TYBW 4_68.png" id="65_o173v"]
 [ext_resource type="Texture2D" uid="uid://cgujck640gsjm" path="res://Ichigo/images/spritesheets/attack/jujisho/hos/Ichigo_TYBW 4_69.png" id="66_bg747"]
-[ext_resource type="AudioStream" uid="uid://cesfur0g8etpb" path="res://Ichigo/sfx/attack_effect_2.wav" id="67_b2wj2"]
 [ext_resource type="Texture2D" uid="uid://blq3x5foyr5mv" path="res://Ichigo/images/spritesheets/attack/jujisho/hos/Ichigo_TYBW 4_70.png" id="67_n1ina"]
-[ext_resource type="AudioStream" uid="uid://dquha6inqw3xj" path="res://Ichigo/sfx/getsuga_4.wav" id="68_bp2is"]
 [ext_resource type="Texture2D" uid="uid://csl78oj1xcbef" path="res://Ichigo/images/spritesheets/block/Ichigo_TYBW 2_4.png" id="75_6fj1x"]
 [ext_resource type="Texture2D" uid="uid://unk578xojhuf" path="res://Ichigo/images/spritesheets/block/Ichigo_TYBW 4_4.png" id="76_wgtxq"]
 [ext_resource type="Texture2D" uid="uid://ditt0ske2iydp" path="res://Ichigo/images/spritesheets/retreat/Ichigo_TYBW 2_78.png" id="77_1mi4f"]
@@ -6604,7 +6602,7 @@ tracks/32/keys = {
 
 [sub_resource type="Animation" id="Animation_omnrf"]
 resource_name = "jujisho_base"
-length = 3.5
+length = 0.9
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -7002,47 +7000,6 @@ tracks/32/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/33/type = "audio"
-tracks/33/imported = false
-tracks/33/enabled = true
-tracks/33/path = NodePath("AnimationPlayer/AudioStreamPlayer2D")
-tracks/33/interp = 1
-tracks/33/loop_wrap = true
-tracks/33/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("67_b2wj2")
-}],
-"times": PackedFloat32Array(0.016666668)
-}
-tracks/33/use_blend = true
-tracks/34/type = "audio"
-tracks/34/imported = false
-tracks/34/enabled = true
-tracks/34/path = NodePath("AnimationPlayer/AudioStreamPlayer2D")
-tracks/34/interp = 1
-tracks/34/loop_wrap = true
-tracks/34/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("68_bp2is")
-}],
-"times": PackedFloat32Array(0.4)
-}
-tracks/34/use_blend = true
-tracks/35/type = "audio"
-tracks/35/imported = false
-tracks/35/enabled = true
-tracks/35/path = NodePath("AnimationPlayer/AudioStreamPlayer2D")
-tracks/35/interp = 1
-tracks/35/loop_wrap = true
-tracks/35/keys = {
-"clips": [],
-"times": PackedFloat32Array()
-}
-tracks/35/use_blend = true
 
 [sub_resource type="Animation" id="Animation_5yhsl"]
 resource_name = "jujisho_hos"

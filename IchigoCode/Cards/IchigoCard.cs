@@ -31,7 +31,7 @@ public abstract class IchigoCard(int cost, CardType type, CardRarity rarity, Tar
         base.AddExtraArgsToDescription(description);
 
         description.Add(
-            "BankaiFonon",
+            "BankaiIcon",
             "[img]res://Ichigo/images/charui/bankai_icon.png[/img]");
     }
 }

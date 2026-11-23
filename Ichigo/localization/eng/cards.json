@@ -98,9 +98,24 @@
   "ICHIGO-REIRYOKU_CLONE.title": "Reiryoku Clone",
   "ICHIGO-REIRYOKU_CLONE.description": "Gain {Counter:diff()} [gold]Reiryoku Clone[/gold] (1 more while in [gold]Bankai[/gold]).",
 
-  "ICHIGO-BANKAI_TENSAI_ZANGETSU.title": "Bankai: Tensai Zangetsu",
-  "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]. \n{BankaiIcon}: Add 2 turns to your current [gold]Bankai[/gold].",
+  "ICHIGO-BANKAI_TENSA_ZANGETSU.title": "Bankai: Tensa Zangetsu",
+  "ICHIGO-BANKAI_TENSA_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]. \n{BankaiIcon}: Add 2 turns to your current [gold]Bankai[/gold].",
 
   "ICHIGO-GETSUGA_JUJISHO.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Double additional damage.",
-  "ICHIGO-GETSUGA_JUJISHO.title": "Getsuga Jujisho"
+  "ICHIGO-GETSUGA_JUJISHO.title": "Getsuga Jujisho",
+
+  "ICHIGO-RISING_MOON.title": "Rising Moon",
+  "ICHIGO-RISING_MOON.description": "Deal {Damage:diff()} damage. \nYour next Attack costs 0 {energyPrefix:energyIcons(1)}. \n[{BankaiIcon}: Your next Skill costs 0 {energyPrefix:energyIcons(1)}.",
+
+  "ICHIGO-OVERSWING.title": "Overswing",
+  "ICHIGO-OVERSWING.description": "Lose {HpLoss:diff()} HP. \nDeal {Damage:diff()} damage.",
+
+  "ICHIGO-MOON_FLASH.title": "Moon Flash",
+  "ICHIGO-MOON_FLASH.description": "Deal {Damage:diff()} damage. \nApply any debuffs on the enemy to ALL other enemies.",
+
+  "ICHIGO-ECLIPSE.title": "Eclipse",
+  "ICHIGO-ECLIPSE.description": "Deal {CalculatedDamage:diff()} damage. \nDeal additional damage equal to {ExtraDamage:diff()}% of your missing HP. \n{BankaiIcon}: Double the additional damage.",
+
+  "ICHIGO-DUAL_CRESCENT.title": "Dual Crescent",
+  "ICHIGO-DUAL_CRESCENT.description": "Deal {Damage:diff()} damage 2 times. \n{BankaiIcon}: Hit 2 additional times."
 }
