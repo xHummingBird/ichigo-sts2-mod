@@ -26,11 +26,7 @@ public class Hollowfication() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (!(ReiryokuManager.IsInTrueBankai(Owner)))
-        {
-            await CreatureCmd.Damage(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue,
-                ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
-        }
+        await LoseHpOrHeal(choiceContext, cardPlay);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
 

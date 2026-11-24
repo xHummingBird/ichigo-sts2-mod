@@ -33,11 +33,7 @@ public class HollowGuard() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (!ReiryokuManager.IsInTrueBankai(Owner))
-        {
-            await CreatureCmd.Damage(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue,
-                ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
-        }
+        await LoseHpOrHeal(choiceContext, cardPlay);
         await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
     }
 

@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.Models;
 namespace Ichigo.IchigoCode.Cards.Basic;
 
 public class DualZangetsu() : IchigoCard(
-    1,
+    2,
     CardType.Skill,
     CardRarity.Basic,
     TargetType.Self)

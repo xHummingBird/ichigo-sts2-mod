@@ -32,11 +32,7 @@ public class Berserk() : IchigoCard(
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (!ReiryokuManager.IsInTrueBankai(Owner))
-        {
-            await CreatureCmd.Damage(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue,
-                ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
-        }
+        await LoseHpOrHeal(choiceContext, cardPlay);
 		foreach (CardModel card in PileType.Hand.GetPile(Owner).Cards)
 		{
 			if (!card.EnergyCost.CostsX && card.Type == CardType.Attack)

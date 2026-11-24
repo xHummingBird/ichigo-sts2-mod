@@ -3,7 +3,11 @@ using BaseLib.Extensions;
 using BaseLib.Utils;
 using Ichigo.IchigoCode.Character;
 using Ichigo.IchigoCode.Extensions;
+using Ichigo.IchigoCode.Mechanics;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.ValueProps;
 using MegaCrit.Sts2.Core.Localization;
 
 namespace Ichigo.IchigoCode.Cards;
@@ -24,6 +28,20 @@ public abstract class IchigoCard(int cost, CardType type, CardRarity rarity, Tar
     //Uses card_portraits/card_name.png as image path. These should be smaller images.
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+
+    // In True Bankai, HP loss from cards is converted into healing of the same amount.
+    protected async Task LoseHpOrHeal(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        decimal amount = DynamicVars.HpLoss.BaseValue;
+
+        if (ReiryokuManager.IsInTrueBankai(Owner))
+        {
+            await CreatureCmd.Heal(Owner.Creature, amount);
+            return;
+        }
+
+        await CreatureCmd.Damage(choiceContext, Owner.Creature, amount,
+            ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
     
     protected override void AddExtraArgsToDescription(
         LocString description)

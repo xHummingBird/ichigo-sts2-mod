@@ -32,15 +32,7 @@ public class PowerOfVisored() : IchigoCard(
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        await CreatureCmd.Damage(
-            choiceContext,
-            Owner.Creature,
-            DynamicVars.HpLoss.BaseValue,
-            ValueProp.Unblockable |
-            ValueProp.Unpowered |
-            ValueProp.Move,
-            this,
-            cardPlay);
+        await LoseHpOrHeal(choiceContext, cardPlay);
 
         for (int i = 0; i < DynamicVars.Cards.IntValue; i++)
         {

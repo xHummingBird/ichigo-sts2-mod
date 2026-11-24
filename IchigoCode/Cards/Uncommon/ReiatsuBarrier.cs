@@ -15,7 +15,7 @@ using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
 
-public class ReiryokuBarrier() : IchigoCard(
+public class ReiatsuBarrier() : IchigoCard(
     1,
     CardType.Skill,
     CardRarity.Uncommon,
@@ -30,13 +30,12 @@ public class ReiryokuBarrier() : IchigoCard(
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<BleedPower>(),
-        HoverTipFactory.FromPower<SpiritualFracturePower>(),
-        HoverTipFactory.FromPower<DefensePower>()
+        HoverTipFactory.FromPower<SpiritualFracturePower>()
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<DefensePower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<ReiatsuBarrierPower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);
         await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
     }
 

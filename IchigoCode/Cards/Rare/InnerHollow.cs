@@ -33,11 +33,7 @@ public class InnerHollow() : IchigoCard(
     ];
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (!ReiryokuManager.IsInTrueBankai(Owner))
-        {
-            await CreatureCmd.Damage(choiceContext, Owner.Creature, DynamicVars.HpLoss.BaseValue,
-                ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
-        }
+        await LoseHpOrHeal(choiceContext, cardPlay);
 		await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, DynamicVars["Strength"].BaseValue, Owner.Creature, this);
 
     }
