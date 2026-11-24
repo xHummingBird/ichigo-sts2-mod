@@ -30,15 +30,7 @@ public class Overswing() : IchigoCard(
         if (ownerCreature == null || play.Target == null)
             return;
         
-        await CreatureCmd.Damage(
-                choiceContext,
-                ownerCreature,
-                DynamicVars.HpLoss.BaseValue,
-                ValueProp.Unblockable |
-                ValueProp.Unpowered |
-                ValueProp.Move,
-                this,
-                play);
+        await LoseHpOrHeal(choiceContext, play);
 
         if (Owner.Character is Character.Ichigo ichigo)
         {

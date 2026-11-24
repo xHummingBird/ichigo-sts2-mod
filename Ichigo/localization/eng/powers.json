@@ -57,5 +57,5 @@
 
   "ICHIGO-SHUNPO_MASTERY_POWER.title": "Shunpo Mastery",
   "ICHIGO-SHUNPO_MASTERY_POWER.description": "Whenever you play a [gold]Getsuga[/gold] card, gain Block.",
-  "ICHIGO-SHUNPO_MASTERY_POWER.smartDescription": "Whenever you play a [gold]Getsuga[/gold] card, gain [blue]{Amount}[/blue] [gold]Block[/gold].",
+  "ICHIGO-SHUNPO_MASTERY_POWER.smartDescription": "Whenever you play a [gold]Getsuga[/gold] card, gain [blue]{Amount}[/blue] [gold]Block[/gold]."
 }

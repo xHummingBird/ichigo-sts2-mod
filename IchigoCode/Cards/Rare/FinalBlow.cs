@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
@@ -43,7 +44,7 @@ public class FinalBlow() : IchigoCard(
 
         var isTrueBankai =
             ownerCreature.HasPower<TrueBankaiPower>();
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner.Character is Character.Ichigo ichigo)
         {
             if (isTrueBankai)
@@ -56,7 +57,7 @@ public class FinalBlow() : IchigoCard(
                 await ichigo.DashTo(
                     ownerCreature,
                     target,
-                    distance: 400f,
+                    distance: 300f,
                     durationSeconds: 0.2f,
                     overrideAnim: "dash");
                 ichigo.PlayAnimation(ownerCreature, "final_blow");
@@ -175,6 +176,7 @@ public class FinalBlow() : IchigoCard(
                     "res://Ichigo/sfx/slash_1.wav")
                 .Execute(choiceContext);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()
