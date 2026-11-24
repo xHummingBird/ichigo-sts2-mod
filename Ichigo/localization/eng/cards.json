@@ -216,5 +216,8 @@
   "ICHIGO-BLACK_VOID.description": "Lose 3 HP. \nRemove all of the enemy's [gold]Block[/gold]. \nDeal {Damage:diff()} damage.",
 
   "ICHIGO-BLUT_VENE.title": "Blut Vene",
-  "ICHIGO-BLUT_VENE.description": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal {BlutVenePower:diff()} damage back."
+  "ICHIGO-BLUT_VENE.description": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal {BlutVenePower:diff()} damage back.",
+  
+  "ICHIGO-SHARED_CONVICTION.title": "Shared Conviction",
+  "ICHIGO-SHARED_CONVICTION.description": "Gain [gold]Shared Conviction[/gold].\nWhenever you apply [gold]Bleeding[/gold] to an enemy, draw {Cards:diff()} cards."
 }
