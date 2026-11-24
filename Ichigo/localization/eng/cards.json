@@ -219,5 +219,8 @@
   "ICHIGO-BLUT_VENE.description": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal {BlutVenePower:diff()} damage back.",
   
   "ICHIGO-SHARED_CONVICTION.title": "Shared Conviction",
-  "ICHIGO-SHARED_CONVICTION.description": "Gain [gold]Shared Conviction[/gold].\nWhenever you apply [gold]Bleeding[/gold] to an enemy, draw {Cards:diff()} cards."
+  "ICHIGO-SHARED_CONVICTION.description": "Gain [gold]Shared Conviction[/gold].\nWhenever you apply [gold]Bleeding[/gold] to an enemy, draw {Cards:diff()} cards.",
+
+  "ICHIGO-SPIRITUAL_BALANCE.title": "Spiritual Balance",
+  "ICHIGO-SPIRITUAL_BALANCE.description": "Gain [gold]Spiritual Balance[/gold].\nWhenever you lose HP, gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
 }

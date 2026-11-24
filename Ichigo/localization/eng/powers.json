@@ -61,5 +61,9 @@
   
   "ICHIGO-SHARED_CONVICTION_POWER.title": "Shared Conviction",
   "ICHIGO-SHARED_CONVICTION_POWER.description": "Whenever you apply [gold]Bleeding[/gold] to an enemy, draw [blue]{Amount}[/blue] cards.",
-  "ICHIGO-SHARED_CONVICTION_POWER.smartDescription": "Whenever you apply [gold]Bleeding[/gold] to an enemy, draw [blue]{Amount}[/blue] cards."
+  "ICHIGO-SHARED_CONVICTION_POWER.smartDescription": "Whenever you apply [gold]Bleeding[/gold] to an enemy, draw [blue]{Amount}[/blue] cards.",
+
+  "ICHIGO-SPIRITUAL_BALANCE_POWER.title": "Spiritual Balance",
+  "ICHIGO-SPIRITUAL_BALANCE_POWER.description": "Whenever you lose HP, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
+  "ICHIGO-SPIRITUAL_BALANCE_POWER.smartDescription": "Whenever you lose HP, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold]."
 }
