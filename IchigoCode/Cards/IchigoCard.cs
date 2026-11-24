@@ -33,16 +33,15 @@ public abstract class IchigoCard(int cost, CardType type, CardRarity rarity, Tar
     protected async Task LoseHpOrHeal(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         decimal amount = DynamicVars.HpLoss.BaseValue;
-
+        
+        await CreatureCmd.Damage(choiceContext, Owner.Creature, amount,
+            ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
         if (ReiryokuManager.IsInTrueBankai(Owner))
         {
             await CreatureCmd.Heal(Owner.Creature, amount);
-            return;
         }
+    }
 
-        await CreatureCmd.Damage(choiceContext, Owner.Creature, amount,
-            ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
-    
     protected override void AddExtraArgsToDescription(
         LocString description)
     {

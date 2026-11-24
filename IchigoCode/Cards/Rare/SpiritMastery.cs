@@ -17,13 +17,18 @@ public class SpiritMastery() : IchigoCard(
     TargetType.Self
 )
 {
-    public override IEnumerable<CardKeyword> CanonicalKeywords =>
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        CardKeyword.Innate
+        HoverTipFactory.FromPower<SpiritualFracturePower>()
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<SpiritMasteryCounterPower>(choiceContext, Owner.Creature, 1m, Owner.Creature, this);
+        await PowerCmd.Apply<SpiritMasteryPower>(choiceContext, Owner.Creature, 2m, Owner.Creature, this);
+    }
+    
+    protected override void OnUpgrade()
+    {
+        AddKeyword(CardKeyword.Innate);
     }
 }

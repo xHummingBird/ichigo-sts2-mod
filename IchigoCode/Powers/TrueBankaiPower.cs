@@ -44,7 +44,16 @@ public sealed class TrueBankaiPower : IchigoPower
     {
         if (side != Owner.Side)
             return;
-
+        
+        if (Amount <= 1)
+        {
+            ReiryokuManager.SetReiryoku(Owner.Player, 0);
+            await PowerCmd.Decrement(this);
+            var ichigo = Owner.Player.Character as Character.Ichigo;
+            ichigo.PlayAnimation(Owner, "idle");
+            return;
+        }
+        
         await PowerCmd.Decrement(this);
     }
 }

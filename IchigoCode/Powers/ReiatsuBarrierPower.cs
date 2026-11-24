@@ -18,7 +18,7 @@ public sealed class ReiatsuBarrierPower : IchigoPower
 {
     public override PowerType Type => PowerType.Buff;
 
-    public override PowerStackType StackType => PowerStackType.Counter;
+    public override PowerStackType StackType => PowerStackType.Single;
 
     private const decimal DamageMultiplier = 0.5m;
 
@@ -50,7 +50,7 @@ public sealed class ReiatsuBarrierPower : IchigoPower
     {
 		if (side == CombatSide.Enemy)
 		{
-			await PowerCmd.Decrement(this);
+			await PowerCmd.Remove(this);
 		}
     }
 }

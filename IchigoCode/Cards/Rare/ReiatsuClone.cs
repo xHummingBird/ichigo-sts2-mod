@@ -37,7 +37,7 @@ public class ReiatsuClone() : IchigoCard(
         {
             counter += 1;
         }
-        await PowerCmd.Apply<ReiryokuClonePower>(choiceContext, Owner.Creature, counter, Owner.Creature, this);
+        await PowerCmd.Apply<ReiatsuClonePower>(choiceContext, Owner.Creature, counter, Owner.Creature, this);
 
     }
 

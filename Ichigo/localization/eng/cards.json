@@ -93,7 +93,7 @@
   "ICHIGO-AURA_SHIELD.description": "Gain 4 [gold]Block[/gold]. Gain {GetsugaExhaustMultiplier:diff()} additional [gold]Block[/gold] for each Getsuga Tenshou card in your [gold]Exhaust[/gold] pile.",
 
   "ICHIGO-REIATSU_BARRIER.title": "Reiatsu Barrier",
-  "ICHIGO-REIATSU_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold].\nFor {Turns:diff()} {Turns:plural:turn|turns}, take 50% less damage from attacks by enemies with [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-REIATSU_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold].\nThis turn, take 50% damage from enemies with [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold].",
 
   "ICHIGO-HOLLOW_GUARD.title": "Hollow Guard",
   "ICHIGO-HOLLOW_GUARD.description": "Lose {HpLoss:diff()} HP.\nGain {Block:diff()} [gold]Block[/gold].",
@@ -107,9 +107,10 @@
   "ICHIGO-THE_RESOLVE_TO_KILL.description": "For {Turns:diff()} turn(s): [gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage.",
 
   "ICHIGO-SHUNPO_MASTERY.title": "Shunpo Mastery",
-  "ICHIGO-SHUNPO_MASTERY.description": "Whenever you play a [gold]Getsuga Tenshou[/gold], gain {Block:diff()} [gold]Block[/gold].",
-  "ICHIGO-REIRYOKU_CLONE.title": "Reiatsu Clone",
-  "ICHIGO-REIRYOKU_CLONE.description": "Your next attack is played twice. \n{BankaiIcon}: Your next 2 attacks are played twice.",
+  "ICHIGO-SHUNPO_MASTERY.description": "Whenever you play a [gold]Getsuga[/gold] card, gain {Block:diff()} [gold]Block[/gold].",
+  
+  "ICHIGO-REIATSU_CLONE.title": "Reiatsu Clone",
+  "ICHIGO-REIATSU_CLONE.description": "Your next attack is played twice. \n{BankaiIcon}: Your next 2 attacks are played twice.",
 
   "ICHIGO-BANKAI_TENSA_ZANGETSU.title": "Bankai: Tensa Zangetsu",
   "ICHIGO-BANKAI_TENSA_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]. \n{BankaiIcon}: Extend [gold]Bankai[/gold] by 2 turns.",

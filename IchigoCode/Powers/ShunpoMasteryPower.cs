@@ -9,13 +9,24 @@ using Ichigo.IchigoCode.Cards.Rare;
 using Ichigo.IchigoCode.Cards.Uncommon;
 using Ichigo.IchigoCode.Extensions;
 using Ichigo.IchigoCode.Mechanics;
+using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Powers;
 
-public class ShunpoMasteryPower :
-    TemporaryStrengthPower,
-    ICustomModel
+
+public class ShunpoMasteryPower : IchigoPower
 {
-    public override AbstractModel OriginModel =>
-        ModelDb.Card<ShunpoMastery>();
+    public override PowerType Type => PowerType.Buff;
+
+    public override PowerStackType StackType => PowerStackType.Counter;
+
+    public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        if (cardPlay.Card.Owner.Creature != Owner || cardPlay.Card is not IGetsugaCard)
+            return;
+
+        Flash();
+        await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, cardPlay);
+    }
 }

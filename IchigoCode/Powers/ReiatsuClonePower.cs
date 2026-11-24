@@ -14,7 +14,7 @@ using MegaCrit.Sts2.Core.Commands;
 
 namespace Ichigo.IchigoCode.Powers;
 
-public sealed class ReiryokuClonePower : IchigoPower
+public sealed class ReiatsuClonePower : IchigoPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;

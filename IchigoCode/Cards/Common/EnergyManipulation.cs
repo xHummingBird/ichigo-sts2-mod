@@ -25,7 +25,8 @@ public class EnergyManipulation() : IchigoCard(
             new DynamicVar("Reiryoku", 8)
         ];
 
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [
+    public override IEnumerable<CardKeyword> CanonicalKeywords => 
+    [
         CardKeyword.Exhaust
     ];
 

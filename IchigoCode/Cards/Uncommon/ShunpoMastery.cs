@@ -21,7 +21,7 @@ public class ShunpoMastery() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<ShunpoMasteryCounterPower>(choiceContext, Owner.Creature, DynamicVars["Block"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<ShunpoMasteryPower>(choiceContext, Owner.Creature, DynamicVars["Block"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
