@@ -7,6 +7,7 @@ using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Extensions;
 using Ichigo.IchigoCode.Powers;
 using Ichigo.IchigoCode.Relics;
+using MegaCrit.Sts2.Core.Runs;
 
 namespace Ichigo.IchigoCode.Cards.Ancient;
 
@@ -46,6 +47,10 @@ public class BankaiHos() : IchigoCard(
             DynamicVars["Turns"].IntValue,
             Owner.Creature,
             this);
+        await Task.Delay(900);
+        ichigo.PlayAnimation(Owner.Creature, "idle");
+        SfxCmd.Play("res://Ichigo/sounds/tensa_zangetsu.mp3");
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

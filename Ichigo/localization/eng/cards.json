@@ -100,10 +100,6 @@
 
   "ICHIGO-SUBSTITUTE_SHINIGAMI.title": "Substitute Shinigami",
   "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Gain [gold]Substitute Shinigami[/gold] for {Turns:diff()} turns.",
-
-  "ICHIGO-BANKAI_TENSAI_ZANGETSU.title": "Bankai: Tensai Zangetsu",
-  "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. If you are not in [gold]Bankai[/gold], gain {Reiryoku:diff()} [gold]Reiryoku[/gold]. If you are, add 2 turns to your current [gold]Bankai[/gold].",
-
   "ICHIGO-SPIRIT_MASTERY.title": "Spirit Mastery",
   "ICHIGO-SPIRIT_MASTERY.description": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
 
@@ -111,9 +107,79 @@
   "ICHIGO-THE_RESOLVE_TO_KILL.description": "For {Turns:diff()} turn(s): [gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage.",
 
   "ICHIGO-SHUNPO_MASTERY.title": "Shunpo Mastery",
-  "ICHIGO-SHUNPO_MASTERY.description": "Whenever you play a [gold]Getsuga Tenshou[/gold], gain {Block:diff()} [gold]Block[/gold]."
-  "ICHIGO-BANKAI_TENSAI_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]. \n{BankaiIcon}: Add 2 turns to your current [gold]Bankai[/gold].",
+  "ICHIGO-SHUNPO_MASTERY.description": "Whenever you play a [gold]Getsuga Tenshou[/gold], gain {Block:diff()} [gold]Block[/gold].",
+  "ICHIGO-REIRYOKU_CLONE.title": "Reiatsu Clone",
+  "ICHIGO-REIRYOKU_CLONE.description": "Your next attack is played twice. \n{BankaiIcon}: Your next 2 attacks are played twice.",
+
+  "ICHIGO-BANKAI_TENSA_ZANGETSU.title": "Bankai: Tensa Zangetsu",
+  "ICHIGO-BANKAI_TENSA_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]. \n{BankaiIcon}: Extend [gold]Bankai[/gold] by 2 turns.",
 
   "ICHIGO-GETSUGA_JUJISHO.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Double additional damage.",
-  "ICHIGO-GETSUGA_JUJISHO.title": "Getsuga Jujisho"
+  "ICHIGO-GETSUGA_JUJISHO.title": "Getsuga Jujisho",
+
+  "ICHIGO-RISING_MOON.title": "Rising Moon",
+  "ICHIGO-RISING_MOON.description": "Deal {Damage:diff()} damage. \nYour next Attack costs 0 {energyPrefix:energyIcons(1)}. \n{BankaiIcon}: Your next Skill costs 0 {energyPrefix:energyIcons(1)}.",
+
+  "ICHIGO-OVERSWING.title": "Overswing",
+  "ICHIGO-OVERSWING.description": "Lose {HpLoss:diff()} HP. \nDeal {Damage:diff()} damage.",
+
+  "ICHIGO-MOON_FLASH.title": "Moon Flash",
+  "ICHIGO-MOON_FLASH.description": "Deal {Damage:diff()} damage. \nApply any debuffs on the enemy to ALL other enemies.",
+
+  "ICHIGO-ECLIPSE.title": "Eclipse",
+  "ICHIGO-ECLIPSE.description": "Deal {CalculatedDamage:diff()} damage. \nDeal additional damage equal to {ExtraDamage:diff()}% of your missing HP. \n{BankaiIcon}: Double the additional damage.",
+
+  "ICHIGO-DUAL_CRESCENT.title": "Dual Crescent",
+  "ICHIGO-DUAL_CRESCENT.description": "Deal {Damage:diff()} damage 2 times. \n{BankaiIcon}: Hit 2 additional times.",
+
+  "ICHIGO-BLACK_GETSUGA.title": "Black Getsuga",
+  "ICHIGO-BLACK_GETSUGA.description": "Deal {Damage:diff()} damage. \nDouble the enemy's [gold]Bleed[/gold]. \n{BankaiIcon}: Costs 0 {energyPrefix:energyIcons(1)}.",
+
+  "ICHIGO-GETSUGA_PIERCE.title": "Getsuga Pierce",
+  "ICHIGO-GETSUGA_PIERCE.description": "Deal {Damage:diff()} damage. \nCosts 0 {energyPrefix:energyIcons(1)} if you've played [gold]Getsuga Tenshou[/gold] this turn. \n{BankaiIcon}: Trigger the enemy's [gold]Bleed[/gold].",
+
+  "ICHIGO-POINT_BLANK_GETSUGA.title": "Point-Blank Getsuga",
+  "ICHIGO-POINT_BLANK_GETSUGA.description": "Deal {Damage:diff()} damage. \nApply {BleedPower:diff()} [gold]Bleed[/gold]. \n{BankaiIcon}: Double the [gold]Bleed[/gold] applied.",
+
+  "ICHIGO-EXECUTE.title": "Execute",
+  "ICHIGO-EXECUTE.description": "Deal {CalculatedDamage:diff()} damage. \nIf the enemy has less than 50% HP, deal double damage.",
+
+  "ICHIGO-FRENZY.title": "Frenzy",
+  "ICHIGO-FRENZY.description": "Deal {Damage:diff()} damage. \nIf you've lost HP this turn, hit an additional time.",
+
+  "ICHIGO-POISE_BREAK.title": "Poise Break",
+  "ICHIGO-POISE_BREAK.description": "Deal {Damage:diff()} damage. \nDouble the enemy's [gold]Spiritual Fracture[/gold].",
+
+  "ICHIGO-OPEN_WOUNDS.title": "Open Wounds",
+  "ICHIGO-OPEN_WOUNDS.description": "Deal {Damage:diff()} damage. \nIf the enemy has [gold]Spiritual Fracture[/gold], apply {BleedPower:diff()} [gold]Bleed[/gold].",
+
+  "ICHIGO-OVERHEAD_STRIKE.title": "Overhead Strike",
+  "ICHIGO-OVERHEAD_STRIKE.description": "Deal {Damage:diff()} damage. \nApply {BleedPower:diff()} [gold]Bleed[/gold]. \nApply {SpiritualFracturePower:diff()} [gold]Spiritual Fracture[/gold].",
+
+  "ICHIGO-LUNGE_SLASH.title": "Lunge Slash",
+  "ICHIGO-LUNGE_SLASH.description": "Deal {Damage:diff()} damage. \nIf the enemy has [gold]Spiritual Fracture[/gold], hit an additional time.",
+
+  "ICHIGO-STEADFAST_BLADE.title": "Steadfast Blade",
+  "ICHIGO-STEADFAST_BLADE.description": "Deal {Damage:diff()} damage. \nRetain your hand this turn.",
+
+  "ICHIGO-FANG_SLASH.title": "Fang Slash",
+  "ICHIGO-FANG_SLASH.description": "Deal {Damage:diff()} damage {HitCount} times. \nPlay a random Attack from your draw pile.",
+
+  "ICHIGO-HEAVENLY_FLASH.title": "Heavenly Flash",
+  "ICHIGO-HEAVENLY_FLASH.description": "Deal {Damage:diff()} damage. \nHits an additional time for each Skill played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+
+  "ICHIGO-BRUTE_FORCE.title": "Brute Force",
+  "ICHIGO-BRUTE_FORCE.description": "Lose 10% of your current HP. \nDeal {CalculatedDamage:diff()} damage and additional damage equal to the HP lost.",
+
+  "ICHIGO-BARRAGE.title": "Barrage",
+  "ICHIGO-BARRAGE.description": "Deal {Damage:diff()} damage for each Attack played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+
+  "ICHIGO-DEATHBLOW.title": "Deathblow",
+  "ICHIGO-DEATHBLOW.description": "Deal {Damage:diff()} damage. \nTrigger the enemy's [gold]Bleed[/gold].",
+
+  "ICHIGO-BLADE_DANCE.title": "Blade Dance",
+  "ICHIGO-BLADE_DANCE.description": "Deal {Damage:diff()} damage {HitCount:diff()} times. \nCosts 1 less for each Attack played this turn.",
+
+  "ICHIGO-FINAL_BLOW.title": "Final Blow",
+  "ICHIGO-FINAL_BLOW.description": "Deal damage equal to the number of cards you've played this combat.{InCombat:\n(Deals {CalculatedDamage:diff()} damage)|}"
 }

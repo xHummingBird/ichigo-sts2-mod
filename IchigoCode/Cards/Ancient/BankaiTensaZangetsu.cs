@@ -10,7 +10,7 @@ using Ichigo.IchigoCode.Mechanics;
 
 namespace Ichigo.IchigoCode.Cards.Ancient;
 
-public class BankaiTensaiZangetsu() : IchigoCard(
+public class BankaiTensaZangetsu() : IchigoCard(
     0,
     CardType.Skill,
     CardRarity.Ancient,
@@ -21,6 +21,11 @@ public class BankaiTensaiZangetsu() : IchigoCard(
     [
         new CardsVar(2),
         new DynamicVar("Reiryoku", 100)
+    ];
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords =>
+    [
+        CardKeyword.Exhaust
     ];
 
     protected override async Task OnPlay(
