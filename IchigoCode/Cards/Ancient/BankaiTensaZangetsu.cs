@@ -22,6 +22,11 @@ public class BankaiTensaZangetsu() : IchigoCard(
         new CardsVar(2),
         new DynamicVar("Reiryoku", 100)
     ];
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords =>
+    [
+        CardKeyword.Exhaust
+    ];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

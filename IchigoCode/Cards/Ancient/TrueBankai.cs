@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using Ichigo.IchigoCode.Powers;
 using Ichigo.IchigoCode.Relics;
+using MegaCrit.Sts2.Core.Runs;
 
 namespace Ichigo.IchigoCode.Cards.Ancient;
 
@@ -28,7 +29,7 @@ public class TrueBankai() : IchigoCard(
         var turns = DynamicVars["Turns"].IntValue;
         if (Owner.GetRelic<Hougyoku>() != null)
             turns += 1;
-        
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         var ichigo = Owner.Character as Character.Ichigo;
         AudioHelper.PlayRandomBankaiBefore();
         ichigo.PlayCutIn("jujisho_bankai");
@@ -46,7 +47,9 @@ public class TrueBankai() : IchigoCard(
             Owner.Creature,
             this);
         await Task.Delay(900);
+        ichigo.PlayAnimation(Owner.Creature, "idle");
         SfxCmd.Play("res://Ichigo/sounds/tensa_zangetsu.mp3");
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

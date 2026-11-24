@@ -69,7 +69,7 @@ public class MoonFlash() : IchigoCard(
 
         if (Owner.Character is Character.Ichigo ichigo)
         {
-            AudioHelper.PlayRandomAttack();
+            AudioHelper.PlayRandomPhrase();
 
             await ichigo.DashTo(
                 ownerCreature,

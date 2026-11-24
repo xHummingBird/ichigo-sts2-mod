@@ -7,7 +7,6 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Powers;
 
-// At the start of its owner's turn, deals unblockable damage equal to the amount, then loses 1 stack.
 public sealed class BleedPower : IchigoPower
 {
     public override PowerType Type => PowerType.Debuff;
@@ -22,11 +21,18 @@ public sealed class BleedPower : IchigoPower
         if (!participants.Contains(Owner))
             return;
 
+        await Trigger();
+    }
+
+    public async Task Trigger()
+    {
+        Flash();
         await CreatureCmd.Damage(
             new ThrowingPlayerChoiceContext(),
             Owner,
             Amount,
-            ValueProp.Unblockable | ValueProp.Unpowered,
+            ValueProp.Unblockable |
+            ValueProp.Unpowered,
             null,
             null);
 

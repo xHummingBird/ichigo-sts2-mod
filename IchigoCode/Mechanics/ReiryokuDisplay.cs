@@ -38,7 +38,7 @@ public partial class ReiryokuDisplay : Control
      * Positive Y = down
      */
     private static readonly Vector2 LabelPositionOffset =
-        new(0f, 11f);
+        new(1f, 12f);
 
     /*
      * Ichigo has only one display state.

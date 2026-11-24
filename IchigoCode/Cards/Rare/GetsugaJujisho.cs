@@ -59,7 +59,7 @@ public class GetsugaJujisho() : IchigoCard(
                 firstEnemy != null &&
                 Owner?.Character is Character.Ichigo ichigo)
             {
-                ichigo.PlayAnimation(ownerCreature, "jujisho");
+                
                 if (ownerCreature.HasPower<TrueBankaiPower>())
                     ichigo.PlayCutIn("jujisho_bankai");
                 else if (ownerCreature.HasPower<BankaiHosPower>())
@@ -67,6 +67,7 @@ public class GetsugaJujisho() : IchigoCard(
                 else ichigo.PlayCutIn("jujisho_base");
                 SfxCmd.Play("res://Ichigo/sfx/cutin_sfx.wav");
                 await Task.Delay(800);
+                ichigo.PlayAnimation(ownerCreature, "jujisho");
                 SfxCmd.Play("res://Ichigo/sounds/getsuga_jujisho.wav", 0.7f);
                 SfxCmd.Play("res://Ichigo/sfx/attack_effect_2.wav", 0.7f);
                 await Task.Delay(400);

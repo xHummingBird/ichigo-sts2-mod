@@ -53,7 +53,6 @@ public class Ichigo : PlaceholderCharacterModel
         ModelDb.Card<DefendIchigo>(),
 
         ModelDb.Card<DualZangetsu>(),
-        ModelDb.Card<FlashStep>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
@@ -848,6 +847,22 @@ public class Ichigo : PlaceholderCharacterModel
             character.PlayAnimation(
                 target,
                 "hit");
+            
+            if (target.CurrentHp < 20)
+            {
+                AudioHelper
+                    .PlayRandomDamagedCritical();
+            }
+            else if (result.UnblockedDamage < 10)
+            {
+                AudioHelper
+                    .PlayRandomDamaged();
+            }
+            else
+            {
+                AudioHelper
+                    .PlayRandomDamagedHigh();
+            }
         }
     }
 }
