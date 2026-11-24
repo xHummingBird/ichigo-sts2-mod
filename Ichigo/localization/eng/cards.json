@@ -222,5 +222,8 @@
   "ICHIGO-SHARED_CONVICTION.description": "Gain [gold]Shared Conviction[/gold].\nWhenever you apply [gold]Bleeding[/gold] to an enemy, draw {Cards:diff()} cards.",
 
   "ICHIGO-SPIRITUAL_BALANCE.title": "Spiritual Balance",
-  "ICHIGO-SPIRITUAL_BALANCE.description": "Gain [gold]Spiritual Balance[/gold].\nWhenever you lose HP, gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
+  "ICHIGO-SPIRITUAL_BALANCE.description": "Gain [gold]Spiritual Balance[/gold].\nWhenever you lose HP, gain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-REIATSU_ABSORPTION.title": "Reiatsu Absorption",
+  "ICHIGO-REIATSU_ABSORPTION.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain 2 [gold]Reiryoku[/gold]."
 }

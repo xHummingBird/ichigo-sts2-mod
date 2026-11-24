@@ -65,5 +65,9 @@
 
   "ICHIGO-SPIRITUAL_BALANCE_POWER.title": "Spiritual Balance",
   "ICHIGO-SPIRITUAL_BALANCE_POWER.description": "Whenever you lose HP, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
-  "ICHIGO-SPIRITUAL_BALANCE_POWER.smartDescription": "Whenever you lose HP, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold]."
+  "ICHIGO-SPIRITUAL_BALANCE_POWER.smartDescription": "Whenever you lose HP, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
+
+  "ICHIGO-REIATSU_ABSORPTION_POWER.title": "Reiatsu Absorption",
+  "ICHIGO-REIATSU_ABSORPTION_POWER.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
+  "ICHIGO-REIATSU_ABSORPTION_POWER.smartDescription": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold]."
 }
