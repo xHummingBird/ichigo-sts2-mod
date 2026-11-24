@@ -48,16 +48,61 @@ public class FinalBlow() : IchigoCard(
         {
             if (isTrueBankai)
             {
-                // =====================================================
-                // TRUE BANKAI ANIMATION
-                // Add Final Blow's True Bankai animation here.
-                // =====================================================
+                SfxCmd.Play("res://Ichigo/sounds/final_blow.mp3", 0.7f);
+                ichigo.PlayCutIn("jujisho_bankai");
+                SfxCmd.Play("res://Ichigo/sfx/cutin_sfx.wav");
+                await Task.Delay(1000);
+                
+                await ichigo.DashTo(
+                    ownerCreature,
+                    target,
+                    distance: 400f,
+                    durationSeconds: 0.2f,
+                    overrideAnim: "dash");
+                ichigo.PlayAnimation(ownerCreature, "final_blow");
+                SfxCmd.Play("res://Ichigo/sfx/attack_effect_2.wav", 0.7f);
+                await Task.Delay(300);
+                SfxCmd.Play("res://Ichigo/sfx/attack_effect_3.wav", 0.7f);
+                await Task.Delay(16);
+                SfxCmd.Play("res://Ichigo/sfx/from_cloud/sword_swing_heavy.wav");
+                await Task.Delay(17);
+                IchigoExtensions.CombatHelpers.IchigoFakeHit(
+                    ownerCreature,
+                    target,
+                    hitSfx:
+                    "res://Ichigo/sfx/from_cloud/cloud_hit.wav",
+                    hitVfx:
+                    "execute_hit");
+
+                await Task.Delay(200);
+
+                IchigoExtensions.CombatHelpers.IchigoFakeHit(
+                    ownerCreature,
+                    target,
+                    hitSfx:
+                    "res://Ichigo/sfx/from_cloud/cloud_hit.wav",
+                    playHitVfx: false);
+
+                await Task.Delay(67);
+
+                IchigoExtensions.CombatHelpers.IchigoFakeHit(
+                    ownerCreature,
+                    target,
+                    hitSfx:
+                    "res://Ichigo/sfx/from_cloud/cloud_hit.wav",
+                    playHitVfx: false);
+
+                await Task.Delay(67);
 
                 await CommonActions.CardAttack(this, play)
                     .WithHitFx(
                         null,
                         "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
                     .Execute(choiceContext);
+
+                await ichigo.Retreat(
+                    ownerCreature,
+                    duration: 0.2f);
             }
             else
             {
