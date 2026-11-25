@@ -21,8 +21,20 @@ public class VastoLorde() : IchigoCard(
     [
         new PowerVar<BleedPower>(2m)
     ];
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromPower<BleedPower>(),
+        HoverTipFactory.FromPower<SpiritualFracturePower>()
+    ];
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<VastoLordePower>(choiceContext, Owner.Creature, DynamicVars["BleedPower"].BaseValue, Owner.Creature, this);
+    }
+
+    protected override void OnUpgrade()
+    {
+        DynamicVars["BleedPower"].UpgradeValueBy(1m);
     }
 }

@@ -24,8 +24,13 @@ public sealed class VastoLordePower : IchigoPower
 	{
 		if (player == Owner.Player)
 		{
+            decimal amount = Amount;
+            if (CombatState.HittableEnemies.Any(e => e.HasPower<SpiritualFracturePower>()))
+            {
+                amount *= 2m;
+            }
             Flash();
-		    await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, Amount, Owner, null);
+		    await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, amount, Owner, null);
 		}
 	}
 }
