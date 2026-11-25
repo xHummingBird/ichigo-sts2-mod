@@ -237,5 +237,8 @@
   "ICHIGO-VASTO_LORDE.description": "At the start of each turn, apply {BleedPower:diff()} [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
 
   "ICHIGO-REBORN_POWER.title": "Reborn Power",
-  "ICHIGO-REBORN_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply {BleedPower:diff()} [gold]Bleed[/gold] to the target."
+  "ICHIGO-REBORN_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply {BleedPower:diff()} [gold]Bleed[/gold] to the target.",
+
+  "ICHIGO-GETSUGA_AURA.title": "Getsuga Aura",
+  "ICHIGO-GETSUGA_AURA.description": "[gold]Getsuga Tenshou[/gold] cards deal {AdditionalDamage:diff()} additional damage."
 }

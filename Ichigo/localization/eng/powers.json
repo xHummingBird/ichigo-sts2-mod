@@ -85,5 +85,9 @@
 
   "ICHIGO-REBORN_POWER_POWER.title": "Reborn",
   "ICHIGO-REBORN_POWER_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target.",
-  "ICHIGO-REBORN_POWER_POWER.smartDescription": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target."
+  "ICHIGO-REBORN_POWER_POWER.smartDescription": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target.",
+
+  "ICHIGO-GETSUGA_AURA_POWER.title": "Getsuga Aura",
+  "ICHIGO-GETSUGA_AURA_POWER.description": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage.",
+  "ICHIGO-GETSUGA_AURA_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage."
 }
