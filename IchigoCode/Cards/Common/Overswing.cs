@@ -18,7 +18,7 @@ public class Overswing() : IchigoCard(
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new HpLossVar(2m),
-        new DamageVar(22m, ValueProp.Move)
+        new DamageVar(24m, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(
@@ -82,6 +82,6 @@ public class Overswing() : IchigoCard(
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(6m);
+        DynamicVars.Damage.UpgradeValueBy(8m);
     }
 }

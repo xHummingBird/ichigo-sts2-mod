@@ -24,7 +24,7 @@
   "ICHIGO-BRINGER_LIGHT.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "ICHIGO-SONIDO.title": "Sonido",
-  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}.",
+  "ICHIGO-SONIDO.description": "Lose {HpLoss:diff()} HP. \nGain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {Energy:energyIcons()}.",
 
   "ICHIGO-BANKAI_HOS.title": "Bankai: Horn of Salvation",
   "ICHIGO-BANKAI_HOS.description": "Enter [gold]Bankai: Horn of Salvation[/gold] for [blue]{Turns:diff()}[/blue] turns. Deal bonus damage equal to percentage of missing HP.",
@@ -33,7 +33,7 @@
   "ICHIGO-TRUE_BANKAI.description": "Enter [gold]True Bankai[/gold] for [blue]{Turns:diff()}[/blue] turns. Double the effectiveness of [gold]Spiritual Fracture[/gold] and heal HP lost from playing cards.",
 
   "ICHIGO-FINAL_GETSUGA.title": "Final Getsuga Tenshou",
-  "ICHIGO-FINAL_GETSUGA.description": "Play all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold]{IfUpgraded:show:, upgrading them first|}.",
+  "ICHIGO-FINAL_GETSUGA.description": "{IfUpgraded:show:Upgrade and play|Play} all [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold].",
 
   "ICHIGO-POWER_FUSION.title": "Power Fusion",
   "ICHIGO-POWER_FUSION.description": "Discard your [gold]Hand[/gold].\nAdd a [gold]Getsuga Tenshou[/gold] into your Hand for each card discarded.",
@@ -48,7 +48,7 @@
   "ICHIGO-ARMOR_CLAD.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {BleedPower:diff()} [gold]Bleed[/gold].",
 
   "ICHIGO-HYPER_SPEED_COMBAT.title": "Hyper Speed Combat",
-  "ICHIGO-HYPER_SPEED_COMBAT.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Bankai[/gold]: Gain {Block:diff()} Block next turn.",
+  "ICHIGO-HYPER_SPEED_COMBAT.description": "Gain {Block:diff()} [gold]Block[/gold].\n{BankaiIcon}: Gain {Block:diff()} Block next turn.",
 
   "ICHIGO-POWER_OF_VISORED.title": "Power of Visored",
   "ICHIGO-POWER_OF_VISORED.description": "Lose {HpLoss:diff()} HP. In [gold]True Bankai[/gold], heal that much instead.\nAdd {Cards:diff()} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
@@ -182,5 +182,35 @@
   "ICHIGO-BLADE_DANCE.description": "Deal {Damage:diff()} damage {HitCount:diff()} times. \nCosts 1 less for each Attack played this turn.",
 
   "ICHIGO-FINAL_BLOW.title": "Final Blow",
-  "ICHIGO-FINAL_BLOW.description": "Deal damage equal to the number of cards you've played this combat.{InCombat:\n(Deals {CalculatedDamage:diff()} damage)|}"
+  "ICHIGO-FINAL_BLOW.description": "Deal damage equal to the number of cards you've played this combat.{InCombat:\n(Deals {CalculatedDamage:diff()} damage)|}",
+
+  "ICHIGO-CERO_CRECIENTE.title": "Cero Creciente",
+  "ICHIGO-CERO_CRECIENTE.description": "Lose 3 HP. \nDeal {Damage:diff()} damage to ALL enemies. \n{BankaiIcon}: Apply 2 [gold]Spiritual Fracture[/gold] and 5 [gold]Bleed[/gold] to ALL enemies.",
+
+  "ICHIGO-REIATSU_EXPLOSION.description": "Deal {Damage:diff()} damage to ALL enemies X{IfUpgraded:show:+1} times. \nIf you have more than 50 [gold]Reiryoku[/gold], increase X by 1.",
+  "ICHIGO-REIATSU_EXPLOSION.title": "Reiatsu Explosion",
+
+  "ICHIGO-ARC_SLASH.title": "Arc Slash",
+  "ICHIGO-ARC_SLASH.description": "Deal {Damage:diff()} damage. \nIf the enemy has [gold]Bleed[/gold], gain 1 {energyPrefix:energyIcons(1)}.",
+
+  "ICHIGO-VORTEX_PULL.title": "Vortex Pull",
+  "ICHIGO-VORTEX_PULL.description": "Deal {Damage:diff()} damage to ALL enemies. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-DUAL_SWEEP.title": "Dual Sweep",
+  "ICHIGO-DUAL_SWEEP.description": "Deal {Damage:diff()} damage 2 times to ALL enemies. \nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "ICHIGO-FULL_MOON.title": "Full Moon",
+  "ICHIGO-FULL_MOON.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \n{BankaiIcon}: If there is only 1 enemy, deal {ExtraDamage:diff()} additional damage.",
+
+  "ICHIGO-GRAND_GETSUGA.title": "Grand Getsuga",
+  "ICHIGO-GRAND_GETSUGA.description": "Deal {Damage:diff()} damage. \nCosts 1 less {energyPrefix:energyIcons(1)} for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Hits ALL enemies.",
+
+  "ICHIGO-FLYING_GETSUGA.title": "Flying Getsuga",
+  "ICHIGO-FLYING_GETSUGA.description": "Deal {Damage:diff()} damage. \n{BankaiIcon}: Play a random [gold]Getsuga[/gold] from your [gold]Draw Pile[/gold].",
+
+  "ICHIGO-NEW_MOON.title": "New Moon",
+  "ICHIGO-NEW_MOON.description": "Deal {Damage:diff()} damage. \nAdd {IfUpgraded:show:an upgraded|a} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]. \n{BankaiIcon}: Add 2 additional [gold]Getsuga Tenshou[/gold].",
+
+  "ICHIGO-BLACK_VOID.title": "Black Void",
+  "ICHIGO-BLACK_VOID.description": "Lose 3 HP. \nRemove all of the enemy's [gold]Block[/gold]. \nDeal {Damage:diff()} damage."
 }

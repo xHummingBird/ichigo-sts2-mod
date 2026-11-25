@@ -21,11 +21,6 @@ public class SteadfastBlade() : IchigoCard(
         new DamageVar(11m, ValueProp.Move)
     ];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<RetainHandPower>()
-    ];
-
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
