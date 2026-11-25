@@ -92,5 +92,8 @@
   "ICHIGO-GETSUGA_AURA_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage.",
   "ICHIGO-BATTLE_INSTINCT_POWER.title": "Battle Instinct",
   "ICHIGO-BATTLE_INSTINCT_POWER.description": "Whenever you play your 3rd Attack each turn, gain [blue]{Amount}[/blue] Block.",
-  "ICHIGO-BATTLE_INSTINCT_POWER.smartDescription": "Whenever you play your 3rd Attack each turn, gain [blue]{Amount}[/blue] Block."
+  "ICHIGO-BATTLE_INSTINCT_POWER.smartDescription": "Whenever you play your 3rd Attack each turn, gain [blue]{Amount}[/blue] Block.",
+  "ICHIGO-SPIRITUAL_MOMENTUM_POWER.title": "Spiritual Momentum",
+  "ICHIGO-SPIRITUAL_MOMENTUM_POWER.description": "Whenever you spend [blue]4[/blue] Energy, gain [blue]{Amount}[/blue] Energy.",
+  "ICHIGO-SPIRITUAL_MOMENTUM_POWER.smartDescription": "Whenever you spend [blue]4[/blue] Energy, gain [blue]{Amount}[/blue] Energy."
 }
