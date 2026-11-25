@@ -69,5 +69,9 @@
 
   "ICHIGO-REIATSU_ABSORPTION_POWER.title": "Reiatsu Absorption",
   "ICHIGO-REIATSU_ABSORPTION_POWER.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
-  "ICHIGO-REIATSU_ABSORPTION_POWER.smartDescription": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold]."
+  "ICHIGO-REIATSU_ABSORPTION_POWER.smartDescription": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
+
+  "ICHIGO-CHAIN_POWER.title": "Chain",
+  "ICHIGO-CHAIN_POWER.description": "Whenever you play your 3rd Attack each turn, add a copy of that card.",
+  "ICHIGO-CHAIN_POWER.smartDescription": "Whenever you play your [blue]3rd[/blue] Attack each turn, add a copy of that card."
 }

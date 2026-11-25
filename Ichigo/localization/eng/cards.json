@@ -225,5 +225,8 @@
   "ICHIGO-SPIRITUAL_BALANCE.description": "Gain [gold]Spiritual Balance[/gold].\nWhenever you lose HP, gain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
 
   "ICHIGO-REIATSU_ABSORPTION.title": "Reiatsu Absorption",
-  "ICHIGO-REIATSU_ABSORPTION.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain 2 [gold]Reiryoku[/gold]."
+  "ICHIGO-REIATSU_ABSORPTION.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain 2 [gold]Reiryoku[/gold].",
+
+  "ICHIGO-CHAIN.title": "Chain",
+  "ICHIGO-CHAIN.description": "Whenever you play your 3rd Attack each turn, add a copy of that card."
 }
