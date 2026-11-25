@@ -80,6 +80,6 @@
   "ICHIGO-SYZYGY_POWER.smartDescription": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
 
   "ICHIGO-VASTO_LORDE_POWER.title": "Vasto Lorde",
-  "ICHIGO-VASTO_LORDE_POWER.description": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture",
-  "ICHIGO-VASTO_LORDE_POWER.smartDescription": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture"
+  "ICHIGO-VASTO_LORDE_POWER.description": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
+  "ICHIGO-VASTO_LORDE_POWER.smartDescription": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture."
 }
