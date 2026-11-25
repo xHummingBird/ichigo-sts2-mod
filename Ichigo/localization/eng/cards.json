@@ -246,5 +246,7 @@
   "ICHIGO-SPIRITUAL_MOMENTUM.title": "Spiritual Momentum",
   "ICHIGO-SPIRITUAL_MOMENTUM.description": "Whenever you spend 4 Energy, gain {Energy:energyIcons()} Energy.",
   "ICHIGO-SOUL_MANIPULATION.title": "Soul Manipulation",
-  "ICHIGO-SOUL_MANIPULATION.description": "The first time you take unblocked damage each turn, gain {Energy:energyIcons()}."
+  "ICHIGO-SOUL_MANIPULATION.description": "The first time you take unblocked damage each turn, gain {Energy:energyIcons()}.",
+  "ICHIGO-COMBAT_EXPERT.title": "Combat Expert",
+  "ICHIGO-COMBAT_EXPERT.description": "Gain {StrengthPower:diff()} Strength and {DexterityPower:diff()} Dexterity."
 }
