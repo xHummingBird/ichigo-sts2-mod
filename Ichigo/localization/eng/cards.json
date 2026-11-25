@@ -240,5 +240,7 @@
   "ICHIGO-REBORN_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply {BleedPower:diff()} [gold]Bleed[/gold] to the target.",
 
   "ICHIGO-GETSUGA_AURA.title": "Getsuga Aura",
-  "ICHIGO-GETSUGA_AURA.description": "[gold]Getsuga Tenshou[/gold] cards deal {AdditionalDamage:diff()} additional damage."
+  "ICHIGO-GETSUGA_AURA.description": "[gold]Getsuga Tenshou[/gold] cards deal {AdditionalDamage:diff()} additional damage.",
+  "ICHIGO-BATTLE_INSTINCT.title": "Battle Instinct",
+  "ICHIGO-BATTLE_INSTINCT.description": "Whenever you play your 3rd Attack each turn, gain {Block:diff()} Block."
 }

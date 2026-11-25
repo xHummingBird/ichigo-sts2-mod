@@ -89,5 +89,8 @@
 
   "ICHIGO-GETSUGA_AURA_POWER.title": "Getsuga Aura",
   "ICHIGO-GETSUGA_AURA_POWER.description": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage.",
-  "ICHIGO-GETSUGA_AURA_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage."
+  "ICHIGO-GETSUGA_AURA_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage.",
+  "ICHIGO-BATTLE_INSTINCT_POWER.title": "Battle Instinct",
+  "ICHIGO-BATTLE_INSTINCT_POWER.description": "Whenever you play your 3rd Attack each turn, gain [blue]{Amount}[/blue] Block.",
+  "ICHIGO-BATTLE_INSTINCT_POWER.smartDescription": "Whenever you play your 3rd Attack each turn, gain [blue]{Amount}[/blue] Block."
 }
