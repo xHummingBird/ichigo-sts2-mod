@@ -37,9 +37,9 @@
 
   "ICHIGO-POWER_FUSION.title": "Power Fusion",
   "ICHIGO-POWER_FUSION.description": "Discard your [gold]Hand[/gold].\nAdd a [gold]Getsuga Tenshou[/gold] into your Hand for each card discarded.",
-
+  
   "ICHIGO-GETSUGA_INFUSION.title": "Getsuga Infusion",
-  "ICHIGO-GETSUGA_INFUSION.description": "This turn, gain 1 [gold]Strength[/gold] for each [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold].",
+  "ICHIGO-GETSUGA_INFUSION.description": "This turn, gain [gold]Strength[/gold] equal to the number of [gold]Getsuga Tenshou[/gold] in your [gold]Exhaust Pile[/gold].",
 
   "ICHIGO-HOLLOWFICATION.title": "Hollowfication",
   "ICHIGO-HOLLOWFICATION.description": "Lose {HpLoss:diff()} HP. \nGain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
@@ -99,13 +99,13 @@
   "ICHIGO-HOLLOW_GUARD.description": "Lose {HpLoss:diff()} HP.\nGain {Block:diff()} [gold]Block[/gold].",
 
   "ICHIGO-SUBSTITUTE_SHINIGAMI.title": "Substitute Shinigami",
-  "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Whenever you play a card that costs {energyPrefix:energyIcons(2)}, add a [gold]Getsuga Tenshou[/gold] to your Hand.",
+  "ICHIGO-SUBSTITUTE_SHINIGAMI.description": "Whenever you play a card that costs {energyPrefix:energyIcons(2)} or more, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
   
   "ICHIGO-SPIRIT_MASTERY.title": "Spirit Mastery",
   "ICHIGO-SPIRIT_MASTERY.description": "Gain 2 [gold]Strength[/gold] whenever you apply [gold]Spiritual Fracture[/gold].",
 
   "ICHIGO-THE_RESOLVE_TO_KILL.title": "The Resolve to Kill",
-  "ICHIGO-THE_RESOLVE_TO_KILL.description": "[gold]Getsuga Tenshou[/gold] gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals (TheResolveToKillPower:diff()} additional damage.",
+  "ICHIGO-THE_RESOLVE_TO_KILL.description": "[gold]Getsuga Tenshou[/gold] gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals {TheResolveToKillPower:diff()} additional damage.",
 
   "ICHIGO-SHUNPO_MASTERY.title": "Shunpo Mastery",
   "ICHIGO-SHUNPO_MASTERY.description": "Whenever you play a [gold]Getsuga[/gold] card, gain {Block:diff()} [gold]Block[/gold].",
@@ -165,7 +165,7 @@
   "ICHIGO-STEADFAST_BLADE.description": "Deal {Damage:diff()} damage. \nRetain your hand this turn.",
 
   "ICHIGO-FANG_SLASH.title": "Fang Slash",
-  "ICHIGO-FANG_SLASH.description": "Deal {Damage:diff()} damage {HitCount} times. \nPlay a random Attack from your draw pile.",
+  "ICHIGO-FANG_SLASH.description": "Deal {Damage:diff()} damage {HitCount:diff()} times. \nPlay a random Attack from your draw pile.",
 
   "ICHIGO-HEAVENLY_FLASH.title": "Heavenly Flash",
   "ICHIGO-HEAVENLY_FLASH.description": "Deal {Damage:diff()} damage. \nHits an additional time for each Skill played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
@@ -180,7 +180,7 @@
   "ICHIGO-DEATHBLOW.description": "Deal {Damage:diff()} damage. \nTrigger the enemy's [gold]Bleed[/gold].",
 
   "ICHIGO-BLADE_DANCE.title": "Blade Dance",
-  "ICHIGO-BLADE_DANCE.description": "Deal {Damage:diff()} damage {HitCount:diff()} times. \nCosts 1 less for each Attack played this turn.",
+  "ICHIGO-BLADE_DANCE.description": "Deal {Damage:diff()} damage {HitCount:diff()} times. \nCosts 1 less {energyPrefix:energyIcons(1)} for each Attack played this turn.",
 
   "ICHIGO-FINAL_BLOW.title": "Final Blow",
   "ICHIGO-FINAL_BLOW.description": "Deal damage equal to the number of cards you've played this combat.{InCombat:\n(Deals {CalculatedDamage:diff()} damage)|}",
@@ -192,7 +192,7 @@
   "ICHIGO-REIATSU_EXPLOSION.title": "Reiatsu Explosion",
 
   "ICHIGO-ARC_SLASH.title": "Arc Slash",
-  "ICHIGO-ARC_SLASH.description": "Deal {Damage:diff()} damage. \nIf the enemy has [gold]Bleed[/gold], gain 1 {energyPrefix:energyIcons(1)}.",
+  "ICHIGO-ARC_SLASH.description": "Deal {Damage:diff()} damage. \nIf the enemy has [gold]Bleed[/gold], gain {energyPrefix:energyIcons(1)}.",
 
   "ICHIGO-VORTEX_PULL.title": "Vortex Pull",
   "ICHIGO-VORTEX_PULL.description": "Deal {Damage:diff()} damage to ALL enemies. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
