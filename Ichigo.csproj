@@ -60,6 +60,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Folder Include="IchigoCode\Nodes\" />
         <Folder Include="Ichigo\images\card_portraits\big\"/>
         <Folder Include="Ichigo\images\powers\big\"/>
         <Folder Include="Ichigo\images\relics\big\"/>
