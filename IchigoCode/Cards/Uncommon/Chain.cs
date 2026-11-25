@@ -27,4 +27,9 @@ public class Chain() : IchigoCard(
         await PowerCmd.Apply<ChainPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
 
     }
+
+    protected override void OnUpgrade()
+    {
+        AddKeyword(CardKeyword.Innate);
+    }
 }

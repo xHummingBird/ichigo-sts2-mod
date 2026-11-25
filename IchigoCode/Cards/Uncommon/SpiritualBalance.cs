@@ -28,4 +28,9 @@ public class SpiritualBalance() : IchigoCard(
     {
         await PowerCmd.Apply<SpiritualBalancePower>(choiceContext, Owner.Creature, DynamicVars["Reiryoku"].BaseValue, Owner.Creature, this);
     }
+    
+    protected override void OnUpgrade()
+    {
+        AddKeyword(CardKeyword.Innate);
+    }
 }
