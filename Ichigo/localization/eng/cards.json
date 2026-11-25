@@ -244,5 +244,7 @@
   "ICHIGO-BATTLE_INSTINCT.title": "Battle Instinct",
   "ICHIGO-BATTLE_INSTINCT.description": "Whenever you play your 3rd Attack each turn, gain {Block:diff()} Block.",
   "ICHIGO-SPIRITUAL_MOMENTUM.title": "Spiritual Momentum",
-  "ICHIGO-SPIRITUAL_MOMENTUM.description": "Whenever you spend 4 Energy, gain {Energy:energyIcons()} Energy."
+  "ICHIGO-SPIRITUAL_MOMENTUM.description": "Whenever you spend 4 Energy, gain {Energy:energyIcons()} Energy.",
+  "ICHIGO-SOUL_MANIPULATION.title": "Soul Manipulation",
+  "ICHIGO-SOUL_MANIPULATION.description": "The first time you take unblocked damage each turn, gain {Energy:energyIcons()}."
 }
