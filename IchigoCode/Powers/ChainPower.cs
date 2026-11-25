@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.Combat.History.Entries;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
@@ -30,6 +31,12 @@ public sealed class ChainPower : IchigoPower
         return new Data();
     }
 
+	public override Task AfterApplied(Creature? applier, CardModel? cardSource)
+	{
+		GetInternalData<Data>().attacksPlayedThisTurn = CombatManager.Instance.History.CardPlaysStarted.Count((CardPlayStartedEntry e) => e.CardPlay.Card.Type == CardType.Attack && e.CardPlay.Player == Owner.Player && e.HappenedThisTurn(CombatState));
+		return Task.CompletedTask;
+	}
+
     public override Task BeforeCardPlayed(CardPlay cardPlay)
     {
         if (cardPlay.Card.Owner.Creature != Owner)
@@ -55,8 +62,11 @@ public sealed class ChainPower : IchigoPower
         {
             GetInternalData<Data>().cardToClone = null;
             Flash();
-            CardModel card = cardPlay.Card.CreateClone();
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner.Player);
+            for (int i = 0; i < Amount; i++) {
+                CardModel card = cardPlay.Card.CreateClone();
+                await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, Owner.Player);
+            }
+
         }
     }
 

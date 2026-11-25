@@ -17,34 +17,34 @@ public sealed class SoulManipulationPower : IchigoPower
 {
     public override PowerType Type => PowerType.Buff;
 
-    bool triggered = true;
-
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override async Task AfterDamageReceived(
+	private bool _triggeredThisTurn;
+
+	public override async Task AfterDamageReceived(
         PlayerChoiceContext choiceContext,
-        Creature target,
-        DamageResult result,
-        ValueProp props,
-        Creature? dealer,
+        Creature target, 
+        DamageResult result, 
+        ValueProp props, 
+        Creature? dealer, 
         CardModel? cardSource)
-    {
-        if (target != Owner || result.UnblockedDamage <= 0)
-            return;
-
-        if (triggered)
-        {
-            triggered = false;
-            Flash();
-            await PlayerCmd.GainEnergy(Amount, Owner.Player);
-        }
-    }
-
-    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
-    {
-		if (side != CombatSide.Enemy)
+	{
+		if (Owner.CombatState != null && Owner.CombatState.CurrentSide == Owner.Side && target == Owner && result.UnblockedDamage > 0 && !_triggeredThisTurn)
 		{
-			triggered = true;
+			_triggeredThisTurn = true;
+			Flash();
+			await PlayerCmd.GainEnergy(Amount, Owner.Player);
 		}
-    }
+	}
+
+	public override Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+	{
+		if (!participants.Contains(Owner))
+		{
+			return Task.CompletedTask;
+		}
+		_triggeredThisTurn = false;
+		return Task.CompletedTask;
+	}
+
 }

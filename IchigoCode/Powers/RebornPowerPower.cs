@@ -23,10 +23,20 @@ public class RebornPowerPower : IchigoPower
 
     public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (cardPlay.Card.Owner.Creature != Owner || cardPlay.Card is not IGetsugaCard)
-            return;
+        var bleedAmount = Owner.GetPowerAmount<RebornPowerPower>();
+        bool isBankai =
+            Owner.HasPower<TrueBankaiPower>() ||
+            Owner.HasPower<BankaiHosPower>();
 
-            Flash();
-		    await PowerCmd.Apply<BleedPower>(choiceContext, cardPlay.Target, Amount, Owner, null);
+        if (bleedAmount > 0)
+            {
+                if (isBankai)
+                {
+                    await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, bleedAmount, Owner, cardPlay.Card);
+                } else {
+                    await PowerCmd.Apply<BleedPower>(choiceContext, [cardPlay.Target], bleedAmount, Owner, cardPlay.Card);
+                }
+                
+            }
     }
 }
