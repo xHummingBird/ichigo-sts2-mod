@@ -73,5 +73,9 @@
 
   "ICHIGO-CHAIN_POWER.title": "Chain",
   "ICHIGO-CHAIN_POWER.description": "Whenever you play your 3rd Attack each turn, add a copy of that card.",
-  "ICHIGO-CHAIN_POWER.smartDescription": "Whenever you play your [blue]3rd[/blue] Attack each turn, add a copy of that card."
+  "ICHIGO-CHAIN_POWER.smartDescription": "Whenever you play your [blue]3rd[/blue] Attack each turn, add a copy of that card.",
+
+  "ICHIGO-SYZYGY_POWER.title": "Syzygy",
+  "ICHIGO-SYZYGY_POWER.description": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+  "ICHIGO-SYZYGY_POWER.smartDescription": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]."
 }

@@ -228,5 +228,8 @@
   "ICHIGO-REIATSU_ABSORPTION.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain 2 [gold]Reiryoku[/gold].",
 
   "ICHIGO-CHAIN.title": "Chain",
-  "ICHIGO-CHAIN.description": "Whenever you play your 3rd Attack each turn, add a copy of that card."
+  "ICHIGO-CHAIN.description": "Whenever you play your 3rd Attack each turn, add a copy of that card.",
+
+  "ICHIGO-SYZYGY.title": "Syzygy",
+  "ICHIGO-SYZYGY.description": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]."
 }
