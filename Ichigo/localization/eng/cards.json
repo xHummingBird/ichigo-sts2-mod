@@ -234,5 +234,8 @@
   "ICHIGO-SYZYGY.description": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
 
   "ICHIGO-VASTO_LORDE.title": "Vasto Lorde",
-  "ICHIGO-VASTO_LORDE.description": "At the start of each turn, apply {BleedPower:diff()} [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture."
+  "ICHIGO-VASTO_LORDE.description": "At the start of each turn, apply {BleedPower:diff()} [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
+
+  "ICHIGO-REBORN_POWER.title": "Reborn Power",
+  "ICHIGO-REBORN_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply {BleedPower:diff()} [gold]Bleed[/gold] to the target."
 }

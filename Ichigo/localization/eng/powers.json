@@ -81,5 +81,9 @@
 
   "ICHIGO-VASTO_LORDE_POWER.title": "Vasto Lorde",
   "ICHIGO-VASTO_LORDE_POWER.description": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
-  "ICHIGO-VASTO_LORDE_POWER.smartDescription": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture."
+  "ICHIGO-VASTO_LORDE_POWER.smartDescription": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
+
+  "ICHIGO-REBORN_POWER_POWER.title": "Reborn",
+  "ICHIGO-REBORN_POWER_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target.",
+  "ICHIGO-REBORN_POWER_POWER.smartDescription": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target."
 }
