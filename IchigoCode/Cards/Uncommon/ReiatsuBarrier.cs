@@ -36,7 +36,7 @@ public class ReiatsuBarrier() : IchigoCard(
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<ReiatsuBarrierPower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);
-        await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
+        await CommonActions.CardBlock(this, cardPlay);
     }
 
     protected override void OnUpgrade()

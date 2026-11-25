@@ -27,7 +27,8 @@ public class PreciseCut() : IchigoCard(
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<BleedPower>()
+        HoverTipFactory.FromPower<BleedPower>(),
+        HoverTipFactory.FromCard<GetsugaTenshou>(),
     ];
 
     protected override async Task OnPlay(

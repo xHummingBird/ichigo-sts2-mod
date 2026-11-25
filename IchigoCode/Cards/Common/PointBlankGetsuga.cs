@@ -36,8 +36,10 @@ public class PointBlankGetsuga() : IchigoCard(
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
+        IchigoStaticHoverTips.Getsuga,
         HoverTipFactory.FromPower<BleedPower>()
     ];
+
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

@@ -29,7 +29,8 @@ public class NewMoon() : IchigoCard(
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        IchigoStaticHoverTips.Getsuga
+        IchigoStaticHoverTips.Getsuga,
+        HoverTipFactory.FromCard<GetsugaTenshou>()
     ];
 
     protected override bool ShouldGlowGoldInternal =>

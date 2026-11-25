@@ -27,7 +27,6 @@ public class HyperSpeedCombat() : IchigoCard(
     {
         await CommonActions.CardBlock(
             this,
-            DynamicVars.Block,
             cardPlay);
 
         bool isBankai =
@@ -39,7 +38,7 @@ public class HyperSpeedCombat() : IchigoCard(
             await PowerCmd.Apply<BlockNextTurnPower>(
                 choiceContext,
                 Owner.Creature,
-                DynamicVars.Block.BaseValue,
+                DynamicVars.Block.PreviewValue,
                 Owner.Creature,
                 this);
         }

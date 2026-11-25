@@ -1,3 +1,4 @@
+using Ichigo.IchigoCode.Cards.Ancient;
 using Ichigo.IchigoCode.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -142,17 +143,18 @@ public abstract class IchigoRelicBase : IchigoRelic
 
         var options = new List<CardModel>
         {
-            combatState.CreateCard<Ichigo.IchigoCode.Cards.Ancient.BankaiHos>(Owner),
-            combatState.CreateCard<Ichigo.IchigoCode.Cards.Ancient.TrueBankai>(Owner)
+            combatState.CreateCard<BankaiHos>(Owner),
+            combatState.CreateCard<TrueBankai>(Owner)
         };
 
         CardModel? chosen = await CardSelectCmd.FromChooseACardScreen(choiceContext, options, Owner, canSkip: false);
         if (chosen is null)
             return;
-
+        
         Flash();
-        ReiryokuManager.Reset(Owner);
-        CardCmd.ApplyKeyword(chosen, CardKeyword.Exhaust );
+        CardCmd.ApplyKeyword(chosen, CardKeyword.Exhaust);
+        if (Owner.GetRelic<Hougyoku>() != null)
+            CardCmd.Upgrade(chosen);
         await CardCmd.AutoPlay(choiceContext, chosen, null);
 
     }

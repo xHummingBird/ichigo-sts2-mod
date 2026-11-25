@@ -22,7 +22,7 @@ public class DefendIchigo() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
+        await CommonActions.CardBlock(this, cardPlay);
     }
 
     protected override void OnUpgrade()

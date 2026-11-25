@@ -1,3 +1,4 @@
+using Ichigo.IchigoCode.Relics;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -27,6 +28,8 @@ public sealed class SoulDisruptionPower : IchigoPower
 
         await PowerCmd.Remove(this);
         var powerAmount = 2;
+        if (Owner.Player.GetRelic<GokonTekkou>() != null)
+            powerAmount += 1;
         if (!Owner.HasPower<SpiritualFracturePower>())
         {
             await PowerCmd.Apply<SpiritualFracturePower>(choiceContext, Owner, powerAmount , applier, cardSource);

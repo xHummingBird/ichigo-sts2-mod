@@ -63,18 +63,15 @@ public class ReiatsuExplosion() : IchigoCard(
             ichigo.PlayAnimation(
                 ownerCreature,
                 "explosion");
-
-            // 0.333s: first audio.
+            
             await Task.Delay(333);
 
             SfxCmd.Play("res://Ichigo/sfx/explosion.wav", 0.7f);
-
-            // 0.400s: second audio.
+            
             await Task.Delay(67);
 
             SfxCmd.Play("res://Ichigo/sfx/attack_effect_3.wav", 0.7f);
-
-            // 0.433s: first fake hit.
+            
             await Task.Delay(33);
 
             IchigoExtensions.CombatHelpers.IchigoFakeHit(
@@ -84,8 +81,7 @@ public class ReiatsuExplosion() : IchigoCard(
                     "res://Ichigo/sfx/from_cloud/cloud_hit.wav",
                 hitVfx:
                     "jujisho_hit");
-
-            // 0.733s: second fake hit.
+            
             await Task.Delay(300);
 
             IchigoExtensions.CombatHelpers.IchigoFakeHit(
@@ -95,8 +91,7 @@ public class ReiatsuExplosion() : IchigoCard(
                     "res://Ichigo/sfx/from_cloud/cloud_hit.wav",
                 hitVfx:
                     "jujisho_hit");
-
-            // 1.033s: begin the real multi-hit attack.
+            
             await Task.Delay(300);
         }
 

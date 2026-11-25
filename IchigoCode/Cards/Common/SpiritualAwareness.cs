@@ -25,13 +25,9 @@ public class SpiritualAwareness() : IchigoCard(
             new DynamicVar("Reiryoku", 7)
         ];
 
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [
-        CardKeyword.Exhaust
-    ];
-
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-		await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
+		await CommonActions.CardBlock(this, cardPlay);
         ReiryokuManager.GainReiryoku(Owner, DynamicVars["Reiryoku"].IntValue);
     }
 

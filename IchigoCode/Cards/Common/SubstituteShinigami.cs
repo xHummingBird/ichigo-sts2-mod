@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using Ichigo.IchigoCode.Cards.Token;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Factories;
@@ -17,10 +18,13 @@ public class SubstituteShinigami() : IchigoCard(
     TargetType.Self
 )
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Turns", 3m)];
-
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromCard<GetsugaTenshou>()
+    ];
+    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<SubstituteShinigamiPower>(choiceContext, Owner.Creature, DynamicVars["Turns"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<SubstituteShinigamiPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 }

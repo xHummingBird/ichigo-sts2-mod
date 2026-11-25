@@ -20,6 +20,10 @@ public class AuraShield() : IchigoCard(
     CardRarity.Uncommon,
     TargetType.Self)
 {
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromCard<GetsugaTenshou>(),
+    ];
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DynamicVar("GetsugaExhaustMultiplier", 2m),

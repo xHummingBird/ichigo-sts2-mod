@@ -19357,5 +19357,3 @@ libraries = {
 &"": SubResource("AnimationLibrary_gs1r0")
 }
 autoplay = "idle_base"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AnimationPlayer"]

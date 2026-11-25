@@ -33,7 +33,6 @@ public class ArmorClad() : IchigoCard(
     {
         await CommonActions.CardBlock(
             this,
-            DynamicVars.Block,
             cardPlay);
 
         await PowerCmd.Apply<BleedPower>(

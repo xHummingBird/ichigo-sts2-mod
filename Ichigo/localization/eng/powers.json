@@ -40,22 +40,26 @@
   "ICHIGO-REIATSU_CLONE_POWER.smartDescription": "Your next [gold]Attack[/gold] is played [blue]{Amount}[/blue] additional time(s).",
 
   "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.title": "Substitute Shinigami",
-  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.description": "Whenever you play a card costing 2 or more Energy, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
-  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.smartDescription": "Whenever you play a card costing [blue]2[/blue] or more Energy, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.description": "Whenever you play a card that costs [blue]2[/blue] Energy or more, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+  "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.smartDescription": "Whenever you play a card that costs [blue]2[/blue] Energy or more, add {Amount:plural:a [gold]Getsuga Tenshou[/gold]|[blue]{}[/blue] [gold]Getsuga Tenshous[/gold]} into your [gold]Hand[/gold].",
 
   "ICHIGO-THE_RESOLVE_TO_KILL_POWER.title": "The Resolve to Kill",
   "ICHIGO-THE_RESOLVE_TO_KILL_POWER.description": "[gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage.",
   "ICHIGO-THE_RESOLVE_TO_KILL_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards gain [gold]Retain[/gold]. The first [gold]Getsuga Tenshou[/gold] you play each turn deals 6 additional damage for [blue]{Amount}[/blue] turn(s).",
 
   "ICHIGO-SPIRIT_MASTERY_POWER.title": "Spirit Mastery",
-  "ICHIGO-SPIRIT_MASTERY_POWER.description": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
-  "ICHIGO-SPIRIT_MASTERY_POWER.smartDescription": "Increase [gold]Strength[/gold] by 2 whenever you apply [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-SPIRIT_MASTERY_POWER.description": "Gain 2 [gold]Strength[/gold] whenever you apply [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-SPIRIT_MASTERY_POWER.smartDescription": "Gain {Amount} [gold]Strength[/gold] whenever you apply [gold]Spiritual Fracture[/gold].",
 
   "ICHIGO-ENHANCED_REFLEXES_POWER.title": "Enhanced Reflexes",
-  "ICHIGO-ENHANCED_REFLEXES_POWER.description": "Whenever you lose HP, deal [blue]{Amount}[/blue] damage to ALL enemies.",
-  "ICHIGO-ENHANCED_REFLEXES_POWER.smartDescription": "Whenever you lose HP, deal [blue]{Amount}[/blue] damage to ALL enemies.",
+  "ICHIGO-ENHANCED_REFLEXES_POWER.description": "Whenever you lose HP on your turn, deal damage to ALL enemies.",
+  "ICHIGO-ENHANCED_REFLEXES_POWER.smartDescription": "Whenever you lose HP on your turn, deal [blue]{Amount}[/blue] damage to ALL enemies.",
 
   "ICHIGO-SHUNPO_MASTERY_POWER.title": "Shunpo Mastery",
   "ICHIGO-SHUNPO_MASTERY_POWER.description": "Whenever you play a [gold]Getsuga[/gold] card, gain Block.",
-  "ICHIGO-SHUNPO_MASTERY_POWER.smartDescription": "Whenever you play a [gold]Getsuga[/gold] card, gain [blue]{Amount}[/blue] [gold]Block[/gold]."
+  "ICHIGO-SHUNPO_MASTERY_POWER.smartDescription": "Whenever you play a [gold]Getsuga[/gold] card, gain [blue]{Amount}[/blue] [gold]Block[/gold].",
+
+  "ICHIGO-BLUT_VENE_POWER.title": "Blut Vene",
+  "ICHIGO-BLUT_VENE_POWER.description": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal damage back.",
+  "ICHIGO-BLUT_VENE_POWER.smartDescription": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal [blue]{Amount}[/blue] damage back."
 }

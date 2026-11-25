@@ -33,7 +33,7 @@ public class Sonido() : IchigoCard(
     {
         await LoseHpOrHeal(choiceContext, cardPlay);
         await PowerCmd.Apply<EnergyNextTurnPower>(choiceContext, Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
-        await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
+        await CommonActions.CardBlock(this, cardPlay);
     }
 
     protected override void OnUpgrade()

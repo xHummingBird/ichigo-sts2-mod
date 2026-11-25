@@ -36,7 +36,7 @@ public class BlackGetsuga() : IchigoCard(
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<BleedPower>()
+        IchigoStaticHoverTips.Getsuga,
     ];
 
     public override bool TryModifyEnergyCostInCombatLate(

@@ -1,4 +1,5 @@
 ﻿using BaseLib.Utils;
+using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Extensions;
 using Ichigo.IchigoCode.Mechanics;
 using Ichigo.IchigoCode.Powers;
@@ -8,6 +9,7 @@ using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Runs;
@@ -22,7 +24,12 @@ public class GetsugaJujisho() : IchigoCard(
     CardRarity.Rare,
     TargetType.AllEnemies), IGetsugaCard
 {
-    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        IchigoStaticHoverTips.Getsuga,
+        HoverTipFactory.FromCard<GetsugaTenshou>()
+    ];
+
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new CalculationBaseVar(7m),

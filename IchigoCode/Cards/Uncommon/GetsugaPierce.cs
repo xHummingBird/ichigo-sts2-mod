@@ -30,6 +30,7 @@ public class GetsugaPierce() : IchigoCard(
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
+        IchigoStaticHoverTips.Getsuga,
         HoverTipFactory.FromPower<BleedPower>()
     ];
 

@@ -13,7 +13,7 @@ using Ichigo.IchigoCode.Cards.Token;
 namespace Ichigo.IchigoCode.Cards.Rare;
 
 public class PowerFusion() : IchigoCard(
-    0,
+    1,
     CardType.Skill,
     CardRarity.Rare,
     TargetType.Self

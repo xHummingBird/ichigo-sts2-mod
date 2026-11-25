@@ -4,5 +4,5 @@ namespace Ichigo.IchigoCode.Relics;
 
 public class HollowMask : IchigoRelic
 {
-    public override RelicRarity Rarity => RelicRarity.Rare;
+    public override RelicRarity Rarity => RelicRarity.Uncommon;
 }

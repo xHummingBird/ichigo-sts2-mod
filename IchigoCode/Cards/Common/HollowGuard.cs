@@ -26,15 +26,11 @@ public class HollowGuard() : IchigoCard(
         new HpLossVar(1m),
         new BlockVar(10m, ValueProp.Move)
     ];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<TrueBankaiPower>()
-    ];
-
+    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await LoseHpOrHeal(choiceContext, cardPlay);
-        await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
+        await CommonActions.CardBlock(this, cardPlay);
     }
 
     protected override void OnUpgrade()

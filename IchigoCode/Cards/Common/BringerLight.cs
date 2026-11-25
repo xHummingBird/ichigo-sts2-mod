@@ -22,7 +22,7 @@ public class BringerLight() : IchigoCard(
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
+        await CommonActions.CardBlock(this, cardPlay);
         await CommonActions.Draw(this, choiceContext);
     }
 

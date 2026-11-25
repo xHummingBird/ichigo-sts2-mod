@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using Ichigo.IchigoCode.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Factories;
@@ -17,6 +18,10 @@ public class ShunpoMastery() : IchigoCard(
     TargetType.Self
 )
 {
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        IchigoStaticHoverTips.Getsuga
+    ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Block", 2m)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

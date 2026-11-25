@@ -33,7 +33,7 @@ public class IronBody() : IchigoCard(
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        await CommonActions.CardBlock(this, DynamicVars.Block, cardPlay);
+        await CommonActions.CardBlock(this, cardPlay);
         ReiryokuManager.GainReiryoku(Owner, DynamicVars["Reiryoku"].IntValue);
     }
 

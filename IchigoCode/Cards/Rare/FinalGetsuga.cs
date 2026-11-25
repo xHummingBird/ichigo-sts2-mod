@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 using Ichigo.IchigoCode.Cards;
 using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Mechanics;
+using Ichigo.IchigoCode.Powers;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
 
@@ -21,11 +22,29 @@ public class FinalGetsuga() : IchigoCard(
 )
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(0)];
+    
+    public override TargetType TargetType =>
+	    IsInBankai
+		    ? TargetType.AllEnemies
+		    : TargetType.AnyEnemy;
+    
+    private bool IsInTrueBankai =>
+	    IsMutable &&
+	    Owner != null &&
+	    Owner.Creature.HasPower<TrueBankaiPower>();
+
+    private bool IsInHosBankai =>
+	    IsMutable &&
+	    Owner != null &&
+	    Owner.Creature.HasPower<BankaiHosPower>();
+
+    private bool IsInBankai =>
+	    IsInTrueBankai ||
+	    IsInHosBankai;
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-		IEnumerable<CardModel> enumerable = PileType.Exhaust.GetPile(Owner).Cards.Where((CardModel c) => c is IGetsugaTenshouCard).ToList();
+		IEnumerable<CardModel> enumerable = PileType.Exhaust.GetPile(Owner).Cards.Where((CardModel c) => c is GetsugaTenshou).ToList();
 		bool flag = true;
 		foreach (CardModel item in enumerable)
 		{
@@ -33,7 +52,10 @@ public class FinalGetsuga() : IchigoCard(
 			{
 				CardCmd.Upgrade(item, CardPreviewStyle.None);
 			}
-			await CardCmd.AutoPlay(choiceContext, item, cardPlay.Target, AutoPlayType.Default, skipXCapture: false, !flag);
+			if (IsInBankai)
+				await CardCmd.AutoPlay(choiceContext, item, null, AutoPlayType.Default, skipXCapture: false, !flag);
+			else
+				await CardCmd.AutoPlay(choiceContext, item, cardPlay.Target, AutoPlayType.Default, skipXCapture: false, !flag);
 			flag = false;
 		}
     }

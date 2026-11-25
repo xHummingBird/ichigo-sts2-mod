@@ -27,10 +27,17 @@ public class InnerHollow() : IchigoCard(
         new HpLossVar(2m),
         new DynamicVar("Strength", 1)
     ];
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<TrueBankaiPower>()
+        HoverTipFactory.FromPower<StrengthPower>()
     ];
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords =>
+    [
+        CardKeyword.Exhaust
+    ];
+    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await LoseHpOrHeal(choiceContext, cardPlay);
@@ -40,6 +47,6 @@ public class InnerHollow() : IchigoCard(
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Strength"].UpgradeValueBy(1m);
+        RemoveKeyword(CardKeyword.Exhaust);
     }
 }

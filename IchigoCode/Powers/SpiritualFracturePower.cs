@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
 using Ichigo.IchigoCode.Mechanics;
+using Ichigo.IchigoCode.Relics;
 using MegaCrit.Sts2.Core.Commands;
 
 namespace Ichigo.IchigoCode.Powers;
@@ -36,12 +37,23 @@ public sealed class SpiritualFracturePower : IchigoPower
             return 1m;
 
         Player? attacker = dealer?.Player;
-        decimal increase = attacker is not null && ReiryokuManager.IsInTrueBankai(attacker)
-            ? BankaiDamageIncrease
-            : BaseDamageIncrease;
 
-        if (dealer is not null && dealer.HasPower<PowerNullificationPower>())
-            increase = 1m + (increase - 1m) * 2m;
+        decimal increase =
+            attacker is not null &&
+            ReiryokuManager.IsInTrueBankai(attacker)
+                ? BankaiDamageIncrease
+                : BaseDamageIncrease;
+
+        if (attacker?.GetRelic<HollowMask>() != null)
+            increase += 0.25m;
+
+        if (dealer is not null &&
+            dealer.HasPower<PowerNullificationPower>())
+        {
+            increase =
+                1m +
+                (increase - 1m) * 2m;
+        }
 
         return increase;
     }

@@ -56,7 +56,7 @@ public class GetsugaTenshou() : IchigoCard(
         AttackCommand attackCommand =
             DamageCmd.Attack(DynamicVars.Damage.BaseValue)
                 .FromCard(this, cardPlay);
-
+        
         if (IsInBankai)
         {
             var ownerCreature = Owner?.Creature;

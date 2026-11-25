@@ -5,6 +5,7 @@ using Ichigo.IchigoCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -22,7 +23,11 @@ public class DualCrescent() : IchigoCard(
         new DamageVar(4m, ValueProp.Move),
         new HitCountVar(2)
     ];
-
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        IchigoStaticHoverTips.Getsuga,
+    ];
     protected override bool ShouldGlowGoldInternal =>
         Owner.Creature.HasPower<TrueBankaiPower>() ||
         Owner.Creature.HasPower<BankaiHosPower>();
