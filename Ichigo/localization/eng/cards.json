@@ -241,12 +241,19 @@
 
   "ICHIGO-GETSUGA_AURA.title": "Getsuga Aura",
   "ICHIGO-GETSUGA_AURA.description": "[gold]Getsuga Tenshou[/gold] cards deal {AdditionalDamage:diff()} additional damage.",
+
   "ICHIGO-BATTLE_INSTINCT.title": "Battle Instinct",
   "ICHIGO-BATTLE_INSTINCT.description": "Whenever you play your 3rd Attack each turn, gain {Block:diff()} Block.",
+
   "ICHIGO-SPIRITUAL_MOMENTUM.title": "Spiritual Momentum",
   "ICHIGO-SPIRITUAL_MOMENTUM.description": "Whenever you spend 4 Energy, gain {Energy:energyIcons()} Energy.",
+
   "ICHIGO-SOUL_MANIPULATION.title": "Soul Manipulation",
   "ICHIGO-SOUL_MANIPULATION.description": "The first time you take unblocked damage each turn, gain {Energy:energyIcons()}.",
+
   "ICHIGO-COMBAT_EXPERT.title": "Combat Expert",
-  "ICHIGO-COMBAT_EXPERT.description": "Gain {StrengthPower:diff()} Strength and {DexterityPower:diff()} Dexterity."
+  "ICHIGO-COMBAT_EXPERT.description": "Gain {StrengthPower:diff()} Strength and {DexterityPower:diff()} Dexterity.",
+
+  "ICHIGO-REIATSU_CONTROL.title": "Reiatsu Control",
+  "ICHIGO-REIATSU_CONTROL.description": "Whenever you play an Attack or Getsuga card, gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
 }
