@@ -41,10 +41,13 @@ public abstract class IchigoRelicBase : IchigoRelic
     public override Task BeforeCombatStart()
     {
         ReiryokuManager.Reset(Owner);
-        
+        Creature? creature = Owner?.Creature;
         var room = Owner.RunState.CurrentRoom;
 
         if (room == null || !room.RoomType.IsCombatRoom())
+            return Task.CompletedTask;
+        
+        if (!LocalContext.IsMe(creature))
             return Task.CompletedTask;
         
         BattleTheme.Play(

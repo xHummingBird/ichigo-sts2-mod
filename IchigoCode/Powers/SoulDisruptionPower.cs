@@ -25,14 +25,13 @@ public sealed class SoulDisruptionPower : IchigoPower
     {
         if (power != this || Amount < FractureThreshold)
             return;
-
-        await PowerCmd.Remove(this);
+        
         var powerAmount = 2;
-        if (Owner.Player.GetRelic<GokonTekkou>() != null)
+        if (applier.Player.GetRelic<GokonTekkou>() != null)
             powerAmount += 1;
         if (!Owner.HasPower<SpiritualFracturePower>())
         {
-            await PowerCmd.Apply<SpiritualFracturePower>(choiceContext, Owner, powerAmount , applier, cardSource);
+            await PowerCmd.Apply<SpiritualFracturePower>(choiceContext, Owner, powerAmount, applier, null);
         }
     }
 }

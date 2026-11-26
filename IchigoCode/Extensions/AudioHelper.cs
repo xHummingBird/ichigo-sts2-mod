@@ -14,7 +14,6 @@ public static class AudioHelper
         "res://Ichigo/sounds/attack_3.wav",
         "res://Ichigo/sounds/attack_4.wav",
         "res://Ichigo/sounds/attack_5.wav",
-        "res://Ichigo/sounds/attack_6.wav",
         "res://Ichigo/sounds/attack_7.wav",
     };
     

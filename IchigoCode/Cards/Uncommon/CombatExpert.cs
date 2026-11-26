@@ -35,7 +35,7 @@ public class CombatExpert() : IchigoCard(
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Strength"].UpgradeValueBy(1m);
-        DynamicVars["Dexterity"].UpgradeValueBy(1m);
+        DynamicVars.Strength.UpgradeValueBy(1m);
+        DynamicVars.Dexterity.UpgradeValueBy(1m);
     }
 }

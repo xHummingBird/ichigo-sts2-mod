@@ -54,7 +54,7 @@
   "ICHIGO-IRON_BODY.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
 
   "ICHIGO-SPIRIT_SURGE.title": "Spirit Surge",
-  "ICHIGO-SPIRIT_SURGE.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {Cards:diff()} [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-SPIRIT_SURGE.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {SpiritualFracturePower:diff()} [gold]Spiritual Fracture[/gold].",
 
   "ICHIGO-BERSERK.title": "Berserk",
   "ICHIGO-BERSERK.description": "Lose {HpLoss:diff()} HP. \n[gold]Attack[/gold] cards in your [gold]Hand[/gold] are free to play this turn.",

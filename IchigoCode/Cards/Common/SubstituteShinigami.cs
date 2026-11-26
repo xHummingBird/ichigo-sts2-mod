@@ -27,4 +27,8 @@ public class SubstituteShinigami() : IchigoCard(
     {
         await PowerCmd.Apply<SubstituteShinigamiPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
+    protected override void OnUpgrade()
+    {
+        AddKeyword(CardKeyword.Innate);
+    }
 }
