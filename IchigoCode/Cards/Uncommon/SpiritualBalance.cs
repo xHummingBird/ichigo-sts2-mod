@@ -19,11 +19,6 @@ public class SpiritualBalance() : IchigoCard(
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Reiryoku", 5)];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<SpiritualBalancePower>()
-    ];
-
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<SpiritualBalancePower>(choiceContext, Owner.Creature, DynamicVars["Reiryoku"].BaseValue, Owner.Creature, this);

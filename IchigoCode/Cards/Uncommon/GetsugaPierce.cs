@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
@@ -91,7 +92,7 @@ public class GetsugaPierce() : IchigoCard(
         }
 
         var isInBankai = IsInBankai;
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner.Character is Character.Ichigo ichigo)
         {
             AudioHelper.PlayRandomGetsuga();
@@ -164,6 +165,7 @@ public class GetsugaPierce() : IchigoCard(
                 ownerCreature,
                 this);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

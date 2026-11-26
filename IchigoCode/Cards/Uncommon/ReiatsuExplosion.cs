@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
@@ -48,7 +49,10 @@ public class ReiatsuExplosion() : IchigoCard(
 
         if (ReiryokuManager.GetReiryoku(Owner) >= 50)
             hitCount++;
-
+        
+        if (hitCount <= 0)
+            return;
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner?.Character is Character.Ichigo ichigo)
         {
             await ichigo.DashTo(
@@ -125,6 +129,7 @@ public class ReiatsuExplosion() : IchigoCard(
                 ownerCreature,
                 duration: 0.2f);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

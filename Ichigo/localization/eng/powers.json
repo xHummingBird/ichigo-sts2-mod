@@ -32,8 +32,8 @@
   "ICHIGO-REIATSU_BARRIER_POWER.smartDescription": "Takes 50% damage from enemies with [gold]Bleed[/gold] or [gold]Spiritual Fracture[/gold].",
 
   "ICHIGO-REIATSU_CLONE_POWER.title": "Reiatsu Clone",
-  "ICHIGO-REIATSU_CLONE_POWER.description": "Your next [gold]Attack[/gold] is played {Amount} additional time(s).",
-  "ICHIGO-REIATSU_CLONE_POWER.smartDescription": "Your next [gold]Attack[/gold] is played [blue]{Amount}[/blue] additional time(s).",
+  "ICHIGO-REIATSU_CLONE_POWER.description": "Your next Attack is played an extra time.",
+  "ICHIGO-REIATSU_CLONE_POWER.smartDescription": "Your next {Amount:plural:Attack is|[blue]{}[/blue] Attacks are} played an extra time.",
 
   "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.title": "Substitute Shinigami",
   "ICHIGO-SUBSTITUTE_SHINIGAMI_POWER.description": "Whenever you play a card that costs [blue]2[/blue] Energy or more, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
@@ -60,50 +60,50 @@
   "ICHIGO-BLUT_VENE_POWER.smartDescription": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal [blue]{Amount}[/blue] damage back.",
   
   "ICHIGO-SHARED_CONVICTION_POWER.title": "Shared Conviction",
-  "ICHIGO-SHARED_CONVICTION_POWER.description": "Whenever you apply [gold]Bleeding[/gold] to an enemy, draw [blue]{Amount}[/blue] cards.",
-  "ICHIGO-SHARED_CONVICTION_POWER.smartDescription": "Whenever you apply [gold]Bleeding[/gold] to an enemy, draw [blue]{Amount}[/blue] cards.",
+  "ICHIGO-SHARED_CONVICTION_POWER.description": "Whenever you apply [gold]Bleed[/gold] to an enemy, draw [blue]1[/blue] card.",
+  "ICHIGO-SHARED_CONVICTION_POWER.smartDescription": "Whenever you apply [gold]Bleed[/gold] to an enemy, draw [blue]{Amount}[/blue] {Amount:plural:card|cards}.",
 
   "ICHIGO-SPIRITUAL_BALANCE_POWER.title": "Spiritual Balance",
-  "ICHIGO-SPIRITUAL_BALANCE_POWER.description": "Whenever you lose HP, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
-  "ICHIGO-SPIRITUAL_BALANCE_POWER.smartDescription": "Whenever you lose HP, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
+  "ICHIGO-SPIRITUAL_BALANCE_POWER.description": "Whenever you lose HP on your turn, gain [blue]5[/blue] [gold]Reiryoku[/gold].",
+  "ICHIGO-SPIRITUAL_BALANCE_POWER.smartDescription": "Whenever you lose HP on your turn, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
 
   "ICHIGO-REIATSU_ABSORPTION_POWER.title": "Reiatsu Absorption",
-  "ICHIGO-REIATSU_ABSORPTION_POWER.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
+  "ICHIGO-REIATSU_ABSORPTION_POWER.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]5[/blue] [gold]Reiryoku[/gold].",
   "ICHIGO-REIATSU_ABSORPTION_POWER.smartDescription": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
 
   "ICHIGO-CHAIN_POWER.title": "Chain",
-  "ICHIGO-CHAIN_POWER.description": "Whenever you play your 3rd Attack each turn, add a copy of that card.",
-  "ICHIGO-CHAIN_POWER.smartDescription": "Whenever you play your [blue]3rd[/blue] Attack each turn, add a copy of that card.",
+  "ICHIGO-CHAIN_POWER.description": "When you play your 3rd Attack each turn, add a copy of it into your [gold]Hand[/gold].",
+  "ICHIGO-CHAIN_POWER.smartDescription": "When you play your 3rd Attack each turn, add {Amount:plural:a copy|[blue]{}[/blue] copies} of it into your [gold]Hand[/gold].",
 
   "ICHIGO-SYZYGY_POWER.title": "Syzygy",
-  "ICHIGO-SYZYGY_POWER.description": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
-  "ICHIGO-SYZYGY_POWER.smartDescription": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+  "ICHIGO-SYZYGY_POWER.description": "At the start of your turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+  "ICHIGO-SYZYGY_POWER.smartDescription": "At the start of your turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
 
   "ICHIGO-VASTO_LORDE_POWER.title": "Vasto Lorde",
-  "ICHIGO-VASTO_LORDE_POWER.description": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
-  "ICHIGO-VASTO_LORDE_POWER.smartDescription": "At the start of each turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
+  "ICHIGO-VASTO_LORDE_POWER.description": "At the start of your turn, apply [blue]2[/blue] [gold]Bleed[/gold] to ALL enemies. Apply double [gold]Bleed[/gold] to enemies with [gold]Spiritual Fracture[/gold].",
+  "ICHIGO-VASTO_LORDE_POWER.smartDescription": "At the start of your turn, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to ALL enemies. Apply double [gold]Bleed[/gold] to enemies with [gold]Spiritual Fracture[/gold].",
 
-  "ICHIGO-REBORN_POWER_POWER.title": "Reborn",
-  "ICHIGO-REBORN_POWER_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target.",
-  "ICHIGO-REBORN_POWER_POWER.smartDescription": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target.",
+  "ICHIGO-REBORN_POWER_POWER.title": "Reborn Power",
+  "ICHIGO-REBORN_POWER_POWER.description": "Whenever you play [gold]Getsuga Tenshou[/gold], apply 2 [gold]Bleed[/gold] to the target.",
+  "ICHIGO-REBORN_POWER_POWER.smartDescription": "Whenever you play [gold]Getsuga Tenshou[/gold], apply [blue]{Amount}[/blue] [gold]Bleed[/gold] to the target.",
 
   "ICHIGO-GETSUGA_AURA_POWER.title": "Getsuga Aura",
-  "ICHIGO-GETSUGA_AURA_POWER.description": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage.",
-  "ICHIGO-GETSUGA_AURA_POWER.smartDescription": "[gold]Getsuga Tenshou[/gold] cards deal [blue]{Amount}[/blue] additional damage.",
-  
+  "ICHIGO-GETSUGA_AURA_POWER.description": "[gold]Getsuga[/gold] cards deal [blue]3[/blue] additional damage.",
+  "ICHIGO-GETSUGA_AURA_POWER.smartDescription": "[gold]Getsuga[/gold] cards deal [blue]{Amount}[/blue] additional damage.",
+
   "ICHIGO-BATTLE_INSTINCT_POWER.title": "Battle Instinct",
-  "ICHIGO-BATTLE_INSTINCT_POWER.description": "Whenever you play your 3rd Attack each turn, gain [blue]{Amount}[/blue] Block.",
-  "ICHIGO-BATTLE_INSTINCT_POWER.smartDescription": "Whenever you play your 3rd Attack each turn, gain [blue]{Amount}[/blue] Block.",
+  "ICHIGO-BATTLE_INSTINCT_POWER.description": "At the start of your turn, add a random [gold]Getsuga[/gold] card into your [gold]Hand[/gold]. It gains [gold]Exhaust[/gold].",
+  "ICHIGO-BATTLE_INSTINCT_POWER.smartDescription": "At the start of your turn, add {Amount:plural:a random [gold]Getsuga[/gold] card|[blue]{}[/blue] random [gold]Getsuga[/gold] cards} into your [gold]Hand[/gold]. {Amount:plural:It gains|They gain} [gold]Exhaust[/gold].",
 
   "ICHIGO-SPIRITUAL_MOMENTUM_POWER.title": "Spiritual Momentum",
-  "ICHIGO-SPIRITUAL_MOMENTUM_POWER.description": "Whenever you spend [blue]4[/blue] Energy, gain [blue]{Amount}[/blue] Energy.",
-  "ICHIGO-SPIRITUAL_MOMENTUM_POWER.smartDescription": "Whenever you spend [blue]4[/blue] Energy, gain [blue]{Amount}[/blue] Energy.",
+  "ICHIGO-SPIRITUAL_MOMENTUM_POWER.description": "Every {energyPrefix:energyIcons(4)} you spend, gain {energyPrefix:energyIcons(1)}.",
+  "ICHIGO-SPIRITUAL_MOMENTUM_POWER.smartDescription": "Every {energyPrefix:energyIcons(4)} you spend, gain {Amount} {energyPrefix:energyIcons(1)}.",
 
   "ICHIGO-SOUL_MANIPULATION_POWER.title": "Soul Manipulation",
-  "ICHIGO-SOUL_MANIPULATION_POWER.description": "The first time you take unblocked damage each turn, gain [blue]{Amount}[/blue] Energy.",
-  "ICHIGO-SOUL_MANIPULATION_POWER.smartDescription": "The first time you take unblocked damage each turn, gain [blue]{Amount}[/blue] Energy.",
+  "ICHIGO-SOUL_MANIPULATION_POWER.description": "The first time you lose HP on your turn, gain [blue]1[/blue] {energyPrefix:energyIcons(1)}.",
+  "ICHIGO-SOUL_MANIPULATION_POWER.smartDescription": "The first time you lose HP on your turn, gain [blue]{Amount}[/blue] {energyPrefix:energyIcons(1)}.",
 
   "ICHIGO-REIATSU_CONTROL_POWER.title": "Reiatsu Control",
-  "ICHIGO-REIATSU_CONTROL_POWER.description": "Whenever you play an Attack or Getsuga card, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold].",
-  "ICHIGO-REIATSU_CONTROL_POWER.smartDescription": "Whenever you play an Attack or Getsuga card, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold]."
+  "ICHIGO-REIATSU_CONTROL_POWER.description": "Whenever you play an [gold]Attack[/gold] or [gold]Getsuga[/gold] card, gain [blue]3[/blue] [gold]Reiryoku[/gold].",
+  "ICHIGO-REIATSU_CONTROL_POWER.smartDescription": "Whenever you play an [gold]Attack[/gold] or [gold]Getsuga[/gold] card, gain [blue]{Amount}[/blue] [gold]Reiryoku[/gold]."
 }

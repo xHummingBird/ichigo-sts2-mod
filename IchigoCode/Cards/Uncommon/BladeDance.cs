@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
@@ -32,7 +33,7 @@ public class BladeDance() : IchigoCard(
 
         if (ownerCreature == null || target == null)
             return;
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner.Character is Character.Ichigo ichigo)
         {
             AudioHelper.PlayRandomPhrase();
@@ -113,6 +114,7 @@ public class BladeDance() : IchigoCard(
                     "res://Ichigo/sfx/slash_1.wav")
                 .Execute(choiceContext);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     public override Task AfterCardEnteredCombat(

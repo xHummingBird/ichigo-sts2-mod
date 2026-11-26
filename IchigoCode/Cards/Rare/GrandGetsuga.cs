@@ -135,6 +135,16 @@ public class GrandGetsuga() : IchigoCard(
             .WithHitFx(null, "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
             .Execute(choiceContext);
         
+        if (IsInBankai)
+            foreach (var enemy in CombatState.HittableEnemies)
+                if (!enemy.HasPower<SpiritualFracturePower>())
+                    await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, enemy, 1, Owner!.Creature, this);
+                else 
+                if (!play.Target.HasPower<SpiritualFracturePower>())
+                    await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner!.Creature, this);
+        
+        
+        
         if (Owner?.Character is Character.Ichigo retreatingIchigo)
         {
             await retreatingIchigo.Retreat(

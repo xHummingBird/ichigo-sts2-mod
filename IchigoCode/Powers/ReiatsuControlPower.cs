@@ -19,10 +19,4 @@ public sealed class ReiatsuControlPower : IchigoPower
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
-
-    public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
-    {
-        if ((cardPlay.Card is IGetsugaCard || cardPlay.Card?.Type == CardType.Attack) && cardPlay.Player == Owner.Player)
-            ReiryokuManager.GainReiryoku(Owner.Player, (int)Amount);
-    }
 }

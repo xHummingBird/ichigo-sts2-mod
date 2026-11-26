@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
@@ -29,7 +30,7 @@ public class RisingMoon() : IchigoCard(
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         var ownerCreature = Owner?.Creature;
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Ichigo ichigo)
         {
             AudioHelper.PlayRandomAttack();
@@ -62,6 +63,7 @@ public class RisingMoon() : IchigoCard(
         if (ownerCreature.HasPower<TrueBankaiPower>() || ownerCreature.HasPower<BankaiHosPower>())
             await PowerCmd.Apply<FreeSkillPower>(choiceContext, Owner.Creature, 1, Owner!.Creature, this); 
         await PowerCmd.Apply<FreeAttackPower>(choiceContext, Owner.Creature, 1, Owner!.Creature, this); 
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
     
     protected override void OnUpgrade()

@@ -21,6 +21,8 @@ public class GetsugaTenshou() : IchigoCard(
     CardRarity.Token,
     TargetType.AnyEnemy), IGetsugaTenshouCard, IGetsugaCard
 {
+    public override bool CanBeGeneratedInCombat => false;
+    
     public override TargetType TargetType =>
         IsInBankai
             ? TargetType.AllEnemies

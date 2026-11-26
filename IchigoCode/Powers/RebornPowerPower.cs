@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using Ichigo.IchigoCode.Cards.Rare;
+using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Cards.Uncommon;
 using Ichigo.IchigoCode.Extensions;
 using Ichigo.IchigoCode.Mechanics;
@@ -23,20 +24,20 @@ public class RebornPowerPower : IchigoPower
 
     public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        var bleedAmount = Owner.GetPowerAmount<RebornPowerPower>();
         bool isBankai =
             Owner.HasPower<TrueBankaiPower>() ||
             Owner.HasPower<BankaiHosPower>();
+        CardModel card = cardPlay.Card;
+        
+        if (card.Owner.Creature != Owner)
+            return;
 
-        if (bleedAmount > 0)
-            {
-                if (isBankai)
-                {
-                    await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, bleedAmount, Owner, cardPlay.Card);
-                } else {
-                    await PowerCmd.Apply<BleedPower>(choiceContext, [cardPlay.Target], bleedAmount, Owner, cardPlay.Card);
-                }
-                
-            }
+        if (card is not GetsugaTenshou)
+            return;
+            
+        if (isBankai)
+            await PowerCmd.Apply<BleedPower>(choiceContext, CombatState.HittableEnemies, Amount, Owner, cardPlay.Card);
+        else 
+            await PowerCmd.Apply<BleedPower>(choiceContext, cardPlay.Target, Amount, Owner, cardPlay.Card);
     }
 }

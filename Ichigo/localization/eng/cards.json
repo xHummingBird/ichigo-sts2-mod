@@ -2,9 +2,6 @@
   "ICHIGO-DEFEND_ICHIGO.title": "Defend",
   "ICHIGO-DEFEND_ICHIGO.description": "Gain {Block:diff()} [gold]Block[/gold].",
 
-  "ICHIGO-GETSUGA_TENSHOU.title": "Getsuga Tenshou",
-  "ICHIGO-GETSUGA_TENSHOU.description": "Deal {Damage:diff()} damage. \n{BankaiIcon}: Double damage and hits ALL enemies.",
-
   "ICHIGO-STRIKE_ICHIGO.title": "Strike",
   "ICHIGO-STRIKE_ICHIGO.description": "Deal {Damage:diff()} damage.",
 
@@ -111,37 +108,16 @@
   "ICHIGO-SHUNPO_MASTERY.description": "Whenever you play a [gold]Getsuga[/gold] card, gain {Block:diff()} [gold]Block[/gold].",
   
   "ICHIGO-REIATSU_CLONE.title": "Reiatsu Clone",
-  "ICHIGO-REIATSU_CLONE.description": "Your next attack is played twice. \n{BankaiIcon}: Your next 2 attacks are played twice.",
+  "ICHIGO-REIATSU_CLONE.description": "This turn, your next attack is played twice. \n{BankaiIcon}: Your next 2 attacks are played twice.",
 
   "ICHIGO-BANKAI_TENSA_ZANGETSU.title": "Bankai: Tensa Zangetsu",
   "ICHIGO-BANKAI_TENSA_ZANGETSU.description": "Add {Cards:diff()} [gold]Getsuga Tenshou[/gold] to your hand. \nGain {Reiryoku:diff()} [gold]Reiryoku[/gold]. \n{BankaiIcon}: Extend [gold]Bankai[/gold] by 2 turns.",
-
-  "ICHIGO-GETSUGA_JUJISHO.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Double additional damage.",
-  "ICHIGO-GETSUGA_JUJISHO.title": "Getsuga Jujisho",
-
-  "ICHIGO-RISING_MOON.title": "Rising Moon",
-  "ICHIGO-RISING_MOON.description": "Deal {Damage:diff()} damage. \nYour next Attack costs 0 {energyPrefix:energyIcons(1)}. \n{BankaiIcon}: Your next Skill costs 0 {energyPrefix:energyIcons(1)}.",
 
   "ICHIGO-OVERSWING.title": "Overswing",
   "ICHIGO-OVERSWING.description": "Lose {HpLoss:diff()} HP. \nDeal {Damage:diff()} damage.",
 
   "ICHIGO-MOON_FLASH.title": "Moon Flash",
   "ICHIGO-MOON_FLASH.description": "Deal {Damage:diff()} damage. \nApply any debuffs on the enemy to ALL other enemies.",
-
-  "ICHIGO-ECLIPSE.title": "Eclipse",
-  "ICHIGO-ECLIPSE.description": "Deal {CalculatedDamage:diff()} damage. \nDeal additional damage equal to {ExtraDamage:diff()}% of your missing HP. \n{BankaiIcon}: Double the additional damage.",
-
-  "ICHIGO-DUAL_CRESCENT.title": "Dual Crescent",
-  "ICHIGO-DUAL_CRESCENT.description": "Deal {Damage:diff()} damage 2 times. \n{BankaiIcon}: Hit 2 additional times.",
-
-  "ICHIGO-BLACK_GETSUGA.title": "Black Getsuga",
-  "ICHIGO-BLACK_GETSUGA.description": "Deal {Damage:diff()} damage. \nDouble the enemy's [gold]Bleed[/gold]. \n{BankaiIcon}: Costs 0 {energyPrefix:energyIcons(1)}.",
-
-  "ICHIGO-GETSUGA_PIERCE.title": "Getsuga Pierce",
-  "ICHIGO-GETSUGA_PIERCE.description": "Deal {Damage:diff()} damage. \nCosts 0 {energyPrefix:energyIcons(1)} if you've played [gold]Getsuga Tenshou[/gold] this turn. \n{BankaiIcon}: Trigger the enemy's [gold]Bleed[/gold].",
-
-  "ICHIGO-POINT_BLANK_GETSUGA.title": "Point-Blank Getsuga",
-  "ICHIGO-POINT_BLANK_GETSUGA.description": "Deal {Damage:diff()} damage. \nApply {BleedPower:diff()} [gold]Bleed[/gold]. \n{BankaiIcon}: Double the [gold]Bleed[/gold] applied.",
 
   "ICHIGO-EXECUTE.title": "Execute",
   "ICHIGO-EXECUTE.description": "Deal {CalculatedDamage:diff()} damage. \nIf the enemy has less than 50% HP, deal double damage.",
@@ -184,10 +160,7 @@
 
   "ICHIGO-FINAL_BLOW.title": "Final Blow",
   "ICHIGO-FINAL_BLOW.description": "Deal damage equal to the number of cards you've played this combat.{InCombat:\n(Deals {CalculatedDamage:diff()} damage)|}",
-
-  "ICHIGO-CERO_CRECIENTE.title": "Cero Creciente",
-  "ICHIGO-CERO_CRECIENTE.description": "Lose 3 HP. \nDeal {Damage:diff()} damage to ALL enemies. \n{BankaiIcon}: Apply 2 [gold]Spiritual Fracture[/gold] and 5 [gold]Bleed[/gold] to ALL enemies.",
-
+  
   "ICHIGO-REIATSU_EXPLOSION.description": "Deal {Damage:diff()} damage to ALL enemies X{IfUpgraded:show:+1} times. \nIf you have more than 50 [gold]Reiryoku[/gold], increase X by 1.",
   "ICHIGO-REIATSU_EXPLOSION.title": "Reiatsu Explosion",
 
@@ -200,18 +173,6 @@
   "ICHIGO-DUAL_SWEEP.title": "Dual Sweep",
   "ICHIGO-DUAL_SWEEP.description": "Deal {Damage:diff()} damage 2 times to ALL enemies. \nDraw {Cards:diff()} {Cards:plural:card|cards}.",
 
-  "ICHIGO-FULL_MOON.title": "Full Moon",
-  "ICHIGO-FULL_MOON.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \n{BankaiIcon}: If there is only 1 enemy, deal {ExtraDamage:diff()} additional damage.",
-
-  "ICHIGO-GRAND_GETSUGA.title": "Grand Getsuga",
-  "ICHIGO-GRAND_GETSUGA.description": "Deal {Damage:diff()} damage. \nCosts 1 less {energyPrefix:energyIcons(1)} for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Hits ALL enemies.",
-
-  "ICHIGO-FLYING_GETSUGA.title": "Flying Getsuga",
-  "ICHIGO-FLYING_GETSUGA.description": "Deal {Damage:diff()} damage. \n{BankaiIcon}: Play a random [gold]Getsuga[/gold] from your [gold]Draw Pile[/gold].",
-
-  "ICHIGO-NEW_MOON.title": "New Moon",
-  "ICHIGO-NEW_MOON.description": "Deal {Damage:diff()} damage. \nAdd {IfUpgraded:show:an upgraded|a} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]. \n{BankaiIcon}: Add 2 additional [gold]Getsuga Tenshou[/gold].",
-
   "ICHIGO-BLACK_VOID.title": "Black Void",
   "ICHIGO-BLACK_VOID.description": "Lose 3 HP. \nRemove all of the enemy's [gold]Block[/gold]. \nDeal {Damage:diff()} damage.",
 
@@ -219,41 +180,80 @@
   "ICHIGO-BLUT_VENE.description": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal {BlutVenePower:diff()} damage back.",
   
   "ICHIGO-SHARED_CONVICTION.title": "Shared Conviction",
-  "ICHIGO-SHARED_CONVICTION.description": "Gain [gold]Shared Conviction[/gold].\nWhenever you apply [gold]Bleeding[/gold] to an enemy, draw {Cards:diff()} cards.",
+  "ICHIGO-SHARED_CONVICTION.description": "Whenever you apply [gold]Bleed[/gold] to an enemy, draw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "ICHIGO-SPIRITUAL_BALANCE.title": "Spiritual Balance",
-  "ICHIGO-SPIRITUAL_BALANCE.description": "Gain [gold]Spiritual Balance[/gold].\nWhenever you lose HP, gain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+  "ICHIGO-SPIRITUAL_BALANCE.description": "Whenever you lose HP on your turn, gain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
 
   "ICHIGO-REIATSU_ABSORPTION.title": "Reiatsu Absorption",
-  "ICHIGO-REIATSU_ABSORPTION.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain 2 [gold]Reiryoku[/gold].",
+  "ICHIGO-REIATSU_ABSORPTION.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain 5 [gold]Reiryoku[/gold].",
 
   "ICHIGO-CHAIN.title": "Chain",
   "ICHIGO-CHAIN.description": "Whenever you play your 3rd Attack each turn, add a copy of that card.",
 
   "ICHIGO-SYZYGY.title": "Syzygy",
-  "ICHIGO-SYZYGY.description": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+  "ICHIGO-SYZYGY.description": "At the start of your turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
 
   "ICHIGO-VASTO_LORDE.title": "Vasto Lorde",
-  "ICHIGO-VASTO_LORDE.description": "At the start of each turn, apply {BleedPower:diff()} [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
-
+  "ICHIGO-VASTO_LORDE.description": "At the start of your turn, apply {BleedPower:diff()} [gold]Bleed[/gold] to ALL enemies. Apply double [gold]Bleed[/gold] to enemies with [gold]Spiritual Fracture[/gold].",
+  
   "ICHIGO-REBORN_POWER.title": "Reborn Power",
-  "ICHIGO-REBORN_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply {BleedPower:diff()} [gold]Bleed[/gold] to the target.",
+  "ICHIGO-REBORN_POWER.description": "Whenever you play [gold]Getsuga Tenshou[/gold], apply {BleedPower:diff()} [gold]Bleed[/gold] to the target.",
 
   "ICHIGO-GETSUGA_AURA.title": "Getsuga Aura",
-  "ICHIGO-GETSUGA_AURA.description": "[gold]Getsuga Tenshou[/gold] cards deal {AdditionalDamage:diff()} additional damage.",
+  "ICHIGO-GETSUGA_AURA.description": "[gold]Getsuga[/gold] cards deal {AdditionalDamage:diff()} additional damage.",
 
   "ICHIGO-BATTLE_INSTINCT.title": "Battle Instinct",
-  "ICHIGO-BATTLE_INSTINCT.description": "Whenever you play your 3rd Attack each turn, gain {Block:diff()} Block.",
+  "ICHIGO-BATTLE_INSTINCT.description": "At the start of each turn, add a random [gold]Getsuga[/gold] card to your Hand. \nIt gains [gold]Exhaust[/gold].",
 
   "ICHIGO-SPIRITUAL_MOMENTUM.title": "Spiritual Momentum",
-  "ICHIGO-SPIRITUAL_MOMENTUM.description": "Whenever you spend 4 Energy, gain {Energy:energyIcons()} Energy.",
+  "ICHIGO-SPIRITUAL_MOMENTUM.description": "Whenever you spend {energyPrefix:energyIcons(4)}, gain {Energy:energyIcons()}.",
 
   "ICHIGO-SOUL_MANIPULATION.title": "Soul Manipulation",
-  "ICHIGO-SOUL_MANIPULATION.description": "The first time you take unblocked damage each turn, gain {Energy:energyIcons()}.",
+  "ICHIGO-SOUL_MANIPULATION.description": "The first time you lose HP on your turn, gain {Energy:energyIcons()}.",
 
   "ICHIGO-COMBAT_EXPERT.title": "Combat Expert",
-  "ICHIGO-COMBAT_EXPERT.description": "Gain {StrengthPower:diff()} Strength and {DexterityPower:diff()} Dexterity.",
+  "ICHIGO-COMBAT_EXPERT.description": "Gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold].",
 
   "ICHIGO-REIATSU_CONTROL.title": "Reiatsu Control",
-  "ICHIGO-REIATSU_CONTROL.description": "Whenever you play an Attack or Getsuga card, gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
+  "ICHIGO-REIATSU_CONTROL.description": "Whenever you play an Attack or [gold]Getsuga[/gold] card, gain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-GETSUGA_TENSHOU.title": "Getsuga Tenshou",
+  "ICHIGO-GETSUGA_TENSHOU.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \n{BankaiIcon}: Double damage and hits ALL enemies.",
+
+  "ICHIGO-GETSUGA_PIERCE.title": "Getsuga Pierce",
+  "ICHIGO-GETSUGA_PIERCE.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \nCosts 0 {energyPrefix:energyIcons(1)} if you've played [gold]Getsuga Tenshou[/gold] this turn. \n{BankaiIcon}: Trigger the enemy's [gold]Bleed[/gold].",
+
+  "ICHIGO-FLYING_GETSUGA.title": "Flying Getsuga",
+  "ICHIGO-FLYING_GETSUGA.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \n{BankaiIcon}: Play a random [gold]Getsuga[/gold] from your [gold]Draw Pile[/gold].",
+
+  "ICHIGO-GETSUGA_JUJISHO.title": "Getsuga Jujisho",
+  "ICHIGO-GETSUGA_JUJISHO.description": "[gold]Getsuga[/gold]\nDeal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Double additional damage.",
+
+  "ICHIGO-CERO_CRECIENTE.title": "Cero Creciente",
+  "ICHIGO-CERO_CRECIENTE.description": "[gold]Getsuga[/gold]\nLose 3 HP. \nDeal {Damage:diff()} damage to ALL enemies. \n{BankaiIcon}: Apply 2 [gold]Spiritual Fracture[/gold] and 5 [gold]Bleed[/gold] to ALL enemies.",
+
+  "ICHIGO-POINT_BLANK_GETSUGA.title": "Point-Blank Getsuga",
+  "ICHIGO-POINT_BLANK_GETSUGA.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \nApply {BleedPower:diff()} [gold]Bleed[/gold]. \n{BankaiIcon}: Double the [gold]Bleed[/gold] applied.",
+
+  "ICHIGO-FULL_MOON.title": "Full Moon",
+  "ICHIGO-FULL_MOON.description": "[gold]Getsuga[/gold]\nDeal {CalculatedDamage:diff()} damage to ALL enemies. \n{BankaiIcon}: If there is only 1 enemy, deal {ExtraDamage:diff()} additional damage.",
+
+  "ICHIGO-BLACK_GETSUGA.title": "Black Getsuga",
+  "ICHIGO-BLACK_GETSUGA.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \nDouble the enemy's [gold]Bleed[/gold]. \n{BankaiIcon}: Costs 0 {energyPrefix:energyIcons(1)}.",
+
+  "ICHIGO-NEW_MOON.title": "New Moon",
+  "ICHIGO-NEW_MOON.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \nAdd {IfUpgraded:show:an upgraded|a} [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold]. \n{BankaiIcon}: Add 2 additional [gold]Getsuga Tenshou[/gold].",
+
+  "ICHIGO-GRAND_GETSUGA.title": "Grand Getsuga",
+  "ICHIGO-GRAND_GETSUGA.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \nCosts 1 less {energyPrefix:energyIcons(1)} for each [gold]Getsuga[/gold] played this combat. \n{BankaiIcon}: Hits ALL enemies.",
+
+  "ICHIGO-DUAL_CRESCENT.title": "Dual Crescent",
+  "ICHIGO-DUAL_CRESCENT.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage 2 times. \n{BankaiIcon}: Hit 2 additional times.",
+
+  "ICHIGO-ECLIPSE.title": "Eclipse",
+  "ICHIGO-ECLIPSE.description": "[gold]Getsuga[/gold]\nDeal {CalculatedDamage:diff()} damage. \nDeal additional damage equal to {ExtraDamage:diff()}% of your missing HP. \n{BankaiIcon}: Double the additional damage.",
+
+  "ICHIGO-RISING_MOON.title": "Rising Moon",
+  "ICHIGO-RISING_MOON.description": "[gold]Getsuga[/gold]\nDeal {Damage:diff()} damage. \nYour next Attack costs 0 {energyPrefix:energyIcons(1)}. \n{BankaiIcon}: Your next Skill costs 0 {energyPrefix:energyIcons(1)}."
 }

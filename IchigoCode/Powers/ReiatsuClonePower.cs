@@ -16,8 +16,9 @@ namespace Ichigo.IchigoCode.Powers;
 
 public sealed class ReiatsuClonePower : IchigoPower
 {
-    public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Counter;
+	public override PowerType Type => PowerType.Buff;
+
+	public override PowerStackType StackType => PowerStackType.Counter;
 
 	public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
 	{
@@ -29,11 +30,19 @@ public sealed class ReiatsuClonePower : IchigoPower
 		{
 			return playCount;
 		}
-		return playCount + Amount;
+		return playCount + 1;
 	}
 
 	public override async Task AfterModifyingCardPlayCount(CardModel card)
 	{
-        await PowerCmd.Decrement(this);
+		await PowerCmd.Decrement(this);
+	}
+
+	public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
+	{
+		if (participants.Contains(Owner))
+		{
+			await PowerCmd.Remove(this);
+		}
 	}
 }

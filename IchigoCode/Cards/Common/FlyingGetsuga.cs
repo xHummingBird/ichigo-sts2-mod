@@ -111,7 +111,8 @@ public class FlyingGetsuga() : IchigoCard(
                         : null);
             }
         }
-
+        if (!play.Target.HasPower<SpiritualFracturePower>())
+            await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner!.Creature, this);
         if (ownerCreature != null &&
             Owner?.Character is Character.Ichigo retreatingIchigo)
         {

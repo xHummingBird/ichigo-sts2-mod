@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
@@ -38,9 +39,6 @@ public class BlackVoid() : IchigoCard(
         var ownerCreature = Owner?.Creature;
         var target = play.Target;
 
-        if (ownerCreature == null)
-            return;
-
         await LoseHpOrHeal(
             choiceContext,
             play);
@@ -51,6 +49,8 @@ public class BlackVoid() : IchigoCard(
             target.Block,
             ownerCreature);
 
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
+        
         if (Owner?.Character is Character.Ichigo ichigo)
         {
             AudioHelper.PlayRandomAttack();
@@ -96,6 +96,8 @@ public class BlackVoid() : IchigoCard(
                     "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
                 .Execute(choiceContext);
         }
+        
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

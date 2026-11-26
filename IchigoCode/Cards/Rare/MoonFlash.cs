@@ -1,5 +1,6 @@
 ﻿using BaseLib.Utils;
 using Ichigo.IchigoCode.Extensions;
+using Ichigo.IchigoCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -156,6 +157,8 @@ public class MoonFlash() : IchigoCard(
                     this);
             }
         }
+        if (!play.Target.HasPower<SpiritualFracturePower>())
+            await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner.Creature, this);
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 

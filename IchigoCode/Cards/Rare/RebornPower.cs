@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using Ichigo.IchigoCode.Cards.Token;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Factories;
@@ -11,19 +12,22 @@ using Ichigo.IchigoCode.Powers;
 namespace Ichigo.IchigoCode.Cards.Rare;
 
 public class RebornPower() : IchigoCard(
-    1,
+    2,
     CardType.Power,
     CardRarity.Rare,
     TargetType.Self
 )
 {
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromPower<BleedPower>(),
+        HoverTipFactory.FromCard<GetsugaTenshou>(),
+    ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new PowerVar<BleedPower>(2m)
     ];
-
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<BleedPower>()];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -32,6 +36,6 @@ public class RebornPower() : IchigoCard(
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Innate);
+        DynamicVars["BleedPower"].UpgradeValueBy(1);
     }
 }

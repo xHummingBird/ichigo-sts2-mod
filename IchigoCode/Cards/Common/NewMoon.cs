@@ -110,7 +110,7 @@ public class NewMoon() : IchigoCard(
 
             await Cmd.Wait(0.25f);
         }
-
+        
         if (ownerCreature != null &&
             Owner?.Character is Character.Ichigo retreatingIchigo)
         {
@@ -118,6 +118,9 @@ public class NewMoon() : IchigoCard(
                 ownerCreature,
                 duration: 0.1f);
         }
+        
+        if (!play.Target.HasPower<SpiritualFracturePower>())
+            await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner!.Creature, this);
     }
 
     protected override void OnUpgrade()

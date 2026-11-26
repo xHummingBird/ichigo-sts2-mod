@@ -1,4 +1,5 @@
 using Ichigo.IchigoCode.Cards.Ancient;
+using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Extensions;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -12,6 +13,7 @@ using Ichigo.IchigoCode.Mechanics;
 using Ichigo.IchigoCode.Powers;
 using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Runs;
+using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Relics;
 
@@ -26,7 +28,7 @@ public abstract class IchigoRelicBase : IchigoRelic
 
     protected virtual int ReiryokuPerAttack => 3;
 
-    protected virtual int ReiryokuPerGetsugaTenshou => 6;
+    protected virtual int ReiryokuPerGetsuga => 6;
 
     protected virtual int BankaiHosTurns => 2;
 
@@ -80,14 +82,43 @@ public abstract class IchigoRelicBase : IchigoRelic
         // Getsuga Tenshou cards are attacks too, but only grant their own amount.
         int gain = card switch
         {
-            IGetsugaTenshouCard => ReiryokuPerGetsugaTenshou,
+            IGetsugaCard => ReiryokuPerGetsuga,
             { Type: CardType.Attack } => ReiryokuPerAttack,
             _ => 0
         };
 
+        if (card.Type is CardType.Attack || card is IGetsugaCard)
+            gain += Owner.Creature.GetPowerAmount<ReiatsuControlPower>();
+
         ReiryokuManager.GainReiryoku(Owner, gain);
 
         await CheckBankaiReady(choiceContext, card);
+    }
+    
+    public override async Task AfterDamageReceived(
+        PlayerChoiceContext choiceContext,
+        Creature target,
+        DamageResult result,
+        ValueProp props,
+        Creature? dealer,
+        CardModel? cardSource)
+    {
+        if (target != Owner.Creature ||
+            result.UnblockedDamage <= 0 ||
+            Owner.Creature.CombatState.CurrentSide != Owner.Creature.Side)
+        {
+            return;
+        }
+
+        if (target.HasPower<TrueBankaiPower>() || target.HasPower<BankaiHosPower>())
+            return;
+
+        if (!target.HasPower<SpiritualBalancePower>())
+            return;
+        
+        ReiryokuManager.GainReiryoku(Owner, target.GetPowerAmount<SpiritualBalancePower>());
+        
+        await CheckBankaiReady(choiceContext, cardSource);
     }
     
 
@@ -127,7 +158,7 @@ public abstract class IchigoRelicBase : IchigoRelic
         InvokeDisplayAmountChanged();
     }
 
-    private async Task CheckBankaiReady(PlayerChoiceContext choiceContext, CardModel? card)
+    public async Task CheckBankaiReady(PlayerChoiceContext choiceContext, CardModel? card)
     {
         if (!ReiryokuManager.IsFull(Owner))
             return;

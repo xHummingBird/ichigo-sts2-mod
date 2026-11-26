@@ -26,10 +26,7 @@ public class Berserk() : IchigoCard(
     [
         new HpLossVar(3m)
     ];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<TrueBankaiPower>()
-    ];
+    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await LoseHpOrHeal(choiceContext, cardPlay);

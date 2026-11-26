@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
@@ -35,14 +36,11 @@ public class Frenzy() : IchigoCard(
         var ownerCreature = Owner?.Creature;
         var target = play.Target;
 
-        if (ownerCreature == null || target == null)
-            return;
-
         var hitCount =
             LostHpThisTurn(ownerCreature)
                 ? DynamicVars.HitCount.IntValue
                 : 1;
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner.Character is Character.Ichigo ichigo)
         {
             AudioHelper.PlayRandomPhrase();
@@ -121,6 +119,7 @@ public class Frenzy() : IchigoCard(
                     "res://Ichigo/sfx/slash_1.wav")
                 .Execute(choiceContext);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

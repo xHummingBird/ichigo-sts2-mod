@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Uncommon;
@@ -45,6 +46,7 @@ public class CeroCreciente() : IchigoCard(
         var ownerCreature = Owner?.Creature;
         var firstEnemy = CombatState.HittableEnemies.FirstOrDefault();
 
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null &&
             firstEnemy != null &&
             Owner?.Character is Character.Ichigo ichigo)
@@ -122,7 +124,14 @@ public class CeroCreciente() : IchigoCard(
                     this);
         }
         
-        else await Task.Delay(200);
+        else foreach (var enemy in CombatState.HittableEnemies)
+            if (!enemy.HasPower<SpiritualFracturePower>())
+                await PowerCmd.Apply<SoulDisruptionPower>(
+                    choiceContext,
+                    enemy,
+                    1,
+                    Owner!.Creature,
+                    this);
 
         if (ownerCreature != null &&
             Owner?.Character is Character.Ichigo retreatingIchigo)
@@ -131,6 +140,7 @@ public class CeroCreciente() : IchigoCard(
                 ownerCreature,
                 duration: 0.2f);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

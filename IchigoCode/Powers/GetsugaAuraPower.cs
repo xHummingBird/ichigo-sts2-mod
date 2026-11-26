@@ -23,7 +23,7 @@ public sealed class GetsugaAuraPower : IchigoPower
     public override decimal ModifyDamageAdditive(Creature? target, decimal amount, ValueProp props,
         Creature? dealer, CardModel? cardSource, CardPlay? cardPlay)
         {
-            if (cardSource is IGetsugaTenshouCard && dealer == Owner)
+            if (cardSource is IGetsugaCard && dealer == Owner)
                 return Amount;
             return 0m;
         }

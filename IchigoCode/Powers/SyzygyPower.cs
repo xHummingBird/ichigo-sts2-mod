@@ -24,10 +24,15 @@ public sealed class SyzygyPower : IchigoPower
 		if (player == Owner.Player)
 		{
             Flash();
-            await GetsugaTenshou.CreateInHand(
-                Owner.Player!,
-                CombatState!,
-                Owner.Player);
+            for (int i = 0; i < Amount; i++)
+            {
+	            await GetsugaTenshou.CreateInHand(
+			            Owner.Player,
+			            CombatState!,
+			            Owner.Player);
+
+	            await Cmd.Wait(0.25f);
+            }
 		}
 	}
 }

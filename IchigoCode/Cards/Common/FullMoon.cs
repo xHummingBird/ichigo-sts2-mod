@@ -125,6 +125,9 @@ public class FullMoon() : IchigoCard(
                 null,
                 "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
             .Execute(choiceContext);
+        
+        if (!play.Target.HasPower<SpiritualFracturePower>())
+            await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner!.Creature, this);
 
         if (Owner?.Character is Character.Ichigo retreatingIchigo)
         {

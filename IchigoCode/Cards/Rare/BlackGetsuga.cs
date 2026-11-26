@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
@@ -65,10 +66,8 @@ public class BlackGetsuga() : IchigoCard(
     {
         var ownerCreature = Owner?.Creature;
         var target = play.Target;
-
-        if (ownerCreature == null || target == null)
-            return;
-
+        
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner.Character is Character.Ichigo ichigo)
         {
             AudioHelper.PlayRandomGetsuga();
@@ -136,6 +135,7 @@ public class BlackGetsuga() : IchigoCard(
                 ownerCreature,
                 this);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

@@ -11,7 +11,7 @@ using Ichigo.IchigoCode.Powers;
 namespace Ichigo.IchigoCode.Cards.Rare;
 
 public class GetsugaAura() : IchigoCard(
-    1,
+    2,
     CardType.Power,
     CardRarity.Rare,
     TargetType.Self

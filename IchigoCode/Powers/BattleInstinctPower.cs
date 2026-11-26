@@ -1,52 +1,88 @@
-using BaseLib.Utils;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Ichigo.IchigoCode.Extensions;
+using Ichigo.IchigoCode.Mechanics;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.ValueProps;
-
-using Ichigo.IchigoCode.Mechanics;
-using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Random;
 
 namespace Ichigo.IchigoCode.Powers;
 
 public sealed class BattleInstinctPower : IchigoPower
 {
-    private class Data
-    {
-        public int attacksPlayedThisTurn;
-    }
+    public override PowerType Type =>
+        PowerType.Buff;
 
-    public override PowerType Type => PowerType.Buff;
-    public override PowerStackType StackType => PowerStackType.Counter;
+    public override PowerStackType StackType =>
+        PowerStackType.Counter;
 
-    protected override object InitInternalData()
-    {
-        return new Data();
-    }
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromKeyword(CardKeyword.Exhaust),
+        IchigoStaticHoverTips.Getsuga
+    ];
 
-    public override async Task BeforeCardPlayed(CardPlay cardPlay)
+    public override async Task BeforeHandDraw(
+        Player player,
+        PlayerChoiceContext choiceContext,
+        ICombatState combatState)
     {
-        if (cardPlay.Card.Owner.Creature == Owner && cardPlay.Card.Type == CardType.Attack)
+        if (player != Owner.Player)
+            return;
+
+        var ichigo =
+            ModelDb.Character<Character.Ichigo>();
+
+        IReadOnlyList<CardModel> getsugaPool =
+            ichigo.CardPool
+                .GetUnlockedCards(
+                    player.UnlockState,
+                    player.RunState.CardMultiplayerConstraint)
+                .Where(card =>
+                    card is IGetsugaCard &&
+                    card.Rarity is not CardRarity.Basic &&
+                    card.Rarity is not CardRarity.Ancient)
+                .ToList();
+
+        if (getsugaPool.Count == 0)
+            return;
+
+        CardModel[] generatedCards =
+            new CardModel[Amount];
+
+        Rng combatCardGeneration =
+            player.RunState.Rng.CombatCardGeneration;
+
+        for (int i = 0; i < Amount; i++)
         {
-            GetInternalData<Data>().attacksPlayedThisTurn++;
-            if (GetInternalData<Data>().attacksPlayedThisTurn == 3)
-            {
-                await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, cardPlay);
-            }
-        }
-    }
+            CardModel getsuga =
+                CardFactory.GetDistinctForCombat(
+                    player,
+                    getsugaPool,
+                    1,
+                    combatCardGeneration)
+                .First();
 
-    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
-    {
-        if (participants.Contains(Owner))
-        {
-            GetInternalData<Data>().attacksPlayedThisTurn = 0;
+            CardCmd.ApplyKeyword(
+                getsuga,
+                CardKeyword.Exhaust);
+
+            generatedCards[i] = getsuga;
         }
+
+        Flash();
+
+        await CardPileCmd.AddGeneratedCardsToCombat(
+            generatedCards,
+            PileType.Hand,
+            player);
     }
 }
-
