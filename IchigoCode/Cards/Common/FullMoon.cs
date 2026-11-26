@@ -107,17 +107,7 @@ public class FullMoon() : IchigoCard(
             }
         }
 
-        var damage = DynamicVars.Damage.BaseValue;
-
-        if (IsInBankai &&
-            enemies.Count == 1)
-        {
-            damage *=
-                1m +
-                DynamicVars.ExtraDamage.BaseValue / 100m;
-        }
-
-        await DamageCmd.Attack(damage)
+        await DamageCmd.Attack(DynamicVars.CalculatedDamage.BaseValue)
             .FromCard(this, play)
             .TargetingAllOpponents(CombatState)
             .WithNoAttackerAnim()
@@ -126,8 +116,9 @@ public class FullMoon() : IchigoCard(
                 "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
             .Execute(choiceContext);
         
-        if (!play.Target.HasPower<SpiritualFracturePower>())
-            await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner!.Creature, this);
+        foreach (var enemy in enemies)
+            if (!enemy.HasPower<SpiritualFracturePower>())
+                await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, enemy, 1, Owner!.Creature, this);
 
         if (Owner?.Character is Character.Ichigo retreatingIchigo)
         {

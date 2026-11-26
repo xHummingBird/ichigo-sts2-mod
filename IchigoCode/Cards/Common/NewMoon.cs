@@ -83,7 +83,6 @@ public class NewMoon() : IchigoCard(
         }
 
         await CommonActions.CardAttack(this, play)
-            .Targeting(target)
             .WithHitFx(
                 null,
                 "res://Ichigo/sfx/from_cloud/cloud_hit.wav")

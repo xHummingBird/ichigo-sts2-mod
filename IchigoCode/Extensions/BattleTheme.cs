@@ -16,8 +16,8 @@ public static class BattleTheme
     private const string MusicBus =
         "bus:/master/music";
 
-    private const float MusicVolume = -9f;
-    private const float FanfareVolume = -9f;
+    private const float MusicVolume = -8f;
+    private const float FanfareVolume = -8f;
 
     private static bool _vanillaMusicMuted;
     private static float _savedMusicBusVolume = 1f;

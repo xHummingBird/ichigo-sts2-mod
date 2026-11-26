@@ -18,15 +18,18 @@ public class EnhancedReflexes() : IchigoCard(
     TargetType.Self
 )
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(8m, ValueProp.Unpowered)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => 
+        [
+            new PowerVar<EnhancedReflexesPower>(8)
+        ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<EnhancedReflexesPower>(choiceContext, Owner.Creature, DynamicVars.Damage.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<EnhancedReflexesPower>(choiceContext, Owner.Creature, DynamicVars["EnhancedReflexesPower"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(3m);
+        DynamicVars["EnhancedReflexesPower"].UpgradeValueBy(3m);
     }
 }

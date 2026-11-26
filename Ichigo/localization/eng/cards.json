@@ -63,7 +63,7 @@
   "ICHIGO-INNER_HOLLOW.description": "Lose {HpLoss:diff()} HP.\nGain {Strength:diff()} [gold]Strength[/gold].",
 
   "ICHIGO-ENHANCED_REFLEXES.title": "Enhanced Reflexes",
-  "ICHIGO-ENHANCED_REFLEXES.description": "Whenever you lose HP on your turn, deal {Damage:diff()} damage to ALL enemies.",
+  "ICHIGO-ENHANCED_REFLEXES.description": "Whenever you lose HP on your turn, deal {EnhancedReflexesPower:diff()} damage to ALL enemies.",
 
   "ICHIGO-POWER_NULLIFICATION.title": "Power Nullification",
   "ICHIGO-POWER_NULLIFICATION.description": "For {Turns:diff()} {Turns:plural:turn|turns}, double the effectiveness of [gold]Spiritual Fracture[/gold].",
