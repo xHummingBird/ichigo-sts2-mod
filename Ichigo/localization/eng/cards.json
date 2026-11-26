@@ -216,5 +216,44 @@
   "ICHIGO-BLACK_VOID.description": "Lose 3 HP. \nRemove all of the enemy's [gold]Block[/gold]. \nDeal {Damage:diff()} damage.",
 
   "ICHIGO-BLUT_VENE.title": "Blut Vene",
-  "ICHIGO-BLUT_VENE.description": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal {BlutVenePower:diff()} damage back."
+  "ICHIGO-BLUT_VENE.description": "When hit by an attack from an enemy with [gold]Spiritual Fracture[/gold], deal {BlutVenePower:diff()} damage back.",
+  
+  "ICHIGO-SHARED_CONVICTION.title": "Shared Conviction",
+  "ICHIGO-SHARED_CONVICTION.description": "Gain [gold]Shared Conviction[/gold].\nWhenever you apply [gold]Bleeding[/gold] to an enemy, draw {Cards:diff()} cards.",
+
+  "ICHIGO-SPIRITUAL_BALANCE.title": "Spiritual Balance",
+  "ICHIGO-SPIRITUAL_BALANCE.description": "Gain [gold]Spiritual Balance[/gold].\nWhenever you lose HP, gain {Reiryoku:diff()} [gold]Reiryoku[/gold].",
+
+  "ICHIGO-REIATSU_ABSORPTION.title": "Reiatsu Absorption",
+  "ICHIGO-REIATSU_ABSORPTION.description": "Whenever you apply [gold]Spiritual Fracture[/gold] or [gold]Bleed[/gold] to an enemy, gain 2 [gold]Reiryoku[/gold].",
+
+  "ICHIGO-CHAIN.title": "Chain",
+  "ICHIGO-CHAIN.description": "Whenever you play your 3rd Attack each turn, add a copy of that card.",
+
+  "ICHIGO-SYZYGY.title": "Syzygy",
+  "ICHIGO-SYZYGY.description": "At the start of each turn, add a [gold]Getsuga Tenshou[/gold] into your [gold]Hand[/gold].",
+
+  "ICHIGO-VASTO_LORDE.title": "Vasto Lorde",
+  "ICHIGO-VASTO_LORDE.description": "At the start of each turn, apply {BleedPower:diff()} [gold]Bleed[/gold] to all enemies. Apply double bleed on enemies with Spiritual Fracture.",
+
+  "ICHIGO-REBORN_POWER.title": "Reborn Power",
+  "ICHIGO-REBORN_POWER.description": "Whenever you play a [gold]Getsuga Tenshou[/gold] card, apply {BleedPower:diff()} [gold]Bleed[/gold] to the target.",
+
+  "ICHIGO-GETSUGA_AURA.title": "Getsuga Aura",
+  "ICHIGO-GETSUGA_AURA.description": "[gold]Getsuga Tenshou[/gold] cards deal {AdditionalDamage:diff()} additional damage.",
+
+  "ICHIGO-BATTLE_INSTINCT.title": "Battle Instinct",
+  "ICHIGO-BATTLE_INSTINCT.description": "Whenever you play your 3rd Attack each turn, gain {Block:diff()} Block.",
+
+  "ICHIGO-SPIRITUAL_MOMENTUM.title": "Spiritual Momentum",
+  "ICHIGO-SPIRITUAL_MOMENTUM.description": "Whenever you spend 4 Energy, gain {Energy:energyIcons()} Energy.",
+
+  "ICHIGO-SOUL_MANIPULATION.title": "Soul Manipulation",
+  "ICHIGO-SOUL_MANIPULATION.description": "The first time you take unblocked damage each turn, gain {Energy:energyIcons()}.",
+
+  "ICHIGO-COMBAT_EXPERT.title": "Combat Expert",
+  "ICHIGO-COMBAT_EXPERT.description": "Gain {StrengthPower:diff()} Strength and {DexterityPower:diff()} Dexterity.",
+
+  "ICHIGO-REIATSU_CONTROL.title": "Reiatsu Control",
+  "ICHIGO-REIATSU_CONTROL.description": "Whenever you play an Attack or Getsuga card, gain {Reiryoku:diff()} [gold]Reiryoku[/gold]."
 }
