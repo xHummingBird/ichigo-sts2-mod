@@ -35,8 +35,13 @@ public sealed class BankaiHosPower : IchigoPower
         if (!props.IsPoweredAttack())
             return 1m;
 
-        double lostPercent = (1.0 - Owner.GetHpPercentRemaining()) * 100.0;
-        return cardSource is GetsugaTenshou ? GetsugaDamageMultiplier : 1m + (decimal)lostPercent / 100m;
+        decimal lostPercent = 1m - (decimal)Owner.GetHpPercentRemaining();
+        decimal multiplier = 1m + lostPercent;
+
+        if (cardSource is GetsugaTenshou)
+            multiplier += GetsugaDamageMultiplier - 1m;
+
+        return multiplier;
     }
 
     public override async Task AfterSideTurnEnd(

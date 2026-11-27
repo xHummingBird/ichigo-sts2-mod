@@ -103,8 +103,6 @@ public class FangSlash() : IchigoCard(
         await CardCmd.AutoPlay(
             choiceContext,
             randomAttack,
-            randomAttack.TargetType == TargetType.AnyEnemy
-                ? target
-                : null);
+            null);
     }
 }

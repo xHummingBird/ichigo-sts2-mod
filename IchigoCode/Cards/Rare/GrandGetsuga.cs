@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Ichigo.IchigoCode.Cards.Rare;
@@ -69,7 +70,7 @@ public class GrandGetsuga() : IchigoCard(
 
         if (referenceTarget == null)
             return;
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner?.Character is Character.Ichigo ichigo)
         {
             // Getsuga Tenshou phrase before the cut-in.
@@ -135,16 +136,18 @@ public class GrandGetsuga() : IchigoCard(
         CommonActions.CardAttack(this, play)
             .WithHitFx(null, "res://Ichigo/sfx/from_cloud/cloud_hit.wav")
             .Execute(choiceContext);
-        
+
         if (IsInBankai)
+        {
             foreach (var enemy in CombatState.HittableEnemies)
                 if (!enemy.HasPower<SpiritualFracturePower>())
                     await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, enemy, 1, Owner!.Creature, this);
-                else 
-                if (!play.Target.HasPower<SpiritualFracturePower>())
-                    await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner!.Creature, this);
-        
-        
+                else await Task.Delay(250);
+        }
+        else
+            if (!play.Target.HasPower<SpiritualFracturePower>())
+                await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner!.Creature, this);
+        else await Task.Delay(250);
         
         if (Owner?.Character is Character.Ichigo retreatingIchigo)
         {
@@ -152,6 +155,7 @@ public class GrandGetsuga() : IchigoCard(
                 ownerCreature,
                 duration: 0.2f);
         }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     public override Task AfterCardEnteredCombat(

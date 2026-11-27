@@ -18,6 +18,7 @@ public static class BattleTheme
 
     private const float MusicVolume = -8f;
     private const float FanfareVolume = -8f;
+    private const float BankaiVolume = -4f;
 
     private static bool _vanillaMusicMuted;
     private static float _savedMusicBusVolume = 1f;
@@ -553,7 +554,7 @@ public static class BattleTheme
                 Bus = "Master",
                 VolumeDb =
                     ScaleDbByBgmSetting(
-                        MusicVolume)
+                        BankaiVolume)
             };
 
         _battlePlayer = player;

@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 using Ichigo.IchigoCode.Mechanics;
 using Ichigo.IchigoCode.Relics;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace Ichigo.IchigoCode.Powers;
 
@@ -66,15 +67,12 @@ public sealed class SpiritualFracturePower : IchigoPower
             await PowerCmd.Remove(Owner.GetPower<SoulDisruptionPower>());
     }
 
-    public override async Task AfterSideTurnStart(
-        CombatSide side,
-        IReadOnlyList<Creature> participants,
-        ICombatState combatState)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
-        if (!participants.Contains(Owner))
-            return;
-        
-        await PowerCmd.Decrement(this);
+        if (side == CombatSide.Enemy)
+        {
+            await PowerCmd.TickDownDuration(this);
+        }
     }
 
 }
