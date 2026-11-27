@@ -11,12 +11,12 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Ichigo.IchigoCode.Cards.Rare;
+namespace Ichigo.IchigoCode.Cards.Uncommon;
 
 public class MoonFlash() : IchigoCard(
     1,
     CardType.Attack,
-    CardRarity.Rare,
+    CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
@@ -157,8 +157,6 @@ public class MoonFlash() : IchigoCard(
                     this);
             }
         }
-        if (!play.Target.HasPower<SpiritualFracturePower>())
-            await PowerCmd.Apply<SoulDisruptionPower>(choiceContext, play.Target, 1, Owner.Creature, this);
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 

@@ -21,7 +21,6 @@ public class Channel() : IchigoCard(
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new BlockVar(20, ValueProp.Move),
         new DynamicVar("Reiryoku", 10)
     ];
     protected override async Task OnPlay(

@@ -20,7 +20,7 @@ public class PowerOfVisored() : IchigoCard(
     [
         new HpLossVar(3),
         new CardsVar(3),
-        new DynamicVar("Reiryoku", 10)
+        new DynamicVar("Reiryoku", 15)
     ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords =>

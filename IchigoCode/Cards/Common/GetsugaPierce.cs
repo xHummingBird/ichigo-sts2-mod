@@ -1,5 +1,4 @@
-﻿using BaseLib.Utils;
-using Ichigo.IchigoCode.Cards.Token;
+﻿using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Extensions;
 using Ichigo.IchigoCode.Mechanics;
 using Ichigo.IchigoCode.Powers;
@@ -13,12 +12,12 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Ichigo.IchigoCode.Cards.Uncommon;
+namespace Ichigo.IchigoCode.Cards.Common;
 
 public class GetsugaPierce() : IchigoCard(
     2,
     CardType.Attack,
-    CardRarity.Uncommon,
+    CardRarity.Common,
     TargetType.AnyEnemy), IGetsugaCard
 {
     private bool IsInBankai =>

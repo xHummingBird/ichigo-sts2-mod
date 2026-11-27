@@ -18,4 +18,15 @@ public class GetsugaInfusionPower :
 {
     public override AbstractModel OriginModel =>
         ModelDb.Card<GetsugaInfusion>();
+    
+    public string? CustomPackedIconPath =>
+        $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png"
+            .BigPowerImagePath();
+
+    public string? CustomBigIconPath =>
+        $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png"
+            .BigPowerImagePath();
+
+    public string? CustomBigBetaIconPath =>
+        null;
 }

@@ -14,7 +14,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 namespace Ichigo.IchigoCode.Cards.Common;
 
 public class SpiritSurge() : IchigoCard(
-    2,
+    1,
     CardType.Skill,
     CardRarity.Common,
     TargetType.AnyEnemy

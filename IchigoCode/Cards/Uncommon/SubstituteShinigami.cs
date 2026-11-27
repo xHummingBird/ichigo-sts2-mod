@@ -1,20 +1,16 @@
-using BaseLib.Utils;
 using Ichigo.IchigoCode.Cards.Token;
+using Ichigo.IchigoCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
-using Ichigo.IchigoCode.Powers;
 
-namespace Ichigo.IchigoCode.Cards.Common;
+namespace Ichigo.IchigoCode.Cards.Uncommon;
 
 public class SubstituteShinigami() : IchigoCard(
     1,
     CardType.Power,
-    CardRarity.Common,
+    CardRarity.Uncommon,
     TargetType.Self
 )
 {

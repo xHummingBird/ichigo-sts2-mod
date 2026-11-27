@@ -45,6 +45,7 @@ public class VortexPull() : IchigoCard(
         CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner?.Character is Character.Ichigo ichigo)
         {
+            AudioHelper.PlayRandomPhrase();
             await ichigo.DashTo(
                 ownerCreature,
                 firstEnemy,

@@ -39,6 +39,7 @@ public class ArcSlash() : IchigoCard(
         if (ownerCreature != null &&
             Owner?.Character is Character.Ichigo ichigo)
         {
+            AudioHelper.PlayRandomAttack();
             await ichigo.DashTo(
                 ownerCreature,
                 target,

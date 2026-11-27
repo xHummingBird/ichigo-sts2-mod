@@ -77,6 +77,7 @@ public class FullMoon() : IchigoCard(
 
         if (Owner?.Character is Character.Ichigo ichigo)
         {
+            AudioHelper.PlayRandomAttack();
             await ichigo.DashTo(
                 ownerCreature,
                 firstEnemy,

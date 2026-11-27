@@ -13,7 +13,7 @@ using Ichigo.IchigoCode.Mechanics;
 namespace Ichigo.IchigoCode.Cards.Common;
 
 public class SpiritualAwareness() : IchigoCard(
-    0,
+    1,
     CardType.Skill,
     CardRarity.Common,
     TargetType.Self
