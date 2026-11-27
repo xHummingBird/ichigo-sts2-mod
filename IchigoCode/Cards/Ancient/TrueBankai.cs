@@ -48,7 +48,8 @@ public class TrueBankai() : IchigoCard(
             this);
         await Task.Delay(900);
         ichigo.PlayAnimation(Owner.Creature, "idle");
-        SfxCmd.Play("res://Ichigo/sounds/tensa_zangetsu.mp3");
+        if (IchigoConfig.EnableVoice)
+            SfxCmd.Play("res://Ichigo/sounds/tensa_zangetsu.mp3", 0.7f);
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 

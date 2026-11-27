@@ -152,6 +152,8 @@ public static class AudioHelper
 
     public static void PlayRandom(string[] pool)
     {
+        if (!IchigoConfig.EnableVoice)
+            return;
         int index = rng.Next(pool.Length);
         SfxCmd.Play(pool[index], 0.7f);
     }

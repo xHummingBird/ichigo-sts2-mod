@@ -49,7 +49,8 @@ public class FinalBlow() : IchigoCard(
         {
             if (isTrueBankai)
             {
-                SfxCmd.Play("res://Ichigo/sounds/final_blow.mp3", 0.7f);
+                if (IchigoConfig.EnableVoice)
+                    SfxCmd.Play("res://Ichigo/sounds/final_blow.mp3", 0.7f);
                 ichigo.PlayCutIn("jujisho_bankai");
                 SfxCmd.Play("res://Ichigo/sfx/cutin_sfx.wav");
                 await Task.Delay(1000);

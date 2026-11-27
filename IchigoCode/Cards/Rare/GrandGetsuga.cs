@@ -73,7 +73,8 @@ public class GrandGetsuga() : IchigoCard(
         if (Owner?.Character is Character.Ichigo ichigo)
         {
             // Getsuga Tenshou phrase before the cut-in.
-            SfxCmd.Play("res://Ichigo/sounds/getsuga_final.mp3", 0.7f);
+            if (IchigoConfig.EnableVoice)
+                SfxCmd.Play("res://Ichigo/sounds/getsuga_final.mp3", 0.7f);
 
             var cutInName = IsInTrueBankai
                 ? "jujisho_bankai"
