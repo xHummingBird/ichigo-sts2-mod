@@ -32,6 +32,9 @@ public static class BattleTheme
 
     private const string VictoryFanfareShort =
         "res://Ichigo/music/05. Clear ~ Results Screen.mp3";
+
+    private const string Bankai =
+        "res://Ichigo/music/bankai.mp3";
     
 
     // ============================================================
@@ -511,6 +514,82 @@ public static class BattleTheme
             && RunManager.Instance.NetService != null
             && netId ==
                RunManager.Instance.NetService.NetId;
+    }
+    
+    public static void PlayBankaiMusic(
+        ulong netId)
+    {
+        if (!IchigoConfig.EnableBankaiMusic)
+            return;
+
+        if (!IsLocalPlayer(netId))
+            return;
+
+        StopBattleMusic();
+        StopFanfare();
+        StopVanillaMusicOnly();
+
+        AudioStream? stream =
+            GD.Load<AudioStream>(Bankai);
+
+        if (stream == null)
+        {
+            GD.PrintErr(
+                $"Failed to load Ichigo Bankai music: {Bankai}");
+
+            return;
+        }
+
+        if (stream is AudioStreamMP3 mp3)
+        {
+            mp3.Loop = true;
+        }
+
+        var player =
+            new AudioStreamPlayer
+            {
+                Name = "IchigoBankaiMusic",
+                Stream = stream,
+                Bus = "Master",
+                VolumeDb =
+                    ScaleDbByBgmSetting(
+                        MusicVolume)
+            };
+
+        _battlePlayer = player;
+
+        player.Finished += () =>
+        {
+            if (ReferenceEquals(
+                    _battlePlayer,
+                    player))
+            {
+                _battlePlayer = null;
+            }
+
+            if (GodotObject.IsInstanceValid(player))
+            {
+                player.QueueFree();
+            }
+        };
+
+        Node? parent = NRun.Instance;
+
+        if (parent == null)
+            parent = NGame.Instance;
+
+        if (parent == null)
+        {
+            _battlePlayer = null;
+            player.QueueFree();
+            return;
+        }
+
+        parent.AddChild(player);
+        player.Play();
+
+        GD.Print(
+            $"Playing looping Ichigo Bankai music: {Bankai}");
     }
 }
 

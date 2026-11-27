@@ -14,7 +14,7 @@ public class ArmorClad() : IchigoCard(
     1,
     CardType.Skill,
     CardRarity.Common,
-    TargetType.Self)
+    TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
@@ -37,7 +37,7 @@ public class ArmorClad() : IchigoCard(
 
         await PowerCmd.Apply<BleedPower>(
             choiceContext,
-            Owner.Creature,
+            cardPlay.Target,
             DynamicVars["BleedPower"].BaseValue,
             Owner.Creature,
             this);

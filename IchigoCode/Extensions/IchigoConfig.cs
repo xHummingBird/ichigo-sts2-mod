@@ -9,5 +9,5 @@ public sealed class IchigoConfig : SimpleModConfig
 
     public static bool EnableCustomVictoryMusic { get; set; } = true;
 
-    public static bool EnableCustomGameOverMusic { get; set; } = true;
+    public static bool EnableBankaiMusic { get; set; } = true;
 }

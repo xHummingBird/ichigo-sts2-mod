@@ -7,6 +7,7 @@ using Ichigo.IchigoCode.Cards.Token;
 using Ichigo.IchigoCode.Extensions;
 using Ichigo.IchigoCode.Powers;
 using Ichigo.IchigoCode.Relics;
+using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Runs;
 
 namespace Ichigo.IchigoCode.Cards.Ancient;
@@ -28,9 +29,9 @@ public class BankaiHos() : IchigoCard(
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        var turns = DynamicVars["Turns"].IntValue;
-        if (Owner.GetRelic<Hougyoku>() != null)
-            turns += 1;
+        if (LocalContext.IsMe(Owner.Creature))
+            BattleTheme.PlayBankaiMusic(RunManager.Instance.NetService.NetId);
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         var ichigo = Owner.Character as Character.Ichigo;
         AudioHelper.PlayRandomBankaiBefore();
         ichigo.PlayCutIn("jujisho_hos");

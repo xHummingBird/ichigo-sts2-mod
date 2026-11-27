@@ -138,8 +138,7 @@ public abstract class IchigoRelicBase : IchigoRelic
         if (!LocalContext.IsMe(creature))
             return;
         
-
-        // Only boss combats play the fanfare and delay Tidus's rewards.
+        
         bool isBoss =
             room.RoomType == RoomType.Boss;
         

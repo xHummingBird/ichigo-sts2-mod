@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using Ichigo.IchigoCode.Powers;
 using Ichigo.IchigoCode.Relics;
+using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Runs;
 
 namespace Ichigo.IchigoCode.Cards.Ancient;
@@ -26,9 +27,8 @@ public class TrueBankai() : IchigoCard(
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        var turns = DynamicVars["Turns"].IntValue;
-        if (Owner.GetRelic<Hougyoku>() != null)
-            turns += 1;
+        if (LocalContext.IsMe(Owner.Creature))
+            BattleTheme.PlayBankaiMusic(RunManager.Instance.NetService.NetId);
         CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         var ichigo = Owner.Character as Character.Ichigo;
         AudioHelper.PlayRandomBankaiBefore();
@@ -54,6 +54,6 @@ public class TrueBankai() : IchigoCard(
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Turns"].UpgradeValueBy(1m);
+        DynamicVars["Turns"].UpgradeValueBy(1);
     }
 }
